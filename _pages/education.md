@@ -7,6 +7,7 @@ author_profile: true
 ## The University of Hong Kong
 
 **Bachelor of Science in Mathematics and Computer Science**
+
 Expected May 2028
 
 Relevant coursework includes probability, stochastic processes, optimization, numerical analysis, scientific computing, algorithm design and analysis, data structures, machine learning, and data science.
