@@ -3,16 +3,16 @@
 # This config file is meant for settings that affect your entire site, values
 # which you are expected to set up once and rarely need to edit after that.
 # For technical reasons, this file is *NOT* reloaded automatically when you use
-# `jekyll serve -l -H localhost`. If you change this file, please restart the 
+# `jekyll serve -l -H localhost`. If you change this file, please restart the
 # server process.
 
 # Basic Site Settings
 locale                   : "en-US"
 site_theme               : "default" # The available themes options are "default", "air", "sunrise", "mint", "dirt" and "contrast"
-title                    : " Ping Sen (Stanley)'s Page"
+title                    : "Stanley Chow"
 title_separator          : "-"
 name                     : &name "Stanley Chow"
-description              : &description "Undergraduate student in Mathematics and Computer Science at The University of Hong Kong"   # Update this with a general description of your site, this is the default if not overridden by a page
+description              : &description "Stanley Chow is a Mathematics student at HKU working on recommendation systems, search, machine learning, and applied mathematics."
 url                      : https://Stanley-Chow.github.io # The base hostname & protocol for your site e.g. "https://[your GitHub username].github.io",
                                                            # or if you already have some other page hosted on Github then use "https://[your GitHub username].github.io/[Your Repo Name]"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
@@ -23,16 +23,14 @@ repository               : "Stanley-Chow/Stanley-Chow.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "profile.png"
+  avatar           : "profile.jpg"
   name             : "Stanley Chow"
-  pronouns         : # example: "she/her"  
-  bio              : >
-    UG Maths & CS @ HKU
-    - Scientific Machine Learning, Numerical Analysis and Quantitative Research.
-  location         : "Beijing & Hong Kong"
+  pronouns         : # example: "she/her"
+  bio              : "Mathematics & CS @ HKU<br>Recommendation · Search · ML<br>Applied Mathematics"
+  location         : "Hong Kong"
   employer         : #"Red Brick University"
   uri              : # URL
-  email            : "pingsenchow@outlook.com" 
+  email            : "pingsenchow@outlook.com"
 
   # Academic websites
   academia         : # URL
@@ -54,8 +52,8 @@ author:
   codepen          : # Username
   dribbble         : # Username
   github           : "Stanley-Chow"
-  kaggle           : # Username  
-  stackoverflow    : # User number or user number and name (i.e., use "1" or "1/jeff-atwood")    
+  kaggle           : # Username
+  stackoverflow    : # User number or user number and name (i.e., use "1" or "1/jeff-atwood")
 
   # Social media
   artstation       : # Username
@@ -68,7 +66,7 @@ author:
   keybase          : # Username
   instagram        : # Username
   lastfm           : # Username
-  linkedin         : "www.linkedin.com/in/ping-sen-chow-951592327" # Username
+  linkedin         : "ping-sen-chow-951592327" # Username
   mastodon         : # URL
   medium           : # URL
   pinterest        : # Username
@@ -89,7 +87,7 @@ publication_category:
   books:
     title: 'Books'
   manuscripts:
-    title: 'Journal Articles'    
+    title: 'Journal Articles'
   conferences:
     title: 'Conference Papers'
 
@@ -97,7 +95,7 @@ publication_category:
 teaser                   :  # filename of teaser fallback teaser image placed in /images/ for social media previews
 breadcrumbs              : false # true, false (default)
 words_per_minute         : 160
-future                   : true
+future                   : false
 read_more                : "disabled" # if enabled, adds "Read more" links to excerpts
 talkmap_link             : false      #change to true to add link to talkmap on talks page
 comments:
@@ -127,7 +125,7 @@ staticman:
       options:
         format           : "iso8601" # "iso8601" (default), "timestamp-seconds", "timestamp-milliseconds"
 atom_feed:
-  hide                   : false     # change to true to hide the RSS feed in the footer
+  hide                   : true     # change to true to hide the RSS feed in the footer
   path                   : # blank (default) uses feed.xml
 
 
@@ -145,14 +143,16 @@ facebook:
   username               :
   app_id                 :
   publisher              :
-og_image                 :  # Social media default site image
-og_description           :  # Social media default site image description
+og_image                 : "og-portfolio.png" # Social media default site image
+og_description           : *description
 # For specifying social profiles
 # - https://developers.google.com/structured-data/customize/social-profiles
 social:
-  type                   : # Person or Organization (defaults to Person)
-  name                   : # If the user or organization name differs from the site's name
-  links: # An array of links to social media profiles
+  type                   : Person
+  name                   : "Stanley Chow"
+  links:
+    - "https://github.com/Stanley-Chow"
+    - "https://www.linkedin.com/in/ping-sen-chow-951592327"
 
 
 # Analytics
@@ -168,6 +168,29 @@ include:
   - _pages
   - files
 exclude:
+  - _posts
+  - _publications
+  - _portfolio
+  - _talks
+  - _teaching
+  - markdown_generator
+  - _pages/archive-layout-with-content.md
+  - _pages/category-archive.html
+  - _pages/collection-archive.html
+  - _pages/cv-json.md
+  - _pages/markdown.md
+  - _pages/non-menu-page.md
+  - _pages/notes.md
+  - _pages/page-archive.html
+  - _pages/portfolio.html
+  - _pages/publications.html
+  - _pages/talks.html
+  - _pages/teaching.html
+  - _pages/year-archive.html
+  - _pages/tag-archive.html
+  - _pages/talkmap.html
+  - _pages/terms.md
+  - talkmap
   - "*.sublime-project"
   - "*.sublime-workspace"
   - .asset-cache
@@ -224,16 +247,16 @@ kramdown:
 # These settings control the types of collections used by the template
 collections:
   teaching:
-    output: true
+    output: false
     permalink: /:collection/:path/
   publications:
-    output: true
+    output: false
     permalink: /:collection/:path/
   portfolio:
-    output: true
+    output: false
     permalink: /:collection/:path/
   talks:
-    output: true
+    output: false
     permalink: /:collection/:path/
 
 

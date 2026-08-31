@@ -1,33 +1,52 @@
 ---
 title: "Research"
 permalink: /research/
+description: "Stanley Chow's ongoing research on parabolic inverse-source reconstruction, visible geometry, and coverage-aware reduced-order modeling."
 author_profile: true
 ---
 
-## Neural-Augmented Reduced-Order Methods for PDE Inverse Problems
+# Parabolic Inverse-Source Reconstruction
 
-**HKU Summer Research Fellowship**
+<span class="project-status">HKU Summer Research Fellowship · May 2026–Present</span>
 
-Supervisor: Prof. Zhiwen Zhang
+**Supervisor:** Prof. Zhiwen Zhang
 
-2026–Present
+I study how to recover spatial sources from noisy observations of a diffusion process. The central issue is identifiability: heat flow smooths fine structure, so an algorithm can fit observations well while still missing source boundaries or small geometric features. My work separates those notions of error and develops reduced models whose reliability can be checked when the query distribution differs from the training snapshots.
 
-This project studies reduced-order methods for parabolic inverse source problems. The current focus is on proper orthogonal decomposition, a posteriori regularization parameter selection, stochastic error estimation, and neural correction for source reconstruction under noisy or uncertain observational data.
+> **Research status:** This is ongoing work. Two manuscript packages are in preparation / major revision locally; neither is described here as published or publicly deposited.
 
-## Urban Transportation Network Optimization
+## Visible Geometry Under Diffusion
 
-**Independent Research Project**
+Working title: *Raw, Heat-Visible, and Geometric Error in Parabolic Inverse Reconstruction of Indicator Sources*
 
-2023
+This track distinguishes three questions:
 
-This project develops mathematical optimization models for urban rail transit route design. The work considers geometric constraints, construction cost minimization, curvature restrictions, and engineering feasibility. It combines analytical derivation for simplified routing cases with numerical optimization methods such as Particle Swarm Optimization for more complex multi-intersection track design problems.
+1. **Raw source error:** How close is the reconstructed source in the ambient (L^2) norm?
+2. **Heat-visible error:** How different are two sources after smoothing at an observation-relevant scale?
+3. **Geometric error:** How accurately does a thresholded reconstruction recover the source interface, measured through quantities such as Hausdorff distance?
 
-## Galactic HI Structure Research
+The experiments combine finite-difference forward solves, Tikhonov regularization, singular-mode diagnostics, thresholded geometry, and noise sweeps. The goal is to state recovery claims in the metric supported by the observations, rather than treating all source-space discrepancies as equally visible.
 
-**Research Assistant, National Astronomical Observatories, Chinese Academy of Sciences**
+## Coverage-Aware Reduced-Order Modeling
 
-Supervisor: Prof. Chengjin Jin
+Working title: *Coverage-Aware POD with Offline–Online Certification for Fully Discrete Affine Parabolic Inverse Source Problems*
 
-2023–2024
+Proper orthogonal decomposition (POD) can accelerate repeated forward and inverse solves, but a low average projection error under one snapshot law does not ensure reliability for a new query law. This track studies:
 
-This project studied 21 cm neutral hydrogen spectral emissions for mapping galactic plane structures. The work involved Doppler shift measurements, velocity profile estimation, and computational modeling of interstellar gas distribution and galactic rotational dynamics.
+- covariance-designed snapshot distributions and basis construction;
+- held-out coverage diagnostics and gap-free risk summaries;
+- reduced forward operators for affine, fully discrete parabolic models;
+- offline-online checks that flag under-covered parameter regimes;
+- reconstruction behavior under basis truncation, regularization, noise, and distribution shift.
+
+The emphasis is on auditable numerical evidence: fixed seeds, explicit train/test source laws, saved diagnostics, and claims that stay within the tested regime.
+
+## Methods & Tools
+
+Python · NumPy · SciPy · finite differences · regularization · POD/SVD · Monte Carlo experiments · geometric metrics · reproducible notebooks · LaTeX
+
+## Earlier Research
+
+### Urban Rail Network Optimization
+
+In 2023, I developed mathematical models for urban rail alignment under geometric, curvature, feasibility, and construction-cost constraints. The work combined analytical routing cases with Particle Swarm Optimization for more complex layouts and was recognized in the S.-T. Yau High School Science Award.

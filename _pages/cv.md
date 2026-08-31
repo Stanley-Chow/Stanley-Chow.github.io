@@ -1,155 +1,73 @@
 ---
 title: "CV"
 permalink: /cv/
+description: "Education, research, selected projects, honors, and technical skills for Stanley Chow."
 author_profile: true
 ---
 
 # Curriculum Vitae
 
-📄 **Download my full CV (PDF)**
+[Download the current PDF CV](/files/CV.pdf){: .btn .btn--primary }<br>
+[Email](mailto:pingsenchow@outlook.com){: .btn } [GitHub](https://github.com/Stanley-Chow){: .btn } [LinkedIn](https://www.linkedin.com/in/ping-sen-chow-951592327){: .btn }
 
-[Download CV](/files/CV.pdf)
+## Education
 
----
+### The University of Hong Kong
 
-# Education
+**Bachelor of Science in Mathematics** · Second Major in Computer Science · Minor in Finance<br>
+Expected May 2028 · GPA: **3.98 / 4.30**
 
-### The University of Hong Kong (HKU)
+Dean's List · HKU Entrance Scholarship · Lee Shau Kee Scholarship
 
-**B.Sc. in Mathematics and Computer Science**
+### University of California, Los Angeles
 
-Expected Graduation: May 2028
-
-**GPA:** 3.98 / 4.30
-
-**Honors**
-
-* Dean's List (2025)
-* UG Entrance Scholarship
-* Lee Shau Kee Scholarship
-
----
-
-### University of California, Los Angeles (UCLA)
-
-**Exchange Student in Mathematics**
-
-2025–2026
-
----
+Exchange study in Mathematics · 2025–2026
 
 ### Stanford University
 
-**International Honors Program (IHP) Program Program**
+International Honors Program · Summer 2025
 
-Summer 2025
+## Research Experience
 
----
+### HKU Summer Research Fellowship
 
-### Beijing National Day School
+**Parabolic Inverse-Source Reconstruction and Coverage-Aware POD** · May 2026–Present<br>
+Supervisor: Prof. Zhiwen Zhang
 
-**A-Level Program**
+- Developed reproducible finite-difference and regularized inverse experiments for recovering indicator sources from noisy diffusion observations.
+- Separated raw source error from heat-visible and thresholded geometric recovery.
+- Designed and evaluated coverage-aware POD bases with held-out diagnostics for snapshot-law shift.
+- Prepared two manuscript packages; the work remains ongoing and is not listed as published.
 
-2021–2024
+### Urban Rail Network Optimization
 
----
+**Independent research** · 2023
 
-# Research Interests
+Modeled rail alignment under geometric and engineering constraints using analytical optimization and Particle Swarm Optimization; recognized in the S.-T. Yau High School Science Award.
 
-* Scientific Machine Learning
-* Numerical Analysis
-* Reduced-Order Modeling
-* Inverse Problems
-* Data-driven Optimization
-* Quantitative Research
+## Selected Projects
 
----
+### H&M Two-Stage Personalized Recommendation System
 
-# Research Experience
+Nine-channel candidate retrieval and LambdaRank over 31.8M transactions; 0.034479 frozen-future MAP@12 and bounded-memory inference for 1.37M customers. [Repository](https://github.com/Stanley-Chow/hm-2stage-recommender)
 
-## HKU Summer Research Fellowship
+### DocuQuest Agent
 
-**Neural-Augmented Reduced-Order Methods for PDE Inverse Problems**
+C++17 lexical retrieval and question-answering pipeline with a custom BST multimap, inverted index, deterministic tests, and injected LLM client. [Repository](https://github.com/Stanley-Chow/docuquest-agent)
 
-Supervisor: **Prof. Zhiwen Zhang**
+### Behavioral Personality Analytics
 
-May 2026 – Present
+Leakage-resistant comparison of 381 configurations; the selected three-feature Gradient Boosting model reached 0.9651 holdout ROC-AUC on generated data. [Repository](https://github.com/Stanley-Chow/behavioral-personality-analytics)
 
-Research on Proper Orthogonal Decomposition (POD), inverse source problems, regularization parameter selection, and neural-enhanced reduced-order methods for partial differential equations.
+### Flight Price Prediction & Pricing Analysis
 
----
+Collaborative XGBoost study over 300,153 rows; contributed Experiments 1 and 2 code and Experiment 2 interpretation. [Repository](https://github.com/Stanley-Chow/flight-price-prediction-and-pricing-analysis)
 
-## Urban Transportation Network Optimization
+## Technical Skills
 
-Independent Research
+**Languages:** Python, C++, SQL, MATLAB<br>
+**ML & Data:** PyTorch, LightGBM, XGBoost, scikit-learn, pandas, NumPy, SciPy, DuckDB<br>
+**Recommendation & Search:** candidate retrieval, collaborative filtering, two-tower models, LightGCN, LambdaRank, temporal validation<br>
+**Research & Engineering:** Git, CMake, Jupyter, LaTeX, numerical optimization, PDEs, experiment design
 
-2023
-
-Mathematical optimization of urban rail transit alignment using analytical optimization and Particle Swarm Optimization (PSO).
-
----
-
-## Galactic HI Structure Research
-
-Research Assistant
-
-National Astronomical Observatories, Chinese Academy of Sciences
-
-2023–2024
-
-Analysis of neutral hydrogen (HI) spectral emissions and computational modeling of galactic rotational structures.
-
----
-
-# Professional Experience
-
-## Data Engineer Intern
-
-Wuhan Boeyo Disaster Reduction Technology Co., Ltd.
-
-Summer 2024
-
-Developed analytical pipelines and visualization tools for Earthquake Early Warning (EEW) systems using Python.
-
----
-
-# Selected Projects
-
-* WorldQuant International Quant Championship
-* Flight Price Prediction
-* DocuQuest Agent
-* Personality Analytics
-* Lemmings Game Engine
-
-More details are available on the **Projects** page.
-
----
-
-# Honors & Awards
-
-* Dean's List (HKU)
-* Lee Shau Kee Scholarship
-* HKU Entrance Scholarship
-* Class of 1978 Scholarship
-* Gold Medal, WorldQuant International Quant Championship
-* S.-T. Yau High School Science Award (Semi-finalist)
-
----
-
-# Technical Skills
-
-**Programming**
-
-Python • C++ • MATLAB • SQL
-
-**Machine Learning**
-
-Scikit-learn • PyTorch • LightGBM • Transformers • Retrieval-Augmented Generation (RAG)
-
-**Mathematics**
-
-Numerical Analysis • Optimization • Scientific Computing • Stochastic Processes • Monte Carlo Methods • Partial Differential Equations
-
----
-
-Last updated: June 2026.
+*Updated August 2026.*

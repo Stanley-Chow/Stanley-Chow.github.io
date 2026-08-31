@@ -1,37 +1,28 @@
 ---
 title: "Education"
 permalink: /education/
+description: "Education and academic distinctions for Stanley Chow."
 author_profile: true
 ---
 
 ## The University of Hong Kong
 
-**Bachelor of Science in Mathematics and Computer Science**
+**Bachelor of Science in Mathematics**<br>
+Second Major in Computer Science · Minor in Finance<br>
+Expected May 2028 · GPA: **3.98 / 4.30**
 
-Expected May 2028
+**Distinctions:** Dean's List, HKU Entrance Scholarship, Lee Shau Kee Scholarship
 
-Relevant coursework includes probability, stochastic processes, optimization, numerical analysis, scientific computing, algorithm design and analysis, data structures, machine learning, and data science.
+Coursework spans probability, stochastic processes, optimization, numerical analysis, scientific computing, algorithms, data structures, machine learning, and data science.
 
 ## University of California, Los Angeles
 
-**Exchange Student in Mathematics**
+**Exchange study in Mathematics** · 2025–2026
 
-2025–2026
-
-Coursework focused on mathematics and computational methods.
+Coursework in mathematics and computational methods.
 
 ## Stanford University
 
-**International Honors Program (IHP) Program**
+**International Honors Program** · Summer 2025
 
-Summer 2025
-
-Participated in academic and industry-facing learning activities related to artificial intelligence and technology.
-
-## Beijing National Day School
-
-**A-Level Program**
-
-2021–2024
-
-Completed A-Level Mathematics, Further Mathematics, Physics, and Computer Science. Research experience during this period included urban transportation network optimization, which was later recognized in the S.-T. Yau High School Science Award.
+Academic and industry-facing study in artificial intelligence and technology.
