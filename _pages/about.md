@@ -14,7 +14,7 @@ redirect_from:
 
 I build retrieval and ranking pipelines, reproducible machine-learning experiments, and numerical methods for inverse problems. My current interests center on recommendation, search, and advertising algorithms, with mathematical modeling and scientific computing as a complementary research foundation.
 
-Recent work includes a nine-channel H&M recommendation pipeline with learning-to-rank and temporally frozen evaluation, a deterministic C++ retrieval layer for document question answering, and HKU research on visible-geometry recovery and coverage-aware reduced-order models for parabolic inverse problems.
+Recent work includes a nine-channel H&M recommendation pipeline with learning-to-rank and temporally frozen evaluation, a deterministic C++ retrieval layer for document question answering, and HKU research on parabolic inverse source reconstruction, with emphasis on scale-resolved error, visible geometry, and reduced-order methods.
 
 <p class="portfolio-actions"><a class="btn btn--primary" href="/projects/">View projects</a> <a class="btn" href="/files/CV.pdf">Download CV</a> <a class="btn" href="https://github.com/Stanley-Chow">GitHub</a></p>
 

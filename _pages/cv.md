@@ -31,14 +31,15 @@ International Honors Program · Summer 2025
 
 ### HKU Summer Research Fellowship
 
-**Parabolic Inverse-Source Reconstruction and Coverage-Aware POD** · May 2026–Present<br>
+**Parabolic Inverse Source Reconstruction: From Raw Error to Visible Geometry** · 2026<br>
 Supervisor: Prof. Zhiwen Zhang
 
-- Developed reproducible finite-difference and regularized inverse experiments for recovering indicator sources from noisy diffusion observations.
-- Separated raw source error from heat-visible and thresholded geometric recovery.
-- Designed and evaluated coverage-aware POD bases with held-out diagnostics for snapshot-law shift.
-- Prepared two manuscript packages; the work remains ongoing and is not listed as published.
+- Study recovery of stationary spatial sources from final-time observations of a parabolic PDE.
+- Distinguish raw source error, heat-visible field error, and thresholded visible-interface error at a declared physical scale.
+- Use spectral truncation as a transparent rate benchmark while POD motivates the repeated-solve reduced-order setting.
+- Connect pointwise visible-field accuracy with stable level-set geometry under a nondegenerate crossing condition.
 
+[Research overview]({{ '/research/parabolic-inverse-source/' | relative_url }}) · [Synopsis]({{ '/files/research/srf/Stanley_Chow_SRF_Research_Synopsis.pdf' | relative_url }}) · [Poster]({{ '/files/research/srf/Stanley_Chow_SRF_A11_Poster.pdf' | relative_url }})
 ### Urban Rail Network Optimization
 
 **Independent research** · 2023
@@ -70,4 +71,4 @@ Collaborative XGBoost study over 300,153 rows; contributed Experiments 1 and 2 c
 **Recommendation & Search:** candidate retrieval, collaborative filtering, two-tower models, LightGCN, LambdaRank, temporal validation<br>
 **Research & Engineering:** Git, CMake, Jupyter, LaTeX, numerical optimization, PDEs, experiment design
 
-*Updated August 2026.*
+*Updated September 2026.*

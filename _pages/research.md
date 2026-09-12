@@ -1,52 +1,51 @@
 ---
 title: "Research"
 permalink: /research/
-description: "Stanley Chow's ongoing research on parabolic inverse-source reconstruction, visible geometry, and coverage-aware reduced-order modeling."
+description: "Stanley Chow's research on scale-resolved parabolic inverse-source reconstruction, visible geometry, and earlier mathematical modeling projects."
 author_profile: true
 ---
 
-# Parabolic Inverse-Source Reconstruction
+# Current Research
 
-<span class="project-status">HKU Summer Research Fellowship · May 2026–Present</span>
+## Parabolic Inverse Source Reconstruction: From Raw Error to Visible Geometry
 
-**Supervisor:** Prof. Zhiwen Zhang
+<p class="project-status">HKU Summer Research Fellowship · Faculty of Science, The University of Hong Kong · 2026<br>Supervisor: Prof. Zhiwen Zhang</p>
 
-I study how to recover spatial sources from noisy observations of a diffusion process. The central issue is identifiability: heat flow smooths fine structure, so an algorithm can fit observations well while still missing source boundaries or small geometric features. My work separates those notions of error and develops reduced models whose reliability can be checked when the query distribution differs from the training snapshots.
+I study recovery of a stationary spatial source from final-time observations of a parabolic PDE. Diffusion suppresses high-frequency information, so sharp or discontinuous sources are difficult to reconstruct pixel by pixel. The project asks how a reconstruction can still retain useful location and shape at a declared physical observation scale.
 
-> **Research status:** This is ongoing work. Two manuscript packages are in preparation / major revision locally; neither is described here as published or publicly deposited.
+<div class="research-question" markdown="1">
+**Central question**
 
-## Visible Geometry Under Diffusion
+How can a reconstruction remain geometrically useful even when its raw pixelwise <em>L</em><sup>2</sup> error is large?
 
-Working title: *Raw, Heat-Visible, and Geometric Error in Parabolic Inverse Reconstruction of Indicator Sources*
+At a declared physical scale, smoothing suppresses unresolved fine-scale oscillations. Raw source error, heat-visible field error, and visible interface error therefore measure different—and complementary—aspects of reconstruction quality.
+</div>
 
-This track distinguishes three questions:
+<div class="research-flow" aria-label="Scale-resolved error hierarchy">
+  <span>Raw source error</span><span aria-hidden="true">→</span><span>Heat-visible field error</span><span aria-hidden="true">→</span><span>Visible geometric error</span>
+</div>
 
-1. **Raw source error:** How close is the reconstructed source in the ambient (L^2) norm?
-2. **Heat-visible error:** How different are two sources after smoothing at an observation-relevant scale?
-3. **Geometric error:** How accurately does a thresholded reconstruction recover the source interface, measured through quantities such as Hausdorff distance?
+### At a glance
 
-The experiments combine finite-difference forward solves, Tikhonov regularization, singular-mode diagnostics, thresholded geometry, and noise sweeps. The goal is to state recovery claims in the metric supported by the observations, rather than treating all source-space discrepancies as equally visible.
+- **Slow raw recovery:** the near-sharp two-dimensional benchmark powers are λ<sup>1/8</sup> and <em>r</em><sup>−1/4</sup>, up to an arbitrarily small exponent loss in the general upper result.
+- **Faster fixed-scale visibility:** at fixed scale ℓ, the unresolved spectral rank tail is exponentially small; noise and regularization still constrain the full inverse reconstruction.
+- **Field-to-geometry stability:** pointwise visible-field accuracy, together with a nondegenerate threshold crossing, controls visible boundary displacement.
 
-## Coverage-Aware Reduced-Order Modeling
+POD motivates the reduced-order setting, while the theoretical rate separation is analyzed using spectral truncation as a transparent rank-resolution benchmark.
 
-Working title: *Coverage-Aware POD with Offline–Online Certification for Fully Discrete Affine Parabolic Inverse Source Problems*
+<p class="research-materials"><a class="btn btn--primary" href="{{ '/research/parabolic-inverse-source/' | relative_url }}">Read the research overview</a> <a class="btn" href="{{ '/files/research/srf/Stanley_Chow_SRF_Research_Synopsis.pdf' | relative_url }}">Research Synopsis (PDF)</a> <a class="btn" href="{{ '/files/research/srf/Stanley_Chow_SRF_A11_Poster.pdf' | relative_url }}">SRF Poster (PDF)</a></p>
 
-Proper orthogonal decomposition (POD) can accelerate repeated forward and inverse solves, but a low average projection error under one snapshot law does not ensure reliability for a new query law. This track studies:
+<figure class="research-poster-figure">
+  <a href="{{ '/files/research/srf/Stanley_Chow_SRF_A11_Poster.pdf' | relative_url }}"><img src="{{ '/images/research/srf-poster-preview.png' | relative_url }}" alt="HKU Summer Research Fellowship poster on scale-resolved parabolic inverse source reconstruction"></a>
+  <figcaption>SRF Poster A11. Select the preview to open the full-resolution PDF.</figcaption>
+</figure>
 
-- covariance-designed snapshot distributions and basis construction;
-- held-out coverage diagnostics and gap-free risk summaries;
-- reduced forward operators for affine, fully discrete parabolic models;
-- offline-online checks that flag under-covered parameter regimes;
-- reconstruction behavior under basis truncation, regularization, noise, and distribution shift.
+# Previous Research
 
-The emphasis is on auditable numerical evidence: fixed seeds, explicit train/test source laws, saved diagnostics, and claims that stay within the tested regime.
+## Urban Transportation Network Optimization
 
-## Methods & Tools
+In 2023, I studied urban rail alignment under geometric, curvature, feasibility, and construction-cost constraints, combining analytical optimization with Particle Swarm Optimization for more complex layouts. The work was recognized in the S.-T. Yau High School Science Award.
 
-Python · NumPy · SciPy · finite differences · regularization · POD/SVD · Monte Carlo experiments · geometric metrics · reproducible notebooks · LaTeX
+## Galactic H I Structure Research
 
-## Earlier Research
-
-### Urban Rail Network Optimization
-
-In 2023, I developed mathematical models for urban rail alignment under geometric, curvature, feasibility, and construction-cost constraints. The work combined analytical routing cases with Particle Swarm Optimization for more complex layouts and was recognized in the S.-T. Yau High School Science Award.
+I analyzed 21 cm neutral-hydrogen spectral emission and used computational models of Galactic rotation to study the large-scale structure of the Milky Way.
