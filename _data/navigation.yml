@@ -1,7 +1,10 @@
 # Primary navigation for the recruiting portfolio.
 main:
-  - title: "About"
+  - title: "Home"
     url: /
+
+  - title: "Writing"
+    url: /writing/
 
   - title: "Projects"
     url: /projects/

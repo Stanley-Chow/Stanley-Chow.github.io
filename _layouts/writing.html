@@ -1,0 +1,12 @@
+---
+layout: home
+---
+<article class="home-article">
+  <a class="home-text-link" href="{{ '/writing/' | relative_url }}">← All writing</a>
+  <header>
+    <p class="home-eyebrow">{{ page.kind | default: 'Essay' | escape }} · <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%-d %B %Y' }}</time></p>
+    <h1>{{ page.title | escape }}</h1>
+    {% if page.summary %}<p class="home-section-intro">{{ page.summary | escape }}</p>{% endif %}
+  </header>
+  <div class="home-article__body">{{ content }}</div>
+</article>

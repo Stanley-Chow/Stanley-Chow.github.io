@@ -246,6 +246,9 @@ kramdown:
 
 # These settings control the types of collections used by the template
 collections:
+  writing:
+    output: true
+    permalink: /writing/:path/
   teaching:
     output: false
     permalink: /:collection/:path/
@@ -262,6 +265,15 @@ collections:
 
 # These settings control how pages and collections are included in the site
 defaults:
+  # Writing is opt-in: templates and unfinished drafts stay hidden.
+  - scope:
+      path: ""
+      type: writing
+    values:
+      layout: writing
+      portfolio_shell: true
+      author_profile: false
+      published: false
   # _posts
   - scope:
       path: ""
