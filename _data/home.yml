@@ -10,11 +10,11 @@ en:
     sitemap: Sitemap
     built_with: Built with
     skip: Skip to content
-    writing_entries: Writing entries
+    writing_entries: Blog posts
     back_home: Back to the homepage
   nav:
     - {title: Home, url: /}
-    - {title: Writing, url: /writing/}
+    - {title: Blog, url: /blog/}
     - {title: Projects, url: /projects/}
     - {title: Research, url: /research/}
     - {title: CV, url: /cv/}
@@ -27,7 +27,7 @@ en:
     cv_label: Download CV (EN)
     cv_url: /files/CV-EN.pdf
     explore: Explore my work
-    read: Read my notes
+    read: Read the blog
     email: Email
     location: Hong Kong
     contacts: Contact and profiles
@@ -105,18 +105,18 @@ en:
         url: /projects/#behavioral-personality-analytics
         repository: https://github.com/Stanley-Chow/behavioral-personality-analytics
   writing:
-    heading: Writing & exploration
-    archive: Writing space
-    url: /writing/
-    eyebrow: Notes from my projects
-    intro: "Ideas, experiments, and lessons that don’t fit neatly into a project summary."
-    empty_title: Putting the process into words.
-    empty_body: "I’ll use this space for research notes, paper replications, and lessons from projects. There aren’t any published posts yet."
-    formats_label: Planned writing formats
+    heading: Blog
+    archive: All posts
+    url: /blog/
+    eyebrow: Notes & observations
+    intro: "Things I’m learning, ideas I’m trying, and observations I want to keep."
+    empty_title: Nothing posted yet.
+    empty_body: "I’ll share notes from my projects, things I’m reading, and ideas I’m working through here."
+    formats_label: Topics for future posts
     formats:
-      - {title: Blog & reflections, body: "What I’m learning and the questions I’m thinking through."}
-      - {title: Research insights, body: "Intuition behind methods, useful experiments, and the limits of a result."}
-      - {title: Paper replications, body: "Reproducing published ideas and documenting where my results agree—or differ."}
+      - {title: Things I’m learning, body: "Something that clicked, a useful idea, or a question I’m still thinking about."}
+      - {title: From my projects, body: "Small discoveries and lessons from building and testing things."}
+      - {title: Notes on papers, body: "Ideas that caught my attention and what happened when I tried them in code."}
   skills:
     heading: Tools & methods
     items:

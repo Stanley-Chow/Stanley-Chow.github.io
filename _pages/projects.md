@@ -24,7 +24,7 @@ sections:
 
 <p class="home-eyebrow">Individual project · Python, PyTorch, LightGBM</p>
 
-How do you choose a handful of useful recommendations from a large product catalogue? I built a system that first finds promising items, then ranks them for each customer.
+How do you choose a handful of useful recommendations from a large product catalogue? I built an offline system that first finds promising items, then ranks them for each customer.
 
 It uses **31.8 million transaction records** and combines nine ways of finding candidates, including shopping history, learned models, and text and image features.
 
@@ -40,9 +40,8 @@ It uses **31.8 million transaction records** and combines nine ways of finding c
 
 </details>
 
-<p class="project-limitation">This is an offline recommendation project, not a live production service. The repository includes the evaluation setup and remaining work.</p>
-
 [View repository](https://github.com/Stanley-Chow/hm-2stage-recommender)
+{: .project-link }
 </article>
 
 <article class="project-entry" id="behavioral-personality-analytics" markdown="1">
@@ -50,11 +49,9 @@ It uses **31.8 million transaction records** and combines nine ways of finding c
 
 <p class="home-eyebrow">Individual project · Python, scikit-learn</p>
 
-I tested whether a small set of behavioral features could predict personality-related outcomes. The main challenge was keeping model selection separate from the final test.
+I used generated behavioral data to test whether a small set of features could predict personality-related outcomes. I kept model selection separate from the final test.
 
 After comparing **381 configurations**, a three-feature Gradient Boosting model reached **0.9651 ROC-AUC** on the holdout set.
-
-<p class="project-limitation">The data are generated. These results do not establish performance on real populations or show that the features cause the outcomes.</p>
 
 <details class="portfolio-technical" markdown="1">
 <summary>Evaluation details</summary>
@@ -62,11 +59,12 @@ After comparing **381 configurations**, a three-feature Gradient Boosting model 
 - Used development data to compare **381 combinations of models and feature subsets**.
 - Selected a three-feature Gradient Boosting model, then tested it once on the untouched holdout set: **0.9651 ROC-AUC**.
 - Reached 0.9910 holdout accuracy on the associated stage-fright task.
-- Kept model selection separate from the final evaluation and documented why results on generated data may not transfer to real people.
+- Kept model selection separate from the final evaluation, with all choices made before checking the holdout results.
 
 </details>
 
 [View repository](https://github.com/Stanley-Chow/behavioral-personality-analytics)
+{: .project-link }
 </article>
 
 <article class="project-entry" id="flight-price-prediction" markdown="1">
@@ -83,13 +81,13 @@ We compared polynomial regression with XGBoost, then looked at how route, class,
 
 - Compared polynomial regression with XGBoost for fare prediction.
 - XGBoost reached **RMSE ₹2,319.47** and **R² 0.9896** on a same-period held-out set of 60,031 rows.
-- Analyzed route, class, stop, airline, and timing premiums while distinguishing predictive associations from causal claims.
-
-The test split was random within the same period. It does not measure how well the model would predict future market prices.
+- Analyzed how route, class, stops, airline and booking time relate to fares.
+- Evaluated the model with a random train-test split using records from the same period.
 
 </details>
 
 [View repository](https://github.com/Stanley-Chow/flight-price-prediction-and-pricing-analysis)
+{: .project-link }
 </article>
 
 </div>
@@ -116,11 +114,12 @@ The search tests run **without network access or API credentials**, so I can che
 - Made the model client replaceable in tests, so search behavior can be checked without network access or credentials. Secrets are read from the environment.
 - Used CMake and focused tests to check object ownership, lookups, retrieval and the question-answering workflow.
 
-This is keyword-based retrieval. It has no embeddings or learned reranker, and it cannot guarantee that generated answers are correct.
+The search layer uses keyword matching and an inverted index to find relevant passages for the question-answering workflow.
 
 </details>
 
 [View repository](https://github.com/Stanley-Chow/docuquest-agent)
+{: .project-link }
 </article>
 
 <article class="project-entry" id="lemmings-game-engine" markdown="1">
@@ -144,6 +143,7 @@ The course supplied the surrounding framework and media assets. My implementatio
 </details>
 
 [View repository](https://github.com/Stanley-Chow/lemmings-game-engine)
+{: .project-link }
 </article>
 
 </div>
@@ -169,7 +169,10 @@ I study how to recover a source from blurred, noisy temperature measurements. I 
 
 </details>
 
-Manuscripts are in preparation, not published. The [research page](/research/#heat-source-demo) includes a 34-second visual demonstration, along with the methods and limits of the comparison.
+The research page includes a 34-second visual demonstration, with a walkthrough of the models and measured results.
+
+[Watch the demo and read more](/research/#heat-source-demo)
+{: .project-link }
 </article>
 
 <article class="project-entry" id="urban-rail-network-optimization" markdown="1">

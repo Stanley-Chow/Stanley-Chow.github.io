@@ -21,24 +21,24 @@ bundle exec jekyll build
 
 The site uses the Academic Pages / Minimal Mistakes Jekyll foundation and deploys from the repository's `master` branch through GitHub Pages.
 
-## Homepage and writing
+## Homepage and blog
 
-The homepage and writing index use the custom `home` layout. The existing research, project, and CV URLs remain unchanged.
+The homepage and blog index use the custom `home` layout. The blog is at `/blog/`; `/writing/` redirects there to preserve older links. The existing research, project, and CV URLs remain unchanged.
 
-To publish an essay, insight, or paper replication, add a Markdown file such as `_writing/my-replication.md` with this front matter, followed by the actual article:
+To publish a blog post, add a Markdown file such as `_writing/my-project-notes.md` with this front matter, followed by the actual post. The internal collection name remains `writing`, but public post URLs use `/blog/`:
 
 ```yaml
 ---
 title: "Your article title"
 date: 2026-09-30
 lang: en
-kind: "Paper replication" # or Research insight / Blog
+kind: "Project notes" # or Reflections / Notes on papers
 summary: "A short, concrete description of the article."
 published: true
 ---
 ```
 
-Only entries explicitly marked `published: true`, with a date no later than the build time, appear. English entries appear on `/writing/`; the newest three also appear on the homepage. Unfinished drafts default to unpublished, and the original template's sample blog posts remain excluded. Until real writing is published, visitors see an honest empty state instead of sample articles. Chinese-language pages and writing are not part of the current public-site workflow.
+Only entries explicitly marked `published: true`, with a date no later than the build time, appear. English entries appear on `/blog/`; the newest three also appear on the homepage. Unfinished drafts default to unpublished, and the original template's sample blog posts remain excluded. Until real posts are published, visitors see an honest empty state instead of sample articles. Chinese-language pages and writing are not part of the current public-site workflow.
 
 The public site is English-only. The Chinese homepage and writing page are retained as drafts and explicitly excluded in `_config.yml`; do not remove those exclusions without approval and a fresh copy review. No language switch is shown. The homepage and CV page offer `files/CV-EN.pdf` (English Quant CV) and a separate `files/CV-ZH.pdf` (Chinese algorithm-focused CV) download. The legacy `files/CV.pdf` remains available for existing links. English homepage copy lives in `_data/home.yml`; inner pages share `_layouts/portfolio-page.html` and the homepage design system. Preserve existing URLs and project anchors when editing.
 

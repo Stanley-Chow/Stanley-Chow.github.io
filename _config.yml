@@ -251,7 +251,7 @@ kramdown:
 collections:
   writing:
     output: true
-    permalink: /writing/:path/
+    permalink: /blog/:path/
   teaching:
     output: false
     permalink: /:collection/:path/

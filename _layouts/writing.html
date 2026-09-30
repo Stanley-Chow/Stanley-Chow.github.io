@@ -2,9 +2,9 @@
 layout: home
 ---
 <article class="home-article">
-  <a class="home-text-link" href="{% if page.lang == 'zh-CN' %}{{ '/zh/writing/' | relative_url }}{% else %}{{ '/writing/' | relative_url }}{% endif %}">← {% if page.lang == 'zh-CN' %}全部文章{% else %}All writing{% endif %}</a>
+  <a class="home-text-link" href="{% if page.lang == 'zh-CN' %}{{ '/zh/writing/' | relative_url }}{% else %}{{ '/blog/' | relative_url }}{% endif %}">← {% if page.lang == 'zh-CN' %}全部文章{% else %}All posts{% endif %}</a>
   <header>
-    <p class="home-eyebrow">{{ page.kind | default: 'Essay' | escape }} · <time datetime="{{ page.date | date_to_xmlschema }}">{% if page.lang == 'zh-CN' %}{{ page.date | date: '%Y 年 %-m 月 %-d 日' }}{% else %}{{ page.date | date: '%-d %B %Y' }}{% endif %}</time></p>
+    <p class="home-eyebrow">{{ page.kind | default: 'Blog post' | escape }} · <time datetime="{{ page.date | date_to_xmlschema }}">{% if page.lang == 'zh-CN' %}{{ page.date | date: '%Y 年 %-m 月 %-d 日' }}{% else %}{{ page.date | date: '%-d %B %Y' }}{% endif %}</time></p>
     <h1>{{ page.title | escape }}</h1>
     {% if page.summary %}<p class="home-section-intro">{{ page.summary | escape }}</p>{% endif %}
   </header>
