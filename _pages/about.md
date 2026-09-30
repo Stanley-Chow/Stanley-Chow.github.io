@@ -10,13 +10,27 @@ redirect_from:
 
 <p class="portfolio-kicker">Mathematics @ HKU · Second Major in Computer Science · Minor in Finance</p>
 
-<p class="portfolio-tagline"><strong>Recommendation Systems · Search & Ranking · Machine Learning · Applied Mathematics</strong></p>
+<p class="portfolio-tagline"><strong>I build systems that help people find what matters.</strong></p>
 
-I build retrieval and ranking pipelines, reproducible machine-learning experiments, and numerical methods for inverse problems. My current interests center on recommendation, search, and advertising algorithms, with mathematical modeling and scientific computing as a complementary research foundation.
+I'm a Mathematics student at HKU, also studying Computer Science and Finance. My work focuses on recommendation systems, search, and machine learning. I also use applied mathematics to study how we can recover information from incomplete measurements.
 
-Recent work includes a nine-channel H&M recommendation pipeline with learning-to-rank and temporally frozen evaluation, a deterministic C++ retrieval layer for document question answering, and HKU research on parabolic inverse source reconstruction, with emphasis on scale-resolved error, visible geometry, and reduced-order methods.
+Recent projects range from recommending clothes using millions of shopping transactions to building a C++ document search engine. In my HKU Summer Research Fellowship, I investigate how to find a hidden heat source—and what happens when we use a smaller, faster model.
 
 <p class="portfolio-actions"><a class="btn btn--primary" href="/projects/">View projects</a> <a class="btn" href="/files/CV.pdf">Download CV</a> <a class="btn" href="https://github.com/Stanley-Chow">GitHub</a></p>
+
+## Research in motion
+
+<div class="research-preview">
+  <a class="research-preview__image" href="{{ '/research/#heat-source-demo' | relative_url }}" aria-label="Watch the hidden heat source research demo">
+    <img src="{{ '/assets/media/srf-heat-demo/thumbnail.jpg' | relative_url }}" width="1920" height="1080" alt="Three models compare the reconstruction of a letter-shaped heat source" loading="lazy">
+    <span class="research-preview__badge" aria-hidden="true">Watch · 34 seconds</span>
+  </a>
+  <div class="research-preview__text">
+    <h3>Can we find a source after its heat has spread?</h3>
+    <p>Watch three models work backwards from the same noisy temperature measurements. The comparison shows why faster computation depends on choosing useful training examples.</p>
+    <a href="{{ '/research/#heat-source-demo' | relative_url }}">Watch the demo and read the story →</a>
+  </div>
+</div>
 
 ## Selected Work
 
@@ -36,17 +50,17 @@ An offline retrieval-and-ranking system built on 31.8 million H&M transaction ev
 </article>
 
 <article class="project-card" markdown="1">
-### Parabolic Inverse Problems & Coverage-Aware POD
+### Finding a Hidden Heat Source
 
 <p class="project-meta">Numerical PDEs · Inverse Problems · Reduced-Order Modeling</p>
 
-Ongoing HKU Summer Research Fellowship work on recovering source geometry from noisy diffusion observations and building reduced models that remain reliable beyond their snapshot law.
+Heat spreads and blurs a source’s outline. My HKU Summer Research Fellowship explores how to recover its location and shape, and how compact models learned from examples can make the computation faster.
 
-- Separated raw source error from heat-visible and geometric recovery.
-- Developed covariance-designed POD with held-out, gap-free risk diagnostics.
-- Implemented finite-difference, Tikhonov, Monte Carlo, and reduced-order experiments.
+- Compare recovered source values with visible shape at a chosen smoothing scale.
+- Study how training examples affect a reduced model’s speed and accuracy.
+- Build reproducible numerical experiments for inverse problems.
 
-[Research overview](/research/)
+[Watch the 34-second demo]({{ '/research/#heat-source-demo' | relative_url }}) · [Research overview]({{ '/research/parabolic-inverse-source/' | relative_url }})
 </article>
 
 <article class="project-card" markdown="1">
@@ -78,11 +92,23 @@ A leakage-resistant study of personality and behavioral-outcome prediction.
 </article>
 </div>
 
-## Technical Toolkit
+## What I work with
 
-<p class="toolkit"><strong>Languages:</strong> Python · C++ · SQL · MATLAB<br>
-<strong>Machine Learning & Data:</strong> PyTorch · LightGBM · XGBoost · scikit-learn · pandas · NumPy · SciPy · DuckDB<br>
-<strong>Recommendation & Search:</strong> Candidate Retrieval · Collaborative Filtering · Two-Tower Models · LightGCN · LambdaRank · Negative Sampling · Temporal Validation<br>
-<strong>Research & Engineering:</strong> Git · CMake · Jupyter · LaTeX · Numerical Optimization · PDEs · Experiment Design</p>
+I mainly work in Python, C++, SQL, and MATLAB. Expand a topic for the methods and tools behind my projects.
+
+<div class="portfolio-toolkit">
+  <details>
+    <summary>Recommendation and search</summary>
+    <p>Candidate retrieval, collaborative filtering, two-tower models, LightGCN, LambdaRank, negative sampling, and temporal validation.</p>
+  </details>
+  <details>
+    <summary>Machine learning and data</summary>
+    <p>PyTorch, LightGBM, XGBoost, scikit-learn, pandas, NumPy, SciPy, and DuckDB.</p>
+  </details>
+  <details>
+    <summary>Scientific computing and engineering</summary>
+    <p>Numerical optimization, partial differential equations, and experiment design; Git, CMake, Jupyter, and LaTeX for building and documenting reproducible work.</p>
+  </details>
+</div>
 
 I am open to internship and research opportunities in recommendation, search, ranking, advertising algorithms, machine learning engineering, and applied data science.

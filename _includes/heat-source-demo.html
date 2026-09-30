@@ -1,0 +1,38 @@
+<section class="heat-demo" id="heat-source-demo" aria-labelledby="heat-demo-title">
+  <h2 id="heat-demo-title">Finding a hidden heat source</h2>
+  <p>Heat spreads and blurs the evidence. Can we work backwards from the final temperature to find where it came from?</p>
+  <p>This 34-second video follows three models as they recover a hidden letter A from the same noisy measurements. Proper orthogonal decomposition (POD) learns a compact model from examples, reducing the number of values the solver needs to adjust.</p>
+  <figure class="heat-demo__media">
+    <video controls playsinline preload="metadata" width="1920" height="1080" poster="{{ '/assets/media/srf-heat-demo/thumbnail.jpg' | relative_url }}" aria-label="Three models reconstruct a hidden heat source" aria-describedby="heat-demo-caption">
+      <source src="{{ '/assets/media/srf-heat-demo/heat_source_demo.mp4' | relative_url }}" type="video/mp4">
+      <track kind="captions" srclang="en" label="English explanation" src="{{ '/assets/media/srf-heat-demo/explanation.vtt' | relative_url }}">
+      <p><a href="{{ '/assets/media/srf-heat-demo/heat_source_demo.mp4' | relative_url }}">Open the video</a> or read the explanation below.</p>
+    </video>
+    <figcaption id="heat-demo-caption">Recorded optimization steps · 34 seconds · No audio. Use fullscreen to read the plots on a phone. The on-screen clocks show measured compute time; the “10×” badge changes playback speed.</figcaption>
+  </figure>
+  <p class="heat-demo__links"><a href="{{ '/assets/media/srf-heat-demo/heat_source_demo.mp4' | relative_url }}" target="_blank" rel="noopener">Open video in a new tab</a> · <a href="{{ '/assets/media/srf-heat-demo/transcript.txt' | relative_url }}">Text transcript</a></p>
+  <h3>What to look for</h3>
+  <p>The model trained on letters finishes quickly and keeps the A’s legs and opening. The model trained on circles is also fast, but distorts that shape. The full model takes longer and gives the most accurate outline in this example.</p>
+  <div class="heat-demo__results" role="region" aria-label="Measured model comparison" tabindex="0">
+    <table>
+      <caption>Results for this A example. Solve times are medians over five queries on one machine, excluding offline training.</caption>
+      <thead><tr><th scope="col">Model</th><th scope="col">Values adjusted</th><th scope="col">Iterative solve</th><th scope="col">Shape overlap</th></tr></thead>
+      <tbody>
+        <tr><th scope="row">Full model</th><td>961</td><td>5.56 s</td><td>92%</td></tr>
+        <tr><th scope="row">POD trained on letters</th><td>14</td><td>48 ms</td><td>84%</td></tr>
+        <tr><th scope="row">POD trained on circles</th><td>13</td><td>56 ms</td><td>55%</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="heat-demo__scroll-note">On narrow screens, scroll the table sideways to see every column.</p>
+  <p><strong>The takeaway:</strong> a compact model can save computation when its training examples cover the shapes we want to recover. Here, the letter-trained model is about 116 times faster in the iterative solve, with a loss in accuracy.</p>
+  <p>“Shape overlap” compares the recovered and reference regions after smoothing at the same physical scale: their shared area divided by their combined area. A is included in the letter training set, so this example shows recovery of a represented shape.</p>
+  <details class="heat-demo__details">
+    <summary>How the comparison was made</summary>
+    <p>All three models use the same source, measurements, noise, mesh, time step, regularization, visibility scale, and iterative solver (steepest descent with exact line search). The video uses recorded solver iterations. It slows the opening, pauses when both POD models finish, then accelerates the remaining replay tenfold. This playback change is separate from the measured 116-fold solve-time difference.</p>
+    <p>The timings include forming the data right-hand side, solving for coefficients, and mapping the solution back to the full grid. Offline training, operator assembly, and video rendering are excluded. Cached direct solves are faster for this linear quadratic problem: 10.60 ms for the full model, 0.0423 ms for letter-trained POD, and 0.0378 ms for circle-trained POD, measured separately over 40 queries. The video’s speedup applies to iterative optimization.</p>
+    <p>This is one preselected noise realization, not evidence of performance on unseen letters. It is a finite-element/POD experiment; the spectral-truncation results in the synopsis below concern a different benchmark.</p>
+    <p>Setup: a 32 × 32-cell mesh with 961 interior unknowns; final time 1; time step 1/32; 100 × 100 sensors; regularization 10<sup>−6</sup>; Gaussian noise standard deviation 10<sup>−3</sup>; visibility length 0.08/π.</p>
+    <p><a href="{{ '/assets/media/srf-heat-demo/metrics.csv' | relative_url }}">Download the measured results (CSV)</a></p>
+  </details>
+</section>

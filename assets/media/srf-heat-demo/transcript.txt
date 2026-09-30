@@ -1,0 +1,22 @@
+Finding a hidden heat source — Stanley Chow
+
+0–6 seconds
+Heat spreads and blurs the evidence. We start with the same noisy final-temperature measurements of a hidden letter A. A compact POD model learns a smaller space from training examples. One model is trained on letters A–O, including A; another is trained on circles moving along a line.
+
+6–17 seconds
+Three reconstructions evolve through actual optimization iterations, with a slower opening so viewers can follow both POD models before they finish. The full model adjusts 961 coefficients; letter-trained POD adjusts 14; circle-trained POD adjusts 13. All use the same steepest-descent solver and stopping tolerance. On-screen clocks report the original measured compute time; playback is slowed using a shared nonlinear clock.
+
+Each method shows its raw reconstructed source and its recovered visible outline. The dashed navy outline is the true outline at the same smoothing scale. The solid outline is the reconstruction.
+
+17–19 seconds
+Both POD models have finished. The video pauses for two seconds to compare their outlines and announces that playback will accelerate 10-fold.
+
+19–25.5 seconds
+The full-model reconstruction continues with an explicit “10× playback” badge. This is exactly 10 times the opening timeline's playback rate; the measured solver times and reconstructions are unchanged.
+
+25.5–34 seconds
+The full model takes a median 5,563 milliseconds and achieves 92% shape overlap. Letter-trained POD takes 48 milliseconds and achieves 84% overlap, a 116-fold speedup for this iterative benchmark. Circle-trained POD takes 56 milliseconds but reaches only 55% overlap.
+
+The lesson: a compact model can reconstruct a recognizable source much faster, provided its training examples represent the relevant shapes. The full model remains more accurate in this example. The 10× playback acceleration is separate from the 116× measured solver speedup.
+
+Shape overlap is area intersection divided by area union, after fixed-scale heat smoothing. A was included in training. These are results for one represented A example, not a claim about unseen letters. Offline model training and rendering time are excluded. Cached direct solves are also measured and reported on the accompanying page; they are faster for this quadratic problem.

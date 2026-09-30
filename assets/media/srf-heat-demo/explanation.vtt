@@ -1,0 +1,25 @@
+WEBVTT
+
+00:00.000 --> 00:06.000
+Heat blurs a hidden A. Three models use the same noisy temperature measurements.
+One compact model learns from letters (including A); another learns from circles.
+
+00:06.000 --> 00:17.000
+Recorded optimization steps: full model, 961 values; letter-trained POD, 14;
+circle-trained POD, 13. Dashed outlines are the reference; solid outlines are recovered.
+
+00:17.000 --> 00:19.000
+Both compact models have finished. Compare their shapes.
+The remaining replay will now accelerate tenfold.
+
+00:19.000 --> 00:25.500
+The full model continues at 10 times the opening playback rate.
+On-screen clocks still report the original measured compute time.
+
+00:25.500 --> 00:30.000
+Full model: 5.56 s, 92% shape overlap. Letter-trained POD: 48 ms, 84% overlap.
+Circle-trained POD: 56 ms, 55% overlap.
+
+00:30.000 --> 00:34.000
+The letter-trained model is about 116 times faster in this iterative benchmark.
+A was included in training. Timings exclude offline training; direct solves are faster here.

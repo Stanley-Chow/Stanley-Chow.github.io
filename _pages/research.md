@@ -7,11 +7,15 @@ author_profile: true
 
 # Current Research
 
-## Parabolic Inverse Source Reconstruction: From Raw Error to Visible Geometry
+## Recovering the shape of a hidden heat source
 
 <p class="project-status">HKU Summer Research Fellowship · Faculty of Science, The University of Hong Kong · 2026<br>Supervisor: Prof. Zhiwen Zhang</p>
 
-I study recovery of a stationary spatial source from final-time observations of a parabolic PDE. Diffusion suppresses high-frequency information, so sharp or discontinuous sources are difficult to reconstruct pixel by pixel. The project asks how a reconstruction can still retain useful location and shape at a declared physical observation scale.
+I study how to locate a hidden source from the heat it leaves behind. As heat spreads, sharp edges blur and fine details become difficult to recover. My research asks two connected questions: can we recover useful shape information from those blurred measurements, and can a smaller model do the computation faster?
+
+{% include heat-source-demo.html %}
+
+## Why shape matters
 
 <div class="research-question" markdown="1">
 **Central question**
@@ -25,13 +29,13 @@ At a declared physical scale, smoothing suppresses unresolved fine-scale oscilla
   <span>Raw source error</span><span aria-hidden="true">→</span><span>Heat-visible field error</span><span aria-hidden="true">→</span><span>Visible geometric error</span>
 </div>
 
-### At a glance
+### What I investigate
 
-- **Slow raw recovery:** the near-sharp two-dimensional benchmark powers are λ<sup>1/8</sup> and <em>r</em><sup>−1/4</sup>, up to an arbitrarily small exponent loss in the general upper result.
-- **Faster fixed-scale visibility:** at fixed scale ℓ, the unresolved spectral rank tail is exponentially small; noise and regularization still constrain the full inverse reconstruction.
-- **Field-to-geometry stability:** pointwise visible-field accuracy, together with a nondegenerate threshold crossing, controls visible boundary displacement.
+- **Source values:** how accurately can we recover the strength of the source at each location, especially near sharp edges?
+- **Shape at a chosen scale:** which features remain reliable when we compare the true and reconstructed sources at the same smoothing scale?
+- **Smaller models:** how do training examples affect the speed and accuracy of reduced-order reconstruction?
 
-POD motivates the reduced-order setting, while the theoretical rate separation is analyzed using spectral truncation as a transparent rank-resolution benchmark.
+The video shows the practical trade-off in a POD experiment. The synopsis and detailed overview explain the error analysis, using spectral truncation as a separate benchmark for spatial resolution.
 
 <p class="research-materials"><a class="btn btn--primary" href="{{ '/research/parabolic-inverse-source/' | relative_url }}">Read the research overview</a> <a class="btn" href="{{ '/files/research/srf/Stanley_Chow_SRF_Research_Synopsis.pdf' | relative_url }}">Research Synopsis (PDF)</a> <a class="btn" href="{{ '/files/research/srf/Stanley_Chow_SRF_A11_Poster.pdf' | relative_url }}">SRF Poster (PDF)</a></p>
 

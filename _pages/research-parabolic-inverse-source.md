@@ -9,9 +9,15 @@ author_profile: true
 
 <p class="project-status">HKU Summer Research Fellowship · Faculty of Science, The University of Hong Kong · 2026<br>Supervisor: Prof. Zhiwen Zhang</p>
 
-## Overview
+{% include heat-source-demo.html %}
 
-I study recovery of a stationary spatial source from final-time observations of a parabolic partial differential equation. Diffusion suppresses high-frequency spatial information before it reaches the measurement, so recovering a sharp or discontinuous source is ill posed: small observational errors can become large source-space errors. The project grew from reduced-order inverse reconstruction using proper orthogonal decomposition (POD), where a reconstructed source could retain a recognizable location and shape despite substantial pixelwise error. This observation motivates a scale-resolved view of reconstruction quality. Instead of asking only whether every source value is recovered, I also ask what remains observable after smoothing at a declared physical length scale. The work therefore distinguishes three levels: raw source error, heat-visible field error, and visible geometric or interface error. Each answers a different question, and raw error remains important; the aim is to state clearly which information is reliably reconstructed at the physical scale of interest.
+## Research overview
+
+I study recovery of a stationary spatial source from final-time observations of a parabolic partial differential equation. Diffusion suppresses fine spatial information before it reaches the measurement. Recovering a sharp or discontinuous source is therefore ill posed: small observational errors can become large source-space errors.
+
+The project grew from reduced-order inverse reconstruction using proper orthogonal decomposition (POD). A reconstructed source could retain a recognizable location and shape despite substantial pixelwise error. That observation led me to compare reconstructions at a declared physical length scale, asking what remains visible after smoothing.
+
+I distinguish raw source error, heat-visible field error, and visible interface error. Each answers a different question. Raw error remains important; the goal is to identify which information is recovered reliably at the scale of interest.
 
 <div class="research-question" markdown="1">
 **Central research question**
