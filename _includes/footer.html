@@ -1,17 +1,17 @@
 {% include base_path %}
-
+{% if page.lang == 'zh-CN' %}{% assign footer_copy = site.data.home.zh.ui %}{% else %}{% assign footer_copy = site.data.home.en.ui %}{% endif %}
+{% if page.alternate_url %}
+<div class="portfolio-language-footer" aria-label="{{ footer_copy.language_label }}">
+  <span>{{ footer_copy.language_label }}:</span>
+  <a href="{{ page.en_url | relative_url }}" lang="en" hreflang="en"{% if page.lang == 'en' %} aria-current="page" class="is-active"{% endif %}>English</a>
+  <a href="{{ page.zh_url | relative_url }}" lang="zh-CN" hreflang="zh-CN"{% if page.lang == 'zh-CN' %} aria-current="page" class="is-active"{% endif %}>中文</a>
+</div>
+{% endif %}
 <div class="page__footer-follow">
   <ul>
-    {% if site.author.github %}
-      <li><a href="https://github.com/{{ site.author.github }}">GitHub</a></li>
-    {% endif %}
-    {% if site.author.linkedin %}
-      <li><a href="https://www.linkedin.com/in/{{ site.author.linkedin }}">LinkedIn</a></li>
-    {% endif %}
-    <li><a href="/sitemap/">Sitemap</a></li>
+    {% if site.author.github %}<li><a href="https://github.com/{{ site.author.github }}">GitHub</a></li>{% endif %}
+    {% if site.author.linkedin %}<li><a href="https://www.linkedin.com/in/{{ site.author.linkedin }}">LinkedIn</a></li>{% endif %}
+    <li><a href="{{ '/sitemap/' | relative_url }}">{{ footer_copy.sitemap }}</a></li>
   </ul>
 </div>
-
-<div class="page__footer-copyright">
-  &copy; {{ site.time | date: '%Y' }} {{ site.name | default: site.title }}. Built with <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> and <a href="https://github.com/academicpages/academicpages.github.io">Academic Pages</a>.
-</div>
+<div class="page__footer-copyright">&copy; {{ site.time | date: '%Y' }} {% if page.lang == 'zh-CN' %}周秉辰{% else %}{{ site.name | default: site.title }}{% endif %}. {{ footer_copy.built_with }} <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a>{% if page.lang == 'zh-CN' %} 与 {% else %} and {% endif %}<a href="https://github.com/academicpages/academicpages.github.io">Academic Pages</a>.</div>

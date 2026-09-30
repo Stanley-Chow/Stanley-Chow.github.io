@@ -9,7 +9,7 @@ author_profile: true
 
 **Bachelor of Science in Mathematics**<br>
 Second Major in Computer Science · Minor in Finance<br>
-Expected May 2028 · GPA: **3.98 / 4.30**
+Expected June 2028 · GPA: **3.98 / 4.30**
 
 **Distinctions:** Dean's List, HKU Entrance Scholarship, Lee Shau Kee Scholarship
 
@@ -17,12 +17,14 @@ Coursework spans probability, stochastic processes, optimization, numerical anal
 
 ## University of California, Los Angeles
 
-**Exchange study in Mathematics** · 2025–2026
+**Exchange study in Mathematics & Computer Science** · 2025–2026<br>
+GPA: **4.0 / 4.0**
 
 Coursework in mathematics and computational methods.
 
 ## Stanford University
 
-**International Honors Program** · Summer 2025
+**Visiting study in Mathematics & Computer Science** · International Honors Program · Summer 2025<br>
+GPA: **4.0 / 4.0**
 
 Academic and industry-facing study in artificial intelligence and technology.

@@ -7,7 +7,7 @@ author_profile: true
 
 # Curriculum Vitae
 
-[Download the current PDF CV](/files/CV.pdf){: .btn .btn--primary }<br>
+[Download the English CV (Quant)](/files/CV-EN.pdf){: .btn .btn--primary } [中文简历（算法）](/files/CV-ZH.pdf){: .btn }<br>
 [Email](mailto:pingsenchow@outlook.com){: .btn } [GitHub](https://github.com/Stanley-Chow){: .btn } [LinkedIn](https://www.linkedin.com/in/ping-sen-chow-951592327){: .btn }
 
 ## Education
@@ -15,17 +15,19 @@ author_profile: true
 ### The University of Hong Kong
 
 **Bachelor of Science in Mathematics** · Second Major in Computer Science · Minor in Finance<br>
-Expected May 2028 · GPA: **3.98 / 4.30**
+Expected June 2028 · GPA: **3.98 / 4.30**
 
 Dean's List · HKU Entrance Scholarship · Lee Shau Kee Scholarship
 
 ### University of California, Los Angeles
 
-Exchange study in Mathematics · 2025–2026
+Exchange study in Mathematics & Computer Science · 2025–2026<br>
+GPA: **4.0 / 4.0**
 
 ### Stanford University
 
-International Honors Program · Summer 2025
+Visiting study in Mathematics & Computer Science · International Honors Program · Summer 2025<br>
+GPA: **4.0 / 4.0**
 
 ## Research Experience
 

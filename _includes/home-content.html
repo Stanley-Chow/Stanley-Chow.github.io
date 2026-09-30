@@ -1,0 +1,89 @@
+{% if page.lang == 'zh-CN' %}{% assign copy = site.data.home.zh %}{% else %}{% assign copy = site.data.home.en %}{% endif %}
+<header class="home-hero">
+  <div class="home-hero__copy">
+    <p class="home-pill">{{ copy.hero.pill | escape }}</p>
+    <h1>{{ copy.hero.name | escape }}<span class="home-hero__dot">.</span></h1>
+    <p class="home-hero__subtitle">{{ copy.hero.subtitle | escape }}</p>
+    <p class="home-hero__intro">{{ copy.hero.intro | escape }}</p>
+    <p class="home-hero__roles">{{ copy.hero.roles | escape }}</p>
+    <div class="home-actions">
+      <a class="home-button home-button--primary home-cv-download" href="{{ copy.hero.cv_url | relative_url }}" hreflang="{{ page.lang }}">{{ copy.hero.cv_label | escape }} <span aria-hidden="true">↓</span></a>
+      <a class="home-button" href="#selected-work">{{ copy.hero.explore | escape }}</a>
+      <a class="home-button" href="#writing">{{ copy.hero.read | escape }}</a>
+    </div>
+    <div class="home-socials" aria-label="{{ copy.hero.contacts | escape }}">
+      <a href="mailto:{{ site.author.email }}">{{ copy.hero.email | escape }}</a>
+      <a href="https://github.com/{{ site.author.github }}">GitHub</a>
+      <a href="https://www.linkedin.com/in/{{ site.author.linkedin }}">LinkedIn</a>
+      <span>{{ copy.hero.location | escape }}</span>
+    </div>
+  </div>
+  <div class="home-hero__portrait">
+    <img src="{{ '/images/profile.jpg' | relative_url }}" alt="{{ copy.hero.portrait_alt | escape }}" width="320" height="320" fetchpriority="high">
+  </div>
+</header>
+
+<section class="home-feature" aria-labelledby="home-feature-title">
+  <div class="home-feature__copy">
+    <p class="home-eyebrow">{{ copy.feature.eyebrow | escape }}</p>
+    <h2 id="home-feature-title">{{ copy.feature.title | escape }}</h2>
+    <p>{{ copy.feature.question | escape }}</p>
+    <p>{{ copy.feature.explanation | escape }}</p>
+    <a class="home-text-link" href="{{ '/research/#heat-source-demo' | relative_url }}" hreflang="en">{{ copy.feature.watch | escape }} <span aria-hidden="true">↗</span></a>
+  </div>
+  <a class="home-feature__visual" href="{{ '/research/#heat-source-demo' | relative_url }}" hreflang="en" aria-label="{{ copy.feature.watch | escape }}">
+    <img src="{{ '/assets/media/srf-heat-demo/thumbnail.jpg' | relative_url }}" alt="{{ copy.feature.image_alt | escape }}" width="1920" height="1080" loading="lazy">
+    <span class="home-play-badge"><span aria-hidden="true">▶</span> {{ copy.feature.badge | escape }}</span>
+  </a>
+</section>
+
+<div class="home-background">
+  <section aria-labelledby="experience-title">
+    <div class="home-section-heading"><h2 id="experience-title">{{ copy.experience.heading | escape }}</h2><a href="{{ '/research/' | relative_url }}" hreflang="en">{{ copy.experience.overview | escape }} <span aria-hidden="true">↗</span></a></div>
+    <ol class="home-timeline">
+      {% for item in copy.experience.items %}
+      <li>
+        <div class="home-timeline__heading"><h3>{{ item.title | escape }}</h3><span>{{ item.period | escape }}</span></div>
+        <p class="home-item-meta">{{ item.meta | escape }}</p><p>{{ item.body | escape }}</p>
+        {% if item.url %}<a class="home-text-link" href="{{ item.url | relative_url }}" hreflang="en">{{ item.link | escape }} <span aria-hidden="true">→</span></a>{% endif %}
+      </li>
+      {% endfor %}
+    </ol>
+  </section>
+  <section aria-labelledby="education-title">
+    <div class="home-section-heading"><h2 id="education-title">{{ copy.education.heading | escape }}</h2></div>
+    <div class="home-education">
+      {% for item in copy.education.items %}
+      <article><span class="home-school-mark{% unless forloop.first %} home-school-mark--neutral{% endunless %}" aria-hidden="true">{{ item.mark }}</span><div><h3>{{ item.name | escape }}</h3><p>{{ item.degree | escape }}</p><p class="home-item-meta">{{ item.detail | escape }}</p></div></article>
+      {% endfor %}
+    </div>
+  </section>
+</div>
+
+<section class="home-section" id="selected-work" aria-labelledby="projects-title">
+  <div class="home-section-heading"><h2 id="projects-title">{{ copy.projects.heading | escape }}</h2><a href="{{ '/projects/' | relative_url }}" hreflang="en">{{ copy.projects.all | escape }} <span aria-hidden="true">↗</span></a></div>
+  <div class="home-project-grid">
+    {% for project in copy.projects.items %}
+    <article class="home-project-card">
+      <p class="home-eyebrow">{{ project.category | escape }}</p><h3><a href="{{ project.url | relative_url }}" hreflang="en">{{ project.title | escape }}</a></h3>
+      <p>{{ project.body | escape }}</p><p class="home-project-fact">{{ project.fact | escape }}</p>
+      <div class="home-project-footer"><span>{{ project.tools | escape }}</span><a href="{{ project.repository }}" aria-label="{{ project.title | escape }} · {{ copy.projects.code | escape }}">{{ copy.projects.code | escape }} <span aria-hidden="true">↗</span></a></div>
+    </article>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="home-section home-writing" id="writing" aria-labelledby="writing-title">
+  <div class="home-section-heading"><h2 id="writing-title">{{ copy.writing.heading | escape }}</h2><a href="{{ copy.writing.url | relative_url }}">{{ copy.writing.archive | escape }} <span aria-hidden="true">↗</span></a></div>
+  {% include writing-cards.html limit=3 compact=true %}
+</section>
+
+<section class="home-section" aria-labelledby="interests-title">
+  <div class="home-section-heading"><h2 id="interests-title">{{ copy.skills.heading | escape }}</h2></div>
+  <div class="home-skills">{% for item in copy.skills.items %}<details><summary>{{ item.title | escape }}</summary><p>{{ item.body | escape }}</p></details>{% endfor %}</div>
+</section>
+
+<section class="home-contact" aria-labelledby="contact-title">
+  <div><p class="home-eyebrow">{{ copy.contact.eyebrow | escape }}</p><h2 id="contact-title">{{ copy.contact.title | escape }}</h2><p>{{ copy.contact.body | escape }}</p></div>
+  <a class="home-button home-button--primary" href="mailto:{{ site.author.email }}">{{ copy.contact.button | escape }} <span aria-hidden="true">↗</span></a>
+</section>

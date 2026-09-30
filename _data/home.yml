@@ -1,0 +1,256 @@
+en:
+  ui:
+    brand: Stanley Chow
+    primary: Primary navigation
+    menu: Menu
+    theme: Toggle color theme
+    switch_text: 中文
+    switch_label: 切换到中文
+    language_label: Language
+    sitemap: Sitemap
+    built_with: Built with
+    skip: Skip to content
+    writing_entries: Writing entries
+    back_home: Back to the homepage
+  nav:
+    - {title: Home, url: /}
+    - {title: Writing, url: /writing/}
+    - {title: Projects, url: /projects/}
+    - {title: Research, url: /research/}
+    - {title: CV, url: /cv/}
+  hero:
+    pill: Mathematics × Computer Science
+    name: Stanley Chow
+    subtitle: Mathematics student at the University of Hong Kong
+    intro: "I work on scientific computing and machine learning, with current projects in inverse problems and sharpness-aware optimization."
+    roles: "Career interests: Data science · ML engineering · Recommender systems · Quant"
+    cv_label: Download CV (EN)
+    cv_url: /files/CV-EN.pdf
+    explore: Explore my work
+    read: Read my notes
+    email: Email
+    location: Hong Kong
+    contacts: Contact and profiles
+    portrait_alt: Stanley Chow
+  feature:
+    eyebrow: Research in motion · HKU Summer Research Fellowship
+    title: Finding a hidden heat source.
+    question: "Heat spreads and blurs a source’s shape. Can we work backwards from the temperature to find where it came from?"
+    explanation: "Watch three models tackle the same problem. A smaller model can finish quickly, but the examples it learns from affect the shape it recovers."
+    watch: Watch the 34-second demo
+    image_alt: Three models reconstruct a letter-shaped heat source from temperature measurements
+    badge: 34 seconds · No audio
+  experience:
+    heading: Research & current work
+    overview: Research overview
+    items:
+      - title: "Capstone: sharpness-aware optimization"
+        period: In progress
+        meta: Current capstone project
+        body: "I’m exploring sharpness-aware optimization for machine-learning training. The work is ongoing; there are no published results yet."
+      - title: HKU Summer Research Fellowship
+        period: "2026"
+        meta: Faculty of Science · Supervisor Prof. Zhiwen Zhang
+        body: "I study how to reconstruct a hidden heat source, how to judge its recovered shape, and when a reduced model can make the computation faster."
+        link: Explore the research
+        url: /research/parabolic-inverse-source/
+      - title: Urban rail network optimization
+        period: "2023"
+        meta: Independent research · S.-T. Yau High School Science Award recognition
+        body: "I modeled rail routes under geometric and engineering constraints, combining analytical optimization with Particle Swarm Optimization."
+  education:
+    heading: Education
+    items:
+      - mark: HKU
+        name: The University of Hong Kong
+        degree: BSc in Mathematics · Expected June 2028
+        detail: Second Major in Computer Science · Minor in Finance · GPA 3.98 / 4.30
+      - mark: UCLA
+        name: University of California, Los Angeles
+        degree: Exchange study · Mathematics & Computer Science
+        detail: 2025–2026 · GPA 4.0 / 4.0
+      - mark: SU
+        name: Stanford University
+        degree: Visiting study · Mathematics & Computer Science
+        detail: International Honors Program · Summer 2025 · GPA 4.0 / 4.0
+  projects:
+    heading: Selected projects
+    all: All projects
+    code: Code
+    items:
+      - category: Recommendation systems
+        title: Personalized recommendations for H&M
+        body: "A two-stage recommender built from millions of shopping transactions. It combines nine retrieval channels, then uses a learned model to rank the candidates."
+        fact: 31.8 million transaction events
+        tools: Python · PyTorch · LightGBM
+        url: /projects/#hm-two-stage-personalized-recommendation-system
+        repository: https://github.com/Stanley-Chow/hm-2stage-recommender
+      - category: Search & software engineering
+        title: DocuQuest Agent
+        body: "A document question-answering system with a C++ search layer. I built its index and retrieval logic, with deterministic tests that run without API credentials."
+        fact: Custom index · Reproducible tests
+        tools: C++17 · CMake · LLM APIs
+        url: /projects/#docuquest-agent
+        repository: https://github.com/Stanley-Chow/docuquest-agent
+      - category: Machine learning
+        title: Behavioral personality analytics
+        body: "A study of how behavioral features predict personality outcomes, with careful separation of model selection and final evaluation."
+        fact: 381 configurations · Generated-data study
+        tools: Python · scikit-learn · pandas
+        url: /projects/#behavioral-personality-analytics
+        repository: https://github.com/Stanley-Chow/behavioral-personality-analytics
+  writing:
+    heading: Writing & exploration
+    archive: Writing space
+    url: /writing/
+    eyebrow: Notes from my projects
+    intro: "Ideas, experiments, and lessons that don’t fit neatly into a project summary."
+    empty_title: Putting the process into words.
+    empty_body: "I’ll use this space for research notes, paper replications, and lessons from projects. There aren’t any published posts yet."
+    formats_label: Planned writing formats
+    formats:
+      - {title: Blog & reflections, body: "What I’m learning and the questions I’m thinking through."}
+      - {title: Research insights, body: "Intuition behind methods, useful experiments, and the limits of a result."}
+      - {title: Paper replications, body: "Reproducing published ideas and documenting where my results agree—or differ."}
+  skills:
+    heading: Tools & methods
+    items:
+      - title: Recommendation & search
+        body: "Candidate retrieval, collaborative filtering, two-tower models, LightGCN, LambdaRank, negative sampling, and temporal validation."
+      - title: Machine learning & data
+        body: "Python, SQL, PyTorch, LightGBM, XGBoost, scikit-learn, pandas, NumPy, SciPy, and DuckDB."
+      - title: Mathematics & engineering
+        body: "C++, MATLAB, numerical optimization, partial differential equations, experiment design, Git, CMake, Jupyter, and LaTeX."
+  contact:
+    eyebrow: Let’s connect
+    title: Have an idea worth exploring?
+    body: "I’m looking for opportunities in data science, machine learning engineering, recommendation systems, and quant. I’m also happy to discuss scientific computing and inverse problems."
+    button: Get in touch
+zh:
+  ui:
+    brand: 周秉辰
+    primary: 主导航
+    menu: 菜单
+    theme: 切换明暗主题
+    switch_text: English
+    switch_label: Switch to English
+    language_label: 页面语言
+    sitemap: 网站地图（英文）
+    built_with: 使用
+    skip: 跳到正文
+    writing_entries: 文章列表
+    back_home: 返回首页
+  nav:
+    - {title: 首页, url: /zh/}
+    - {title: 写作, url: /zh/writing/}
+    - {title: "项目 · EN", url: /projects/}
+    - {title: "研究 · EN", url: /research/}
+    - {title: "简历 · EN", url: /cv/}
+  hero:
+    pill: 数学 × 计算机科学
+    name: 周秉辰
+    subtitle: Stanley Chow · 香港大学数学专业本科生
+    intro: "我用数学和代码研究科学计算与机器学习问题，目前关注逆问题和锐度感知优化。"
+    roles: "求职方向：数据科学 · 机器学习工程 · 推荐系统 · 量化"
+    cv_label: 下载中文简历
+    cv_url: /files/CV-ZH.pdf
+    explore: 看看我的项目
+    read: 阅读笔记
+    email: 邮件联系
+    location: 中国香港
+    contacts: 联系方式与个人主页
+    portrait_alt: 周秉辰
+  feature:
+    eyebrow: 研究演示 · 香港大学暑期研究计划
+    title: 寻找隐藏的热源。
+    question: "热量扩散后，热源的轮廓会变得模糊。只知道最后的温度分布，还能找到热源的位置和形状吗？"
+    explanation: "这个演示让三个模型解决同一个问题。小模型算得更快，但训练时见过哪些形状，会影响它最终能还原什么。"
+    watch: 观看 34 秒演示（英文说明）
+    image_alt: 三个模型从温度观测中重建字母形热源的对比
+    badge: 34 秒 · 无音频
+  experience:
+    heading: 研究与当前项目
+    overview: 研究介绍（英文）
+    items:
+      - title: "Capstone：锐度感知优化（SAM）"
+        period: 进行中
+        meta: 当前毕业专题
+        body: "我正在探索机器学习训练中的锐度感知优化。课题仍在进行中，暂未发布实验结果。"
+      - title: 香港大学暑期研究计划
+        period: "2026"
+        meta: 理学院 · 指导老师：Zhiwen Zhang 教授
+        body: "我研究如何从温度观测中重建隐藏热源，怎样判断恢复的形状是否可靠，以及降阶模型能在什么情况下加快计算。"
+        link: 阅读研究详情（英文）
+        url: /research/parabolic-inverse-source/
+      - title: 城市轨道交通设计优化
+        period: "2023"
+        meta: 独立研究 · 丘成桐中学科学奖
+        body: "我把几何条件、工程限制和建设成本纳入轨道线路模型，并结合解析优化与粒子群优化寻找可行路线。"
+  education:
+    heading: 教育经历
+    items:
+      - mark: HKU
+        name: 香港大学
+        degree: 理学士 · 数学专业 · 预计 2028 年 6 月毕业
+        detail: 计算机科学第二主修 · 金融副修 · GPA 3.98 / 4.30
+      - mark: UCLA
+        name: 加州大学洛杉矶分校
+        degree: 交换学习 · 数学与计算机科学
+        detail: 2025–2026 · GPA 4.0 / 4.0
+      - mark: SU
+        name: 斯坦福大学
+        degree: 访问学习 · 数学与计算机科学
+        detail: International Honors Program · 2025 年夏季 · GPA 4.0 / 4.0
+  projects:
+    heading: 精选项目
+    all: 全部项目（英文）
+    code: 代码
+    items:
+      - category: 推荐系统
+        title: H&M 个性化推荐系统
+        body: "从数千万条购物记录中，为用户生成商品推荐。系统先融合九路召回结果，再用学习得到的排序模型筛选候选商品。"
+        fact: 约 3,180 万条交易记录
+        tools: Python · PyTorch · LightGBM
+        url: /projects/#hm-two-stage-personalized-recommendation-system
+        repository: https://github.com/Stanley-Chow/hm-2stage-recommender
+      - category: 搜索与软件工程
+        title: DocuQuest Agent
+        body: "一个带有 C++ 搜索模块的文档问答系统。我实现了索引与检索逻辑，并通过无需 API 凭证的确定性测试检查结果。"
+        fact: 自定义索引 · 可复现测试
+        tools: C++17 · CMake · LLM APIs
+        url: /projects/#docuquest-agent
+        repository: https://github.com/Stanley-Chow/docuquest-agent
+      - category: 机器学习
+        title: 行为特征与人格预测
+        body: "研究行为特征能否预测人格相关结果，并严格区分模型选择与最终评估，避免让测试数据影响模型选择。"
+        fact: 381 组配置 · 基于生成数据的研究
+        tools: Python · scikit-learn · pandas
+        url: /projects/#behavioral-personality-analytics
+        repository: https://github.com/Stanley-Chow/behavioral-personality-analytics
+  writing:
+    heading: 写作与探索
+    archive: 进入写作空间
+    url: /zh/writing/
+    eyebrow: 项目中的想法与经验
+    intro: "记录项目简介之外的思考、实验，以及做事过程中学到的东西。"
+    empty_title: 把过程也记录下来。
+    empty_body: "这里将放研究笔记、论文复现，以及项目实践中的经验。目前还没有公开文章，内容会在整理好后陆续补充。"
+    formats_label: 计划中的写作形式
+    formats:
+      - {title: 博客与随想, body: "记录正在学习的内容，以及值得继续思考的问题。"}
+      - {title: 研究笔记, body: "解释方法背后的直觉、实验中的发现，以及结论的适用范围。"}
+      - {title: 论文复现, body: "用代码和实验重现论文思路，也如实记录结果的差异。"}
+  skills:
+    heading: 常用工具与方法
+    items:
+      - title: 推荐与搜索
+        body: "候选召回、协同过滤、双塔模型、LightGCN、LambdaRank、负采样与时间切分验证。"
+      - title: 机器学习与数据
+        body: "Python、SQL、PyTorch、LightGBM、XGBoost、scikit-learn、pandas、NumPy、SciPy 与 DuckDB。"
+      - title: 数学与工程
+        body: "C++、MATLAB、数值优化、偏微分方程与实验设计；使用 Git、CMake、Jupyter 和 LaTeX 组织与记录工作。"
+  contact:
+    eyebrow: 保持联系
+    title: 有值得一起探索的想法吗？
+    body: "我正在寻找数据科学、机器学习工程、推荐系统和量化方向的机会，也欢迎交流科学计算与逆问题。"
+    button: 发邮件聊聊

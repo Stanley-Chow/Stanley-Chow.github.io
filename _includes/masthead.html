@@ -1,39 +1,18 @@
 {% include base_path %}
+{% if page.lang == 'zh-CN' %}{% assign nav_copy = site.data.home.zh %}{% else %}{% assign nav_copy = site.data.home.en %}{% endif %}
 <div class="masthead">
   <div class="masthead__inner-wrap">
     <div class="masthead__menu">
-      <nav class="portfolio-nav" aria-label="Primary">
-        <a class="portfolio-nav__title {% if page.url == '/' or page.url == '/index.html' %}selected{% endif %}" href="{{ base_path }}/">{{ site.title }}</a>
-
+      <nav class="portfolio-nav" aria-label="{{ nav_copy.ui.primary | escape }}">
+        <a class="portfolio-nav__title {% if page.url == '/' or page.url == '/zh/' %}selected{% endif %}" href="{{ nav_copy.nav.first.url | relative_url }}">{{ nav_copy.ui.brand | escape }}</a>
         <ul class="portfolio-nav__links">
-          {% for link in site.data.navigation.main %}
-            {% if link.url contains 'http' %}
-              {% assign domain = '' %}
-            {% else %}
-              {% assign domain = base_path %}
-            {% endif %}
-            <li class="{% if page.url contains link.url and link.url != '/' %}selected{% endif %}">
-              <a href="{{ domain }}{{ link.url }}">{{ link.title }}</a>
-            </li>
-          {% endfor %}
+          {% for link in nav_copy.nav %}<li class="{% if page.url == link.url %}selected{% endif %}"><a href="{{ link.url | relative_url }}"{% if page.url == link.url %} aria-current="page"{% endif %}{% if page.lang == 'zh-CN' and link.title contains 'EN' %} hreflang="en"{% endif %}>{{ link.title | escape }}</a></li>{% endfor %}
         </ul>
-
-        <button type="button" id="theme-toggle" class="portfolio-nav__theme" aria-label="Toggle color theme" title="Toggle color theme"><span id="theme-icon" aria-hidden="true">◐</span></button>
-
+        {% if page.alternate_url %}<a class="portfolio-nav__language" href="{{ page.alternate_url | relative_url }}" lang="{{ page.alternate_lang }}" hreflang="{{ page.alternate_lang }}" aria-label="{{ nav_copy.ui.switch_label | escape }}">{{ nav_copy.ui.switch_text }}</a>{% endif %}
+        <button type="button" id="theme-toggle" class="portfolio-nav__theme" aria-label="{{ nav_copy.ui.theme | escape }}" title="{{ nav_copy.ui.theme | escape }}"><span id="theme-icon" aria-hidden="true">◐</span></button>
         <details class="portfolio-nav__mobile">
-          <summary>Menu</summary>
-          <ul>
-            {% for link in site.data.navigation.main %}
-              {% if link.url contains 'http' %}
-                {% assign domain = '' %}
-              {% else %}
-                {% assign domain = base_path %}
-              {% endif %}
-              <li class="{% if page.url contains link.url and link.url != '/' %}selected{% endif %}">
-                <a href="{{ domain }}{{ link.url }}">{{ link.title }}</a>
-              </li>
-            {% endfor %}
-          </ul>
+          <summary>{{ nav_copy.ui.menu | escape }}</summary>
+          <ul>{% for link in nav_copy.nav %}<li class="{% if page.url == link.url %}selected{% endif %}"><a href="{{ link.url | relative_url }}"{% if page.url == link.url %} aria-current="page"{% endif %}{% if page.lang == 'zh-CN' and link.title contains 'EN' %} hreflang="en"{% endif %}>{{ link.title | escape }}</a></li>{% endfor %}</ul>
         </details>
       </nav>
     </div>

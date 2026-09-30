@@ -1,24 +1,27 @@
-{% assign writing_entries = site.writing | where: 'published', true | where_exp: 'entry', 'entry.date <= site.time' | sort: 'date' | reverse %}
+{% assign writing_lang = page.lang | default: 'en' %}
+{% if writing_lang == 'zh-CN' %}{% assign writing_copy = site.data.home.zh.writing %}{% else %}{% assign writing_copy = site.data.home.en.writing %}{% endif %}
+{% assign writing_entries = site.writing | where: 'published', true | where: 'lang', writing_lang | where_exp: 'entry', 'entry.date <= site.time' | sort: 'date' | reverse %}
 {% if writing_entries.size > 0 %}
 <div class="home-writing-grid">
   {% for entry in writing_entries limit:include.limit %}
   <article class="home-writing-card">
-    <p class="home-eyebrow">{{ entry.kind | default: 'Essay' | escape }}</p>
+    <p class="home-eyebrow">{{ entry.kind | default: writing_copy.heading | escape }}</p>
     <h3><a href="{{ entry.url | relative_url }}">{{ entry.title | escape }}</a></h3>
-    <p>{{ entry.summary | default: entry.excerpt | strip_html | truncate: 180 | escape }}</p>
-    <time datetime="{{ entry.date | date_to_xmlschema }}">{{ entry.date | date: '%-d %B %Y' }}</time>
+    {% if entry.summary %}{% assign writing_summary = entry.summary %}{% else %}{% assign writing_summary = entry.excerpt %}{% endif %}
+    <p>{{ writing_summary | strip_html | truncate: 180 | escape }}</p>
+    <time datetime="{{ entry.date | date_to_xmlschema }}">{% if writing_lang == 'zh-CN' %}{{ entry.date | date: '%Y 年 %-m 月 %-d 日' }}{% else %}{{ entry.date | date: '%-d %B %Y' }}{% endif %}</time>
   </article>
   {% endfor %}
 </div>
 {% else %}
-<div class="home-writing-empty">
-  <p class="home-eyebrow">A space taking shape</p>
-  <h3>Beyond the finished project.</h3>
-  <p>I’m making room here for short essays, research notes, and paper replications with code and experiments. No articles are published yet.</p>
+<div class="home-writing-empty{% if include.compact %} home-writing-empty--compact{% endif %}">
+  <p class="home-eyebrow">{{ writing_copy.eyebrow | escape }}</p>
+  <h3>{{ writing_copy.empty_title | escape }}</h3>
+  <p>{{ writing_copy.empty_body | escape }}</p>
 </div>
-<div class="home-writing-topics" aria-label="Planned writing formats">
-  <div><span class="home-topic-number" aria-hidden="true">01</span><h3>Blog &amp; reflections</h3><p>What I’m learning, questions I’m thinking through, and lessons from building things.</p></div>
-  <div><span class="home-topic-number" aria-hidden="true">02</span><h3>Research insights</h3><p>Intuition behind methods, useful experiments, and the limits of a result.</p></div>
-  <div><span class="home-topic-number" aria-hidden="true">03</span><h3>Paper replications</h3><p>Reproducing published ideas, comparing results, and documenting what does—and doesn’t—carry over.</p></div>
+{% unless include.compact %}
+<div class="home-writing-topics" aria-label="{{ writing_copy.formats_label | escape }}">
+  {% for format in writing_copy.formats %}<div><span class="home-topic-number" aria-hidden="true">0{{ forloop.index }}</span><h3>{{ format.title | escape }}</h3><p>{{ format.body | escape }}</p></div>{% endfor %}
 </div>
+{% endunless %}
 {% endif %}

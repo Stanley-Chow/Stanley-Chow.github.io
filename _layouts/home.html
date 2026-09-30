@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-<a class="home-skip-link" href="#main">Skip to content</a>
+<a class="home-skip-link" href="#main">{% if page.lang == 'zh-CN' %}跳到正文{% else %}Skip to content{% endif %}</a>
 <main id="main" class="home-page">
   {{ content }}
 </main>

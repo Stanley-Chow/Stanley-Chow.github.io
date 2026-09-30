@@ -273,6 +273,7 @@ defaults:
       layout: writing
       portfolio_shell: true
       author_profile: false
+      lang: en
       published: false
   # _posts
   - scope:

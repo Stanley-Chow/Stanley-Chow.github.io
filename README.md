@@ -31,12 +31,15 @@ To publish an essay, insight, or paper replication, add a Markdown file such as 
 ---
 title: "Your article title"
 date: 2026-09-30
+lang: en # use zh-CN for Chinese writing
 kind: "Paper replication" # or Research insight / Blog
 summary: "A short, concrete description of the article."
 published: true
 ---
 ```
 
-Only entries explicitly marked `published: true`, with a date no later than the build time, appear. They are listed newest-first on `/writing/`; the newest three also appear on the homepage. Unfinished drafts default to unpublished, and the original template's sample blog posts remain excluded. Until real writing is published, visitors see an honest empty state instead of sample articles.
+Only entries explicitly marked `published: true`, with a date no later than the build time, appear. English entries appear on `/writing/` and Chinese entries on `/zh/writing/`; the newest three in each language also appear on its homepage. Unfinished drafts default to unpublished, and the original template's sample blog posts remain excluded. Until real writing is published, visitors see an honest empty state instead of sample articles.
+
+English and Chinese homepage copy is maintained in `_data/home.yml` and rendered with the same `_includes/home-content.html` template. The language buttons use real URLs (`/` and `/zh/`), work without JavaScript, and also appear in the footer. The English download uses `files/CV-EN.pdf` (Quant); the Chinese download uses `files/CV-ZH.pdf` (algorithm-focused). The legacy `files/CV.pdf` remains available for existing links. Research and project details remain in English until the next translation phase; Chinese navigation explicitly labels those links.
 
 For replications, include the original paper citation, reproduction setup, code link, results, and discrepancies. Keep conclusions clearly separate from the paper's claims.

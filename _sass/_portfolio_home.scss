@@ -14,7 +14,7 @@ body.portfolio-shell {
   --home-panel: #f8fafc;
   --home-tint: #edf4ff;
   min-height: 100vh;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif;
   font-size: 16px;
   font-weight: 400;
   .masthead__inner-wrap { max-width: 1100px; padding: 8px 24px; }
@@ -80,6 +80,11 @@ html[data-theme="dark"] body.portfolio-shell {
   .home-hero__intro { max-width: 590px; font-size: 18px; line-height: 1.7; }
 }
 .home-hero__dot { color: var(--home-accent); }
+.home-page .home-hero__roles { font-size: 14px; color: var(--home-muted); line-height: 1.6; margin-top: 16px; }
+.home-page:lang(zh-CN) h1 { letter-spacing: 0; }
+.portfolio-nav__language { display: inline-flex; align-items: center; justify-content: center; min-height: 40px; margin-left: 12px; padding: 6px 8px; border: 1px solid var(--global-border-color); border-radius: 8px; font-size: 13px; font-weight: 600; }
+.portfolio-language-footer { display: flex; align-items: center; gap: 10px; margin-bottom: 20px; font-size: 14px; a { display: inline-block; padding: 6px 12px; border: 1px solid var(--global-border-color); border-radius: 100px; text-decoration: none; } a.is-active { background: var(--home-tint); color: var(--global-link-color); font-weight: 600; } }
+.home-page .home-writing-empty--compact { padding: 24px 28px; h3 { font-size: 19px !important; } .home-eyebrow { display: none; } }
 .home-page .home-pill {
   display: inline-block;
   margin: 0;
@@ -211,9 +216,11 @@ html[data-theme="dark"] body.portfolio-shell {
   .home-skills { grid-template-columns: minmax(0, 1fr); }
   .home-feature { gap: 24px; padding: 24px; }
 }
-@media (max-width: 760px) {
+@media (max-width: 840px) {
   .portfolio-nav__links { display: none; }
   .portfolio-nav__mobile { display: block; }
+}
+@media (max-width: 760px) {
   .home-hero { grid-template-columns: minmax(0, 1fr); gap: 36px; padding: 40px 0; }
   .home-hero__portrait { width: 220px; justify-self: start; margin-left: 12px; }
   .home-hero__portrait img { height: 220px; }
@@ -225,6 +232,9 @@ html[data-theme="dark"] body.portfolio-shell {
 }
 @media (max-width: 520px) {
   body.portfolio-shell .masthead__inner-wrap { padding: 8px 20px; }
+  body.portfolio-shell .portfolio-nav__language { margin-left: 4px; padding: 6px; }
+  body.portfolio-shell .portfolio-nav__theme { margin-left: 4px; min-width: 28px; padding: 4px; }
+  body.portfolio-shell .portfolio-nav__mobile { margin-left: 4px; }
   .home-page#main { padding: 0 20px; }
   .home-hero h1 { font-size: 44px; letter-spacing: -1.7px; }
   .home-hero .home-hero__subtitle { font-size: 18px; }

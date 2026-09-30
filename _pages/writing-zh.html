@@ -1,17 +1,17 @@
 ---
 layout: home
 portfolio_shell: true
-title: "Writing & exploration"
-description: "Stanley Chow's research notes, paper replications, and lessons from projects."
-permalink: /writing/
-lang: en
+title: "写作与探索"
+description: "周秉辰的研究笔记、论文复现与项目实践记录。"
+permalink: /zh/writing/
+lang: zh-CN
 en_url: /writing/
 zh_url: /zh/writing/
-alternate_url: /zh/writing/
-alternate_lang: zh-CN
+alternate_url: /writing/
+alternate_lang: en
 author_profile: false
 ---
-{% assign copy = site.data.home.en %}
+{% assign copy = site.data.home.zh %}
 <header class="home-writing-header"><p class="home-eyebrow">{{ copy.writing.eyebrow }}</p><h1>{{ copy.writing.heading }}<span class="home-hero__dot">.</span></h1><p class="home-section-intro">{{ copy.writing.intro }}</p></header>
 <section class="home-section" aria-label="{{ copy.ui.writing_entries }}">{% include writing-cards.html %}</section>
-<p><a class="home-text-link" href="{{ '/' | relative_url }}">← {{ copy.ui.back_home }}</a></p>
+<p><a class="home-text-link" href="{{ '/zh/' | relative_url }}">← {{ copy.ui.back_home }}</a></p>
