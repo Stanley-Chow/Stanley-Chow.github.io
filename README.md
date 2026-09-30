@@ -48,4 +48,13 @@ For replications, include the original paper citation, reproduction setup, code 
 
 `/research/` is a card index driven by `_data/research.yml`. Each topic links to a separate overview under `/research/`; the heat-source video and technical materials live on `/research/parabolic-inverse-source/`. New demo links point directly there. The old `/research/#heat-source-demo` anchor still finds the corresponding card. Capstone work is labelled in progress, and earlier topics retain only documented facts.
 
-Project cards present the problem, approach and results without disclosure widgets or evaluation bullet lists. Grid rows stretch cards to equal heights and keep repository links at the bottom. Drawing with LLMs is separate from completed work, under Planned learning: a winter replication plan based on paid tutoring materials. It is not an implemented personal project. Do not publish the tutoring notebook, lesson files or sample outputs, or claim original authorship, results or a competition win.
+Project cards present the problem, approach and results without disclosure widgets or evaluation bullet lists. Grid rows stretch cards to equal heights and keep repository links at the bottom. Drawing with LLMs is separate from completed work, under Planned learning. Public copy describes a proposed text-to-SVG method and explicitly says it is not yet implemented. The supplied pipeline comes from paid tutoring materials; language-model-assisted prompting/checking is a proposed extension, not an implemented feature. Do not publish the tutoring notebook, lesson files or sample outputs, or claim original authorship, results or a competition win.
+
+### Research images
+
+Research cards have consistent 16:9 previews, descriptive alternative text, and captions distinguishing experimental results from illustrative context. Keep image provenance when editing:
+
+- Heat-source preview: three CSS-framed views of the existing SRF demo thumbnail (original source, measured heat, letter-trained POD outline). No new experimental result is implied.
+- `images/research/sam-landscape.svg`: original conceptual illustration of the neighborhood-loss idea in [Foret et al. (2021)](https://arxiv.org/abs/2010.01412), not a plot of capstone results.
+- `images/research/hong-kong-mtr.svg`: unmodified [MTR System Topological Map](https://commons.wikimedia.org/wiki/File:MTR_System_Topological_Map.svg) by Emphrase, [CC0](https://creativecommons.org/publicdomain/zero/1.0/), downloaded 2026-10-01. Historical illustrative context, not an optimized route or up-to-date travel map.
+- `images/research/milky-way-nasa.jpg`: [PIA10748, Our Milky Way Gets a Makeover](https://science.nasa.gov/photojournal/our-milky-way-gets-a-makeover-artist-concept/), NASA/JPL-Caltech, downloaded 2026-10-01. Artist’s concept, not project output. Used as informational context under [NASA media guidelines](https://www.nasa.gov/nasa-brand-center/images-and-media/); no endorsement is implied.

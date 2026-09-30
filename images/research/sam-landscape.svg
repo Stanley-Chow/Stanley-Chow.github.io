@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450" role="img" aria-labelledby="title desc">
+  <title id="title">Sharpness-aware minimization: looking beyond a single low-loss point</title>
+  <desc id="desc">Two conceptual one-dimensional loss landscapes. A narrow valley has higher loss within a small neighborhood; a broad valley has lower loss throughout the same neighborhood. This is an illustration, not an experimental result.</desc>
+  <defs>
+    <linearGradient id="bg" x2="1" y2="1"><stop stop-color="#f0f5ff"/><stop offset="1" stop-color="#e8f6f5"/></linearGradient>
+    <linearGradient id="sharpFill" x2="0" y2="1"><stop stop-color="#527af4" stop-opacity=".18"/><stop offset="1" stop-color="#527af4" stop-opacity="0"/></linearGradient>
+    <linearGradient id="flatFill" x2="0" y2="1"><stop stop-color="#0e9494" stop-opacity=".18"/><stop offset="1" stop-color="#0e9494" stop-opacity="0"/></linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#bg)"/>
+  <g font-family="Arial, Helvetica, sans-serif" fill="#273142">
+    <text x="44" y="53" font-size="24" font-weight="700">A low point is not the whole story.</text>
+    <text x="44" y="83" font-size="17" fill="#596577">What happens when the model’s parameters move a little?</text>
+    <text x="211" y="132" text-anchor="middle" font-size="18" font-weight="700" fill="#335cce">Sharp valley</text>
+    <text x="590" y="132" text-anchor="middle" font-size="18" font-weight="700" fill="#087e82">Broad valley</text>
+    <path d="M60 172 C120 176 159 198 180 252 C194 290 202 326 215 326 C230 326 237 290 251 252 C272 198 303 177 352 173 L352 343 H60Z" fill="url(#sharpFill)"/>
+    <path d="M441 173 C486 183 502 259 532 302 C551 329 629 329 648 302 C678 259 692 182 738 173 L738 343 H441Z" fill="url(#flatFill)"/>
+    <g stroke="#b8c7db" stroke-width="2"><path d="M60 160V343H352" fill="none"/><path d="M441 160V343H738" fill="none"/></g>
+    <rect x="178" y="156" width="74" height="186" rx="5" fill="#527af4" opacity=".10"/>
+    <rect x="553" y="156" width="74" height="186" rx="5" fill="#0e9494" opacity=".10"/>
+    <path d="M60 172 C120 176 159 198 180 252 C194 290 202 326 215 326 C230 326 237 290 251 252 C272 198 303 177 352 173" stroke="#527af4" stroke-width="5" fill="none" stroke-linecap="round"/>
+    <path d="M441 173 C486 183 502 259 532 302 C551 329 629 329 648 302 C678 259 692 182 738 173" stroke="#0e9494" stroke-width="5" fill="none" stroke-linecap="round"/>
+    <g fill="#fff" stroke-width="3"><circle cx="215" cy="326" r="6" stroke="#527af4"/><circle cx="590" cy="322" r="6" stroke="#0e9494"/></g>
+    <g font-size="15" fill="#596577" text-anchor="middle"><text x="211" y="376">Loss rises quickly nearby</text><text x="590" y="376">Nearby loss stays low</text></g>
+    <text x="400" y="420" text-anchor="middle" font-size="16" fill="#273142">SAM considers the loss around a point, not just at the point.</text>
+  </g>
+</svg>

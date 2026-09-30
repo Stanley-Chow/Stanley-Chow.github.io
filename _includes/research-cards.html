@@ -1,6 +1,27 @@
 <div class="portfolio-research-grid">
   {% for item in include.items %}
   <a class="portfolio-research-card" href="{{ item.url | relative_url }}"{% if item.id %} id="{{ item.id }}"{% endif %}>
+    {% if item.visual == 'heat-process' %}
+    <div class="portfolio-research-card__visual research-heat-process">
+      <div class="research-heat-process__step">
+        <span>Hidden source</span>
+        <div class="research-heat-process__crop research-heat-process__crop--source"><img src="{{ '/assets/media/srf-heat-demo/thumbnail.jpg' | relative_url }}" alt="The original letter-A heat source from the SRF demo." width="1920" height="1080" loading="lazy" decoding="async"></div>
+      </div>
+      <span class="research-heat-process__arrow" aria-hidden="true">→</span>
+      <div class="research-heat-process__step">
+        <span>Measured heat</span>
+        <div class="research-heat-process__crop research-heat-process__crop--heat"><img src="{{ '/assets/media/srf-heat-demo/thumbnail.jpg' | relative_url }}" alt="Temperature measurements blur the source into a diffuse heat field." width="1920" height="1080" loading="lazy" decoding="async"></div>
+      </div>
+      <span class="research-heat-process__arrow" aria-hidden="true">→</span>
+      <div class="research-heat-process__step">
+        <span>Recovered shape</span>
+        <div class="research-heat-process__crop research-heat-process__crop--outline"><img src="{{ '/assets/media/srf-heat-demo/thumbnail.jpg' | relative_url }}" alt="The letter-trained POD model recovers a recognizable A outline." width="1920" height="1080" loading="lazy" decoding="async"></div>
+      </div>
+    </div>
+    {% elsif item.image %}
+    <div class="portfolio-research-card__visual{% if item.image_fit == 'contain' %} portfolio-research-card__visual--contain{% endif %}"><img src="{{ item.image | relative_url }}" alt="{{ item.image_alt | escape }}" width="800" height="450" loading="lazy" decoding="async"></div>
+    {% endif %}
+    {% if item.image_caption %}<span class="portfolio-research-card__caption">{{ item.image_caption | escape }}</span>{% endif %}
     <p class="home-eyebrow">{{ item.status | escape }}</p>
     <h3>{{ item.title | escape }}</h3>
     <p>{{ item.summary | escape }}</p>

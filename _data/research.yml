@@ -6,6 +6,8 @@ current:
     url: /research/parabolic-inverse-source/
     id: heat-source-demo
     action: Watch the demo & read the research
+    visual: heat-process
+    image_caption: "Source → measured temperature → recovered outline · SRF demo"
   - title: Sharpness-aware optimization
     status: Current capstone · In progress
     summary: "I’m exploring sharpness-aware optimization for machine-learning training. This page will follow the capstone as the experiments and findings take shape."
@@ -13,6 +15,9 @@ current:
     url: /research/sharpness-aware-optimization/
     id: sharpness-aware-optimization
     action: View the current project
+    image: /images/research/sam-landscape.svg
+    image_alt: "Conceptual loss landscapes: nearby parameter changes raise loss sharply in a narrow valley, but less in a broad valley."
+    image_caption: "SAM seeks low loss across a neighborhood · Conceptual illustration"
 earlier:
   - title: Urban rail network optimization
     status: Independent research · 2023
@@ -20,9 +25,16 @@ earlier:
     topics: Mathematical modeling · Route design
     url: /research/urban-rail-optimization/
     action: Read the project overview
+    image: /images/research/hong-kong-mtr.svg
+    image_alt: "Color-coded Hong Kong MTR route map showing lines and interchange stations."
+    image_fit: contain
+    image_caption: "Hong Kong rail network · Illustrative context · Emphrase, CC0"
   - title: Mapping Galactic hydrogen
     status: Earlier astronomy work
     summary: "I used 21 cm neutral-hydrogen observations and computational models of Galactic rotation to study the large-scale structure of the Milky Way."
     topics: Astronomy · Computational modeling
     url: /research/galactic-hydrogen/
     action: Read the project overview
+    image: /images/research/milky-way-nasa.jpg
+    image_alt: "NASA artist’s concept of the Milky Way, with spiral arms wrapping around a bright central bar."
+    image_caption: "Milky Way artist’s concept · NASA/JPL-Caltech"

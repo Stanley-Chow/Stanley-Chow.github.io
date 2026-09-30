@@ -12,9 +12,16 @@ back_url: /research/
 back_label: All research
 ---
 
+<figure class="research-topic-figure">
+  <img src="{{ '/images/research/sam-landscape.svg' | relative_url }}" alt="Conceptual comparison of a sharp loss valley and a broad valley with low loss nearby." width="800" height="450">
+  <figcaption>A sketch of the idea behind SAM—not a capstone result. Based on <a href="https://arxiv.org/abs/2010.01412">Foret et al., Sharpness-Aware Minimization (2021)</a>.</figcaption>
+</figure>
+
 ## What I’m working on
 
 My capstone focuses on sharpness-aware optimization, often referred to as SAM, in machine-learning training. The project is ongoing.
+
+The basic idea is to look beyond the loss at one set of model parameters. SAM considers nearby parameter settings too, seeking a neighborhood where the loss stays low rather than a single low point surrounded by steep slopes.
 
 ## Progress
 

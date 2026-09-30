@@ -12,6 +12,11 @@ back_url: /research/
 back_label: All research
 ---
 
+<figure class="research-topic-figure">
+  <img src="{{ '/images/research/hong-kong-mtr.svg' | relative_url }}" alt="Hong Kong MTR route map, with colored lines and interchange stations." width="2000" height="1600" loading="lazy">
+  <figcaption>Hong Kong’s rail network provides visual context; this is not an output of my optimization model or a current travel map. Map by Emphrase, <a href="https://commons.wikimedia.org/wiki/File:MTR_System_Topological_Map.svg">Wikimedia Commons</a>, <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0</a>.</figcaption>
+</figure>
+
 ## The problem
 
 I modeled urban rail alignment with constraints on geometry, curvature, feasibility and construction cost. The goal was to find workable routes while accounting for those requirements together.

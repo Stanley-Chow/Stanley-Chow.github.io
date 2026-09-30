@@ -12,6 +12,11 @@ back_url: /research/
 back_label: All research
 ---
 
+<figure class="research-topic-figure">
+  <img src="{{ '/images/research/milky-way-nasa.jpg' | relative_url }}" alt="Artist’s concept of the Milky Way’s spiral arms and central bar." width="800" height="800" loading="lazy">
+  <figcaption>An artist’s concept of the Milky Way, not a map produced by this project. Image: NASA/JPL-Caltech, <a href="https://science.nasa.gov/photojournal/our-milky-way-gets-a-makeover-artist-concept/">PIA10748</a>.</figcaption>
+</figure>
+
 ## The project
 
 I analyzed **21 cm neutral-hydrogen spectral emission** and used computational models of Galactic rotation to study the Milky Way’s large-scale structure.

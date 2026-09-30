@@ -137,13 +137,13 @@ I modeled rail routes with constraints on geometry, curvature, feasibility and c
 {: #planned-learning }
 
 <aside class="portfolio-learning-plan" id="drawing-with-llms" aria-labelledby="drawing-plan-title" markdown="1">
-<p class="home-eyebrow">Winter vacation · Planned replication</p>
+<p class="home-eyebrow">Winter vacation · Planned exploration</p>
 ### Drawing with LLMs: text to SVG
 {: #drawing-plan-title }
 
-During winter vacation, I plan to work through a text-to-SVG solution supplied through tutoring. The idea is to generate an image first, then convert its main shapes into a compact vector drawing.
+The idea is to turn a written description into an editable SVG drawing. A language model could help shape the prompt and check whether the drawing matches what was asked for.
 
-The supplied pipeline uses **SDXL Lightning, a vector-style LoRA and OpenCV**. I want to replicate the code and understand how image generation, color grouping and shape simplification work together under a file-size budget.
+The proposed pipeline uses **SDXL Lightning with a vector-style LoRA** to generate an image, then **OpenCV** to group colors, trace contours and simplify them into SVG paths. The aim is a recognizable drawing that stays within a file-size budget.
 
-<p class="learning-plan__status">Future learning plan · Based on supplied tutoring materials</p>
+<p class="learning-plan__status">Planned · Not yet implemented</p>
 </aside>
