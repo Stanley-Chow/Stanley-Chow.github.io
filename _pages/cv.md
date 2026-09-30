@@ -35,11 +35,9 @@ International Honors Program · Summer 2025
 Supervisor: Prof. Zhiwen Zhang
 
 - Study recovery of stationary spatial sources from final-time observations of a parabolic PDE.
-- Distinguish raw source error, heat-visible field error, and thresholded visible-interface error at a declared physical scale.
-- Use spectral truncation as a transparent rate benchmark while POD motivates the repeated-solve reduced-order setting.
-- Connect pointwise visible-field accuracy with stable level-set geometry under a nondegenerate crossing condition.
+- Compare recovered source values and shapes, and test reduced models that speed up repeated reconstruction.
 
-[Research overview]({{ '/research/parabolic-inverse-source/' | relative_url }}) · [Synopsis]({{ '/files/research/srf/Stanley_Chow_SRF_Research_Synopsis.pdf' | relative_url }}) · [Poster]({{ '/files/research/srf/Stanley_Chow_SRF_A11_Poster.pdf' | relative_url }})
+[Research overview]({{ '/research/parabolic-inverse-source/' | relative_url }}) · [Poster]({{ '/files/research/srf/Stanley_Chow_SRF_A11_Poster.pdf' | relative_url }})
 ### Urban Rail Network Optimization
 
 **Independent research** · 2023

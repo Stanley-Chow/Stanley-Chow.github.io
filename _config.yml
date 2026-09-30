@@ -210,6 +210,8 @@ exclude:
   - gulpfile.js
   - LICENSE
   - local
+  # Unpublished research material is not part of the public site.
+  - files/research/srf/Stanley_Chow_SRF_Research_Synopsis.pdf
   - log
   - node_modules
   - package.json*

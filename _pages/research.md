@@ -1,7 +1,7 @@
 ---
 title: "Research"
 permalink: /research/
-description: "Stanley Chow's research on scale-resolved parabolic inverse-source reconstruction, visible geometry, and earlier mathematical modeling projects."
+description: "Stanley Chow's research on heat-source reconstruction, reduced-order modeling, and earlier mathematical modeling projects."
 author_profile: true
 ---
 
@@ -15,32 +15,14 @@ I study how to locate a hidden source from the heat it leaves behind. As heat sp
 
 {% include heat-source-demo.html %}
 
-## Why shape matters
+## What I investigate
 
-<div class="research-question" markdown="1">
-**Central question**
+I compare the recovered source values and shapes, and test smaller models for repeated reconstruction. The video shows the speed and accuracy trade-off in one POD experiment.
 
-How can a reconstruction remain geometrically useful even when its raw pixelwise <em>L</em><sup>2</sup> error is large?
-
-At a declared physical scale, smoothing suppresses unresolved fine-scale oscillations. Raw source error, heat-visible field error, and visible interface error therefore measure different—and complementary—aspects of reconstruction quality.
-</div>
-
-<div class="research-flow" aria-label="Scale-resolved error hierarchy">
-  <span>Raw source error</span><span aria-hidden="true">→</span><span>Heat-visible field error</span><span aria-hidden="true">→</span><span>Visible geometric error</span>
-</div>
-
-### What I investigate
-
-- **Source values:** how accurately can we recover the strength of the source at each location, especially near sharp edges?
-- **Shape at a chosen scale:** which features remain reliable when we compare the true and reconstructed sources at the same smoothing scale?
-- **Smaller models:** how do training examples affect the speed and accuracy of reduced-order reconstruction?
-
-The video shows the practical trade-off in a POD experiment. The synopsis and detailed overview explain the error analysis, using spectral truncation as a separate benchmark for spatial resolution.
-
-<p class="research-materials"><a class="btn btn--primary" href="{{ '/research/parabolic-inverse-source/' | relative_url }}">Read the research overview</a> <a class="btn" href="{{ '/files/research/srf/Stanley_Chow_SRF_Research_Synopsis.pdf' | relative_url }}">Research Synopsis (PDF)</a> <a class="btn" href="{{ '/files/research/srf/Stanley_Chow_SRF_A11_Poster.pdf' | relative_url }}">SRF Poster (PDF)</a></p>
+<p class="research-materials"><a class="btn btn--primary" href="{{ '/research/parabolic-inverse-source/' | relative_url }}">Read the research overview</a> <a class="btn" href="{{ '/files/research/srf/Stanley_Chow_SRF_A11_Poster.pdf' | relative_url }}">SRF Poster (PDF)</a></p>
 
 <figure class="research-poster-figure">
-  <a href="{{ '/files/research/srf/Stanley_Chow_SRF_A11_Poster.pdf' | relative_url }}"><img src="{{ '/images/research/srf-poster-preview.png' | relative_url }}" alt="HKU Summer Research Fellowship poster on scale-resolved parabolic inverse source reconstruction"></a>
+  <a href="{{ '/files/research/srf/Stanley_Chow_SRF_A11_Poster.pdf' | relative_url }}"><img src="{{ '/images/research/srf-poster-preview.png' | relative_url }}" alt="HKU Summer Research Fellowship poster on parabolic inverse source reconstruction"></a>
   <figcaption>SRF Poster A11. Select the preview to open the full-resolution PDF.</figcaption>
 </figure>
 
