@@ -1,5 +1,5 @@
 {% include base_path %}
-{% if page.lang == 'zh-CN' %}{% assign nav_copy = site.data.home.zh %}{% else %}{% assign nav_copy = site.data.home.en %}{% endif %}
+{% assign nav_copy = site.data.home.en %}
 <div class="masthead">
   <div class="masthead__inner-wrap">
     <div class="masthead__menu">
@@ -8,7 +8,6 @@
         <ul class="portfolio-nav__links">
           {% for link in nav_copy.nav %}<li class="{% if page.url == link.url %}selected{% endif %}"><a href="{{ link.url | relative_url }}"{% if page.url == link.url %} aria-current="page"{% endif %}{% if page.lang == 'zh-CN' and link.title contains 'EN' %} hreflang="en"{% endif %}>{{ link.title | escape }}</a></li>{% endfor %}
         </ul>
-        {% if page.alternate_url %}<a class="portfolio-nav__language" href="{{ page.alternate_url | relative_url }}" lang="{{ page.alternate_lang }}" hreflang="{{ page.alternate_lang }}" aria-label="{{ nav_copy.ui.switch_label | escape }}">{{ nav_copy.ui.switch_text }}</a>{% endif %}
         <button type="button" id="theme-toggle" class="portfolio-nav__theme" aria-label="{{ nav_copy.ui.theme | escape }}" title="{{ nav_copy.ui.theme | escape }}"><span id="theme-icon" aria-hidden="true">◐</span></button>
         <details class="portfolio-nav__mobile">
           <summary>{{ nav_copy.ui.menu | escape }}</summary>

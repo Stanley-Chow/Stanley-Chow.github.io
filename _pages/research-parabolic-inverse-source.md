@@ -1,11 +1,21 @@
 ---
+layout: portfolio-page
+portfolio_shell: true
+lang: en
 title: "Parabolic Inverse Source Reconstruction"
+display_title: From raw error to visible geometry
+eyebrow: HKU Summer Research Fellowship · 2026
+intro: "A reconstruction can get many pixel values wrong and still recover a useful shape. This project studies how to measure that difference and when the shape remains reliable."
+sections:
+  - {id: heat-source-demo, label: Watch the demo}
+  - {id: research-overview, label: Overview}
+  - {id: research-highlights, label: Methods}
+  - {id: selected-numerical-evidence, label: Numerical evidence}
+  - {id: research-materials, label: Materials}
 permalink: /research/parabolic-inverse-source/
 description: "Scale-resolved reconstruction of parabolic inverse sources: raw error, heat-visible fields, and visible geometry."
-author_profile: true
+author_profile: false
 ---
-
-# From Raw Error to Visible Geometry
 
 <p class="project-status">HKU Summer Research Fellowship · Faculty of Science, The University of Hong Kong · 2026<br>Supervisor: Prof. Zhiwen Zhang</p>
 

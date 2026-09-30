@@ -1,12 +1,5 @@
 {% include base_path %}
-{% if page.lang == 'zh-CN' %}{% assign footer_copy = site.data.home.zh.ui %}{% else %}{% assign footer_copy = site.data.home.en.ui %}{% endif %}
-{% if page.alternate_url %}
-<div class="portfolio-language-footer" aria-label="{{ footer_copy.language_label }}">
-  <span>{{ footer_copy.language_label }}:</span>
-  <a href="{{ page.en_url | relative_url }}" lang="en" hreflang="en"{% if page.lang == 'en' %} aria-current="page" class="is-active"{% endif %}>English</a>
-  <a href="{{ page.zh_url | relative_url }}" lang="zh-CN" hreflang="zh-CN"{% if page.lang == 'zh-CN' %} aria-current="page" class="is-active"{% endif %}>中文</a>
-</div>
-{% endif %}
+{% assign footer_copy = site.data.home.en.ui %}
 <div class="page__footer-follow">
   <ul>
     {% if site.author.github %}<li><a href="https://github.com/{{ site.author.github }}">GitHub</a></li>{% endif %}

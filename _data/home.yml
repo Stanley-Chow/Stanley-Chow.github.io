@@ -63,16 +63,21 @@ en:
     items:
       - mark: HKU
         name: The University of Hong Kong
-        degree: BSc in Mathematics · Expected June 2028
-        detail: Second Major in Computer Science · Minor in Finance · GPA 3.98 / 4.30
+        degree: BSc in Mathematics
+        detail: Second Major in Computer Science · Minor in Finance
+        period: Expected June 2028
+        gpa: 3.98 / 4.30
       - mark: UCLA
         name: University of California, Los Angeles
         degree: Exchange study · Mathematics & Computer Science
-        detail: 2025–2026 · GPA 4.0 / 4.0
-      - mark: SU
+        period: 2025–2026
+        gpa: 4.0 / 4.0
+      - mark: STF
         name: Stanford University
         degree: Visiting study · Mathematics & Computer Science
-        detail: International Honors Program · Summer 2025 · GPA 4.0 / 4.0
+        detail: International Honors Program
+        period: Summer 2025
+        gpa: 4.0 / 4.0
   projects:
     heading: Selected projects
     all: All projects

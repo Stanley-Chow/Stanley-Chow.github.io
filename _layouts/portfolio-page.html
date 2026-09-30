@@ -1,0 +1,18 @@
+---
+layout: home
+---
+<article class="portfolio-detail{% if page.detail_type %} portfolio-detail--{{ page.detail_type }}{% endif %}">
+  <header class="portfolio-detail__header">
+    <p class="home-eyebrow">{{ page.eyebrow | default: 'Stanley Chow' | escape }}</p>
+    <h1>{{ page.display_title | default: page.title | escape }}<span class="home-hero__dot">.</span></h1>
+    {% if page.intro %}<p class="portfolio-detail__intro">{{ page.intro | escape }}</p>{% endif %}
+    {% if page.cv_downloads %}{% include cv-downloads.html %}{% endif %}
+    {% if page.sections %}
+    <nav class="portfolio-section-nav" aria-label="On this page">
+      {% for section in page.sections %}<a href="#{{ section.id }}">{{ section.label | escape }}</a>{% endfor %}
+    </nav>
+    {% endif %}
+  </header>
+  <div class="portfolio-prose">{{ content }}</div>
+  <div class="portfolio-detail__end"><a class="home-text-link" href="{{ '/' | relative_url }}">← Back to the homepage</a><a class="home-text-link" href="mailto:{{ site.author.email }}">Get in touch ↗</a></div>
+</article>

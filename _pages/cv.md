@@ -1,45 +1,62 @@
 ---
+layout: portfolio-page
+portfolio_shell: true
+lang: en
 title: "CV"
+display_title: Curriculum vitae
+eyebrow: Background & experience
+intro: "I’m a mathematics student at HKU, working on scientific computing and machine-learning projects. This page brings together my education, research and selected work."
+cv_downloads: true
+sections:
+  - {id: education, label: Education}
+  - {id: research-experience, label: Research}
+  - {id: selected-projects, label: Projects}
+  - {id: technical-skills, label: Skills}
 permalink: /cv/
 description: "Education, research, selected projects, honors, and technical skills for Stanley Chow."
-author_profile: true
+author_profile: false
 ---
 
-# Curriculum Vitae
-
-[Download the English CV (Quant)](/files/CV-EN.pdf){: .btn .btn--primary } [中文简历（算法）](/files/CV-ZH.pdf){: .btn }<br>
-[Email](mailto:pingsenchow@outlook.com){: .btn } [GitHub](https://github.com/Stanley-Chow){: .btn } [LinkedIn](https://www.linkedin.com/in/ping-sen-chow-951592327){: .btn }
+The English PDF is my Quant CV; the Chinese PDF is my algorithm-focused CV. You can also find the [project details](/projects/) and [research demo](/research/#heat-source-demo) on this site.
 
 ## Education
 
 ### The University of Hong Kong
 
 **Bachelor of Science in Mathematics** · Second Major in Computer Science · Minor in Finance<br>
-Expected June 2028 · GPA: **3.98 / 4.30**
+<p class="education-meta"><span>Expected June 2028</span> <span>GPA <strong>3.98 / 4.30</strong></span></p>
 
 Dean's List · HKU Entrance Scholarship · Lee Shau Kee Scholarship
 
 ### University of California, Los Angeles
 
-Exchange study in Mathematics & Computer Science · 2025–2026<br>
-GPA: **4.0 / 4.0**
+Exchange study in Mathematics & Computer Science
+
+<p class="education-meta"><span>2025–2026</span> <span>GPA <strong>4.0 / 4.0</strong></span></p>
 
 ### Stanford University
 
-Visiting study in Mathematics & Computer Science · International Honors Program · Summer 2025<br>
-GPA: **4.0 / 4.0**
+Visiting study in Mathematics & Computer Science · International Honors Program
+
+<p class="education-meta"><span>Summer 2025</span> <span>GPA <strong>4.0 / 4.0</strong></span></p>
 
 ## Research Experience
+
+### Sharpness-aware optimization
+
+**Current capstone · In progress**
+
+Exploring sharpness-aware optimization for machine-learning training. The work is ongoing; results are not yet published.
 
 ### HKU Summer Research Fellowship
 
 **Parabolic Inverse Source Reconstruction: From Raw Error to Visible Geometry** · 2026<br>
 Supervisor: Prof. Zhiwen Zhang
 
-- Study recovery of stationary spatial sources from final-time observations of a parabolic PDE.
-- Distinguish raw source error, heat-visible field error, and thresholded visible-interface error at a declared physical scale.
-- Use spectral truncation as a transparent rate benchmark while POD motivates the repeated-solve reduced-order setting.
-- Connect pointwise visible-field accuracy with stable level-set geometry under a nondegenerate crossing condition.
+- Study how to recover a hidden heat source from temperature measurements taken after diffusion.
+- Compare recovered source values, the field visible at a chosen smoothing scale, and the shape of the recovered region.
+- Build and test reduced models for repeated reconstruction, alongside a separate spectral benchmark for error analysis.
+- Investigate when small field errors lead to a stable recovered boundary.
 
 [Research overview]({{ '/research/parabolic-inverse-source/' | relative_url }}) · [Synopsis]({{ '/files/research/srf/Stanley_Chow_SRF_Research_Synopsis.pdf' | relative_url }}) · [Poster]({{ '/files/research/srf/Stanley_Chow_SRF_A11_Poster.pdf' | relative_url }})
 ### Urban Rail Network Optimization
@@ -52,15 +69,15 @@ Modeled rail alignment under geometric and engineering constraints using analyti
 
 ### H&M Two-Stage Personalized Recommendation System
 
-Nine-channel candidate retrieval and LambdaRank over 31.8M transactions; 0.034479 frozen-future MAP@12 and bounded-memory inference for 1.37M customers. [Repository](https://github.com/Stanley-Chow/hm-2stage-recommender)
+Built a system that finds candidate products and ranks them for each customer, using 31.8 million transaction records. It reached 0.034479 MAP@12 on a later, untouched week and generated predictions for 1.37 million customers. [Repository](https://github.com/Stanley-Chow/hm-2stage-recommender)
 
 ### DocuQuest Agent
 
-C++17 lexical retrieval and question-answering pipeline with a custom BST multimap, inverted index, deterministic tests, and injected LLM client. [Repository](https://github.com/Stanley-Chow/docuquest-agent)
+Built a C++17 document search and question-answering tool, including the index, retrieval logic and tests that run without API credentials. [Repository](https://github.com/Stanley-Chow/docuquest-agent)
 
 ### Behavioral Personality Analytics
 
-Leakage-resistant comparison of 381 configurations; the selected three-feature Gradient Boosting model reached 0.9651 holdout ROC-AUC on generated data. [Repository](https://github.com/Stanley-Chow/behavioral-personality-analytics)
+Compared 381 model and feature configurations while keeping the final test separate from model selection. A three-feature model reached 0.9651 holdout ROC-AUC on generated data. [Repository](https://github.com/Stanley-Chow/behavioral-personality-analytics)
 
 ### Flight Price Prediction & Pricing Analysis
 
@@ -73,4 +90,4 @@ Collaborative XGBoost study over 300,153 rows; contributed Experiments 1 and 2 c
 **Recommendation & Search:** candidate retrieval, collaborative filtering, two-tower models, LightGCN, LambdaRank, temporal validation<br>
 **Research & Engineering:** Git, CMake, Jupyter, LaTeX, numerical optimization, PDEs, experiment design
 
-*Updated September 2026.*
+*Updated October 2026.*

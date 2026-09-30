@@ -1,119 +1,182 @@
 ---
+layout: portfolio-page
+portfolio_shell: true
+lang: en
 title: "Projects"
 permalink: /projects/
 description: "Selected recommendation, machine-learning, information-retrieval, software-engineering, and applied-mathematics projects by Stanley Chow."
-author_profile: true
+author_profile: false
+eyebrow: Things I've built
+intro: "I build models and software to answer practical questions. Here are a few projects, what I contributed, and what I learned from testing them."
+detail_type: projects
+sections:
+  - {id: recommendation--machine-learning, label: Recommendation & ML}
+  - {id: information-retrieval--software-systems, label: Search & software}
+  - {id: research--mathematical-computing, label: Mathematical computing}
 ---
-
-# Selected Projects
-
-The projects below emphasize reproducible evaluation, honest limitations, and clear ownership. Repository links point to public source and fuller methodology.
 
 ## Recommendation & Machine Learning
 
-<article class="project-entry" id="hm-two-stage-personalized-recommendation-system" markdown="1">
-### H&M Two-Stage Personalized Recommendation System
+<div class="portfolio-projects-grid" markdown="1">
 
-<span class="project-status">Flagship · Individual project</span>
+<article class="project-entry project-entry--featured" id="hm-two-stage-personalized-recommendation-system" markdown="1">
+### H&M personalized recommendations
 
-Built an offline retrieval-and-ranking system over **31,788,324 transaction events**.
+<p class="home-eyebrow">Individual project · Python, PyTorch, LightGBM</p>
 
-- Unified nine heuristic, collaborative, learned, text, and image retrieval channels behind a quota-aware candidate interface with a target of 500 candidates per query.
-- Trained LightGBM LambdaRank on **100,000 customer-week queries** from four rolling target weeks, using cutoff-safe features and group-aware negative sampling.
-- Reached **MAP@12 0.034479** on an untouched future week (3.94% below the development score), plus **0.03117 public / 0.03116 private** Kaggle MAP@12.
-- Generated predictions for **1,371,980 customers** in 138 bounded-memory shards; 1,362,281 received personalized output and 9,699 used a documented fallback.
+How do you choose a handful of useful recommendations from a large product catalogue? I built a system that first finds promising items, then ranks them for each customer.
 
-This is a portfolio-scale offline system, not a production serving stack. The repository documents retrieval ablations, temporal validation, reproducibility controls, and remaining work.
+It uses **31.8 million transaction records** and combines nine ways of finding candidates, including shopping history, learned models, and text and image features.
+
+<div class="project-evidence"><div><strong>0.034479</strong><span>MAP@12 on a later, untouched week</span></div><div><strong>1.37 million</strong><span>customers in the prediction run</span></div></div>
+
+<details class="portfolio-technical" markdown="1">
+<summary>How I built and evaluated it</summary>
+
+- Combined nine retrieval methods, with a quota for each and a target of 500 candidate products per customer query.
+- Trained LightGBM LambdaRank on **100,000 customer-week queries** across four rolling target weeks. Features use only information available before each cutoff, and negative examples are sampled within query groups.
+- Reached **MAP@12 0.034479** on a later, untouched week—3.94% below the development score. Kaggle scores were **0.03117 public / 0.03116 private**.
+- Generated predictions for **1,371,980 customers** in 138 batches to limit memory use. Of these, 1,362,281 received personalized results and 9,699 used a documented fallback.
+
+</details>
+
+<p class="project-limitation">This is an offline recommendation project, not a live production service. The repository includes the evaluation setup and remaining work.</p>
 
 [View repository](https://github.com/Stanley-Chow/hm-2stage-recommender)
 </article>
 
 <article class="project-entry" id="behavioral-personality-analytics" markdown="1">
-### Behavioral Personality Analytics
+### Behavioral personality analytics
 
-<span class="project-status">Individual project · Classification</span>
+<p class="home-eyebrow">Individual project · Python, scikit-learn</p>
 
-Designed a leakage-resistant study of personality and behavioral-outcome prediction.
+I tested whether a small set of behavioral features could predict personality-related outcomes. The main challenge was keeping model selection separate from the final test.
 
-- Compared **381 model-and-feature-subset configurations** using development data only.
-- Selected a compact three-feature Gradient Boosting model that achieved **0.9651 ROC-AUC** on the untouched holdout set.
+After comparing **381 configurations**, a three-feature Gradient Boosting model reached **0.9651 ROC-AUC** on the holdout set.
+
+<p class="project-limitation">The data are generated. These results do not establish performance on real populations or show that the features cause the outcomes.</p>
+
+<details class="portfolio-technical" markdown="1">
+<summary>Evaluation details</summary>
+
+- Used development data to compare **381 combinations of models and feature subsets**.
+- Selected a three-feature Gradient Boosting model, then tested it once on the untouched holdout set: **0.9651 ROC-AUC**.
 - Reached 0.9910 holdout accuracy on the associated stage-fright task.
-- Kept exploratory selection separate from final evaluation and documented the limits of generated data, external validity, and causal interpretation.
+- Kept model selection separate from the final evaluation and documented why results on generated data may not transfer to real people.
+
+</details>
 
 [View repository](https://github.com/Stanley-Chow/behavioral-personality-analytics)
 </article>
 
 <article class="project-entry" id="flight-price-prediction" markdown="1">
-### Flight Price Prediction & Pricing Analysis
+### Flight prices and pricing patterns
 
-<span class="project-status">Collaborative project · Regression</span>
+<p class="home-eyebrow">Team project · Python, XGBoost</p>
 
-Contributed the code for Experiments 1 and 2 and the interpretation of Experiment 2 in a six-question airline-pricing study over **300,153 rows**.
+Our team studied airline fares using **300,153 records**. I wrote the code for Experiments 1 and 2 and interpreted the findings from Experiment 2.
+
+We compared polynomial regression with XGBoost, then looked at how route, class, stops, airline and booking time relate to prices.
+
+<details class="portfolio-technical" markdown="1">
+<summary>Results and my contribution</summary>
 
 - Compared polynomial regression with XGBoost for fare prediction.
 - XGBoost reached **RMSE ₹2,319.47** and **R² 0.9896** on a same-period held-out set of 60,031 rows.
 - Analyzed route, class, stop, airline, and timing premiums while distinguishing predictive associations from causal claims.
 
-The split is random rather than temporal, so the reported results should not be read as forward-market performance.
+The test split was random within the same period. It does not measure how well the model would predict future market prices.
+
+</details>
 
 [View repository](https://github.com/Stanley-Chow/flight-price-prediction-and-pricing-analysis)
 </article>
 
-## Information Retrieval & Software Systems
+</div>
+
+## Search & software
+{: #information-retrieval--software-systems }
+
+<div class="portfolio-projects-grid" markdown="1">
 
 <article class="project-entry" id="docuquest-agent" markdown="1">
 ### DocuQuest Agent
 
-<span class="project-status">Individual project · C++17</span>
+<p class="home-eyebrow">Individual project · C++17, CMake</p>
 
-Built a retrieval-augmented document question-answering system with a deterministic search layer.
+A document question-answering tool with a C++ search layer. I built the index and retrieval logic, then connected the retrieved passages to a language-model client.
 
-- Implemented tokenization, a custom ownership-aware unbalanced BST multimap, and an inverted index.
-- Applied AND constraints within each expanded term group and unions across groups.
-- Injected the model client so retrieval tests remain deterministic and credential-free; secrets are read from the environment.
-- Used CMake and focused tests to exercise index ownership, lookup, retrieval, and orchestration.
+The search tests run **without network access or API credentials**, so I can check the core behavior independently of the model service.
 
-The current system is lexical: it does not include embeddings, a learned reranker, or guarantees against hallucination.
+<details class="portfolio-technical" markdown="1">
+<summary>Inside the search layer</summary>
+
+- Built tokenization, an inverted index and a custom unbalanced binary-search-tree multimap with explicit object ownership.
+- Required matches for all terms within each expanded query group, then combined results across groups.
+- Made the model client replaceable in tests, so search behavior can be checked without network access or credentials. Secrets are read from the environment.
+- Used CMake and focused tests to check object ownership, lookups, retrieval and the question-answering workflow.
+
+This is keyword-based retrieval. It has no embeddings or learned reranker, and it cannot guarantee that generated answers are correct.
+
+</details>
 
 [View repository](https://github.com/Stanley-Chow/docuquest-agent)
 </article>
 
 <article class="project-entry" id="lemmings-game-engine" markdown="1">
-### Lemmings Game Engine
+### Lemmings game engine
 
-<span class="project-status">Course project · C++17</span>
+<p class="home-eyebrow">Course project · C++17</p>
 
-Implemented the actor and world logic for a tick-driven 2D game engine within a supplied course framework.
+I implemented the actor and world logic for a tick-based 2D game. Each update coordinates movement, terrain, hazards, goals and player-assigned skills on a **20 × 20 grid**.
 
-- Designed an actor hierarchy with polymorphic state transitions and object lifecycles.
-- Coordinated collision, terrain, spawning, goals, hazards, and skill effects on a 20×20 data-driven grid.
-- Kept responsibilities separated between actor behavior and world orchestration.
+The project gave me practice separating individual actor behavior from the rules that govern the whole game.
 
-Framework code and media assets were supplied; my implementation is concentrated in the Actor and StudentWorld components.
+<details class="portfolio-technical" markdown="1">
+<summary>What I implemented</summary>
+
+- Designed the actor classes and handled their state changes and lifetimes.
+- Coordinated collisions, terrain, spawning, goals, hazards and skill effects on a 20 × 20 grid loaded from level data.
+- Kept individual actor behavior separate from the rules managed by the game world.
+
+The course supplied the surrounding framework and media assets. My implementation is concentrated in the Actor and StudentWorld components.
+
+</details>
 
 [View repository](https://github.com/Stanley-Chow/lemmings-game-engine)
 </article>
 
-## Research & Mathematical Computing
+</div>
+
+## Mathematical computing
+{: #research--mathematical-computing }
+
+<div class="portfolio-projects-grid" markdown="1">
 
 <article class="project-entry" id="parabolic-inverse-source-reconstruction" markdown="1">
-### Parabolic Inverse-Source Reconstruction
+### Reconstructing a hidden heat source
 
-<span class="project-status">Ongoing research · HKU Summer Research Fellowship</span>
+<p class="home-eyebrow">Ongoing research · HKU Summer Research Fellowship</p>
 
-Developing numerical experiments for reconstructing indicator sources from noisy diffusion observations.
+I study how to recover a source from blurred, noisy temperature measurements. I compare both the recovered values and the shape, and test when a smaller model can speed up the computation.
 
-- Distinguishes raw source-space error from **heat-visible error** at an observation scale and **geometric error** of thresholded interfaces.
-- Studies regularized reconstruction, level-set stability, and how diffusion changes what can be identified from data.
-- Builds coverage-aware proper orthogonal decomposition with offline-online diagnostics for snapshot-law shift.
+<details class="portfolio-technical" markdown="1">
+<summary>The research questions</summary>
 
-Manuscript packages are in preparation and are not presented here as published work. See the [research overview](/research/) for the current scope.
+- Compare errors in source values, fields smoothed at a chosen scale, and the boundaries of recovered regions.
+- Study how regularization affects recovery and when a small field error keeps the recovered boundary stable.
+- Test POD models trained on different examples, including what happens when those examples differ from the sources we later try to recover.
+
+</details>
+
+Manuscripts are in preparation, not published. The [research page](/research/#heat-source-demo) includes a 34-second visual demonstration, along with the methods and limits of the comparison.
 </article>
 
 <article class="project-entry" id="urban-rail-network-optimization" markdown="1">
-### Urban Rail Network Optimization
+### Urban rail network optimization
 
-<span class="project-status">Independent research · 2023</span>
+<p class="home-eyebrow">Independent research · 2023</p>
 
-Modeled urban rail alignment under geometric, curvature, feasibility, and construction-cost constraints. Combined analytical derivations for simplified cases with Particle Swarm Optimization for multi-intersection routing. The work was recognized in the S.-T. Yau High School Science Award.
+I modeled rail routes with constraints on geometry, curvature, feasibility and construction cost. I used analytical optimization for simpler layouts and Particle Swarm Optimization for routes with several intersections. The work was recognized in the S.-T. Yau High School Science Award.
 </article>
+</div>

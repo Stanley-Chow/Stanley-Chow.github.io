@@ -8,6 +8,7 @@
     <p class="home-hero__roles">{{ copy.hero.roles | escape }}</p>
     <div class="home-actions">
       <a class="home-button home-button--primary home-cv-download" href="{{ copy.hero.cv_url | relative_url }}" hreflang="{{ page.lang }}">{{ copy.hero.cv_label | escape }} <span aria-hidden="true">↓</span></a>
+      <a class="home-button home-cv-download-zh" href="{{ '/files/CV-ZH.pdf' | relative_url }}" hreflang="zh-CN">Chinese CV <span aria-hidden="true">↓</span></a>
       <a class="home-button" href="#selected-work">{{ copy.hero.explore | escape }}</a>
       <a class="home-button" href="#writing">{{ copy.hero.read | escape }}</a>
     </div>
@@ -54,7 +55,7 @@
     <div class="home-section-heading"><h2 id="education-title">{{ copy.education.heading | escape }}</h2></div>
     <div class="home-education">
       {% for item in copy.education.items %}
-      <article><span class="home-school-mark{% unless forloop.first %} home-school-mark--neutral{% endunless %}" aria-hidden="true">{{ item.mark }}</span><div><h3>{{ item.name | escape }}</h3><p>{{ item.degree | escape }}</p><p class="home-item-meta">{{ item.detail | escape }}</p></div></article>
+      <article><span class="home-school-mark{% unless forloop.first %} home-school-mark--neutral{% endunless %}" aria-hidden="true">{{ item.mark }}</span><div class="home-education__copy"><h3>{{ item.name | escape }}</h3><p>{{ item.degree | escape }}</p>{% if item.detail %}<p class="home-item-meta">{{ item.detail | escape }}</p>{% endif %}{% if item.gpa %}<p class="home-education__meta"><span>{{ item.period | escape }}</span> <span class="home-education__gpa">GPA {{ item.gpa | escape }}</span></p>{% endif %}</div></article>
       {% endfor %}
     </div>
   </section>

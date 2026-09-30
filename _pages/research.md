@@ -1,11 +1,19 @@
 ---
+layout: portfolio-page
+portfolio_shell: true
+lang: en
 title: "Research"
 permalink: /research/
 description: "Stanley Chow's research on scale-resolved parabolic inverse-source reconstruction, visible geometry, and earlier mathematical modeling projects."
-author_profile: true
+author_profile: false
+eyebrow: Questions I'm working on
+intro: "My current work connects scientific computing and machine learning. I study how to recover information from imperfect measurements and how optimization shapes model training."
+sections:
+  - {id: heat-source-demo, label: Heat-source demo}
+  - {id: why-shape-matters, label: The research question}
+  - {id: sharpness-aware-optimization, label: Current capstone}
+  - {id: previous-research, label: Earlier work}
 ---
-
-# Current Research
 
 ## Recovering the shape of a hidden heat source
 
@@ -22,7 +30,7 @@ I study how to locate a hidden source from the heat it leaves behind. As heat sp
 
 How can a reconstruction remain geometrically useful even when its raw pixelwise <em>L</em><sup>2</sup> error is large?
 
-At a declared physical scale, smoothing suppresses unresolved fine-scale oscillations. Raw source error, heat-visible field error, and visible interface error therefore measure different—and complementary—aspects of reconstruction quality.
+Comparing every source value is only one way to judge a reconstruction. I also compare the fields after smoothing them at the same chosen scale, then compare the boundaries of the recovered regions. These checks help distinguish errors in source values from errors in the visible shape.
 </div>
 
 <div class="research-flow" aria-label="Scale-resolved error hierarchy">
@@ -44,12 +52,20 @@ The video shows the practical trade-off in a POD experiment. The synopsis and de
   <figcaption>SRF Poster A11. Select the preview to open the full-resolution PDF.</figcaption>
 </figure>
 
-# Previous Research
+## Sharpness-aware optimization
+{: #sharpness-aware-optimization }
 
-## Urban Transportation Network Optimization
+<p class="project-status">Current capstone · In progress</p>
+
+I’m exploring sharpness-aware optimization in machine-learning training. This is an ongoing capstone, not a completed project. I’ll add the experimental setup and findings when they are ready to share.
+
+## Previous research
+{: #previous-research }
+
+### Urban rail network optimization
 
 In 2023, I studied urban rail alignment under geometric, curvature, feasibility, and construction-cost constraints, combining analytical optimization with Particle Swarm Optimization for more complex layouts. The work was recognized in the S.-T. Yau High School Science Award.
 
-## Galactic H I Structure Research
+### Galactic H I structure
 
 I analyzed 21 cm neutral-hydrogen spectral emission and used computational models of Galactic rotation to study the large-scale structure of the Milky Way.

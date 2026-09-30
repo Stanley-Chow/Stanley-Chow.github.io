@@ -168,6 +168,9 @@ include:
   - _pages
   - files
 exclude:
+  # Chinese pages are retained as drafts, but must not be generated or published.
+  - _pages/home-zh.html
+  - _pages/writing-zh.html
   - _posts
   - _publications
   - _portfolio
