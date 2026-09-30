@@ -43,3 +43,9 @@ Only entries explicitly marked `published: true`, with a date no later than the 
 The public site is English-only. The Chinese homepage and writing page are retained as drafts and explicitly excluded in `_config.yml`; do not remove those exclusions without approval and a fresh copy review. No language switch is shown. The homepage and CV page offer `files/CV-EN.pdf` (English Quant CV) and a separate `files/CV-ZH.pdf` (Chinese algorithm-focused CV) download. The legacy `files/CV.pdf` remains available for existing links. English homepage copy lives in `_data/home.yml`; inner pages share `_layouts/portfolio-page.html` and the homepage design system. Preserve existing URLs and project anchors when editing.
 
 For replications, include the original paper citation, reproduction setup, code link, results, and discrepancies. Keep conclusions clearly separate from the paper's claims.
+
+## Research and project pages
+
+`/research/` is a card index driven by `_data/research.yml`. Each topic links to a separate overview under `/research/`; the heat-source video and technical materials live on `/research/parabolic-inverse-source/`. New demo links point directly there. The old `/research/#heat-source-demo` anchor still finds the corresponding card. Capstone work is labelled in progress, and earlier topics retain only documented facts.
+
+Project cards present the problem, approach and results without disclosure widgets or evaluation bullet lists. Grid rows stretch cards to equal heights and keep repository links at the bottom. Drawing with LLMs is separate from completed work, under Planned learning: a winter replication plan based on paid tutoring materials. It is not an implemented personal project. Do not publish the tutoring notebook, lesson files or sample outputs, or claim original authorship, results or a competition win.

@@ -16,6 +16,9 @@ author_profile: false
 - [Projects](/projects/)
 - [Research](/research/)
 - [Heat-source reconstruction: detailed overview](/research/parabolic-inverse-source/)
+- [Sharpness-aware optimization: current capstone](/research/sharpness-aware-optimization/)
+- [Urban rail network optimization](/research/urban-rail-optimization/)
+- [Mapping Galactic hydrogen](/research/galactic-hydrogen/)
 - [CV](/cv/)
 - [Education](/education/)
 

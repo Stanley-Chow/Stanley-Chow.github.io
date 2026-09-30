@@ -214,6 +214,8 @@ html[data-theme="dark"] body.portfolio-shell {
 .portfolio-detail { margin: 64px 0 0; }
 .portfolio-detail__header { max-width: 820px; margin: 0 auto 48px; h1 { margin: 12px 0 20px; font-size: clamp(34px, 5vw, 50px); line-height: 1.15; letter-spacing: -1.5px; } }
 .portfolio-detail--projects .portfolio-detail__header { max-width: none; }
+.portfolio-back { display: inline-flex; margin-bottom: 24px; }
+.portfolio-detail--research-index .portfolio-detail__header, .portfolio-detail--research-index .portfolio-prose, .portfolio-detail--research-index .portfolio-detail__end { max-width: none; }
 .home-page .portfolio-detail__intro { max-width: 760px; font-size: 18px; color: var(--home-muted); line-height: 1.7; }
 .portfolio-section-nav { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 24px; a { padding: 7px 14px; border: 1px solid var(--global-border-color); border-radius: 100px; font-size: 13px; font-weight: 600; color: var(--global-text-color); } a:hover { background: var(--home-panel); text-decoration: none !important; } }
 .portfolio-prose {
@@ -244,7 +246,11 @@ html[data-theme="dark"] body.portfolio-shell {
 .project-entry--featured { grid-column: 1 / -1; }
 .home-page#main .project-entry .project-link { margin-top: auto; padding-top: 16px; }
 .portfolio-prose .project-evidence { display: flex; flex-wrap: wrap; gap: 20px 48px; margin: 24px 0; padding: 20px 24px; border-radius: 14px; background: var(--home-panel); div { display: flex; flex-direction: column; gap: 4px; } strong { color: var(--global-link-color); font-size: 26px; letter-spacing: -0.6px; } span { color: var(--home-muted); font-size: 13px; } }
-.portfolio-technical { margin: 20px 0; padding: 16px 0; border-top: 1px solid var(--global-border-color); border-bottom: 1px solid var(--global-border-color); summary { cursor: pointer; font-size: 14px; font-weight: 600; } p, li { font-size: 14px; } summary + p, summary + ul { margin-top: 16px; } ul:last-child, p:last-child { margin-bottom: 0; } }
+.portfolio-learning-plan { padding: 28px; background: var(--home-panel); border: 1px solid var(--global-border-color); border-radius: 18px; h3 { margin: 0 0 16px !important; } }
+.home-page#main .learning-plan__status { margin-bottom: 0; font-size: 13px; color: var(--home-muted); }
+.portfolio-research-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+.home-page#main a.portfolio-research-card { display: flex; flex-direction: column; padding: 28px; border: 1px solid var(--global-border-color); border-radius: 18px; background: var(--global-bg-color); color: var(--global-text-color); text-decoration: none !important; transition: border-color .15s ease, background-color .15s ease; h3 { font-size: 22px; margin: 0 0 16px !important; } &:hover { border-color: var(--home-accent); background: var(--home-panel); } &:hover .portfolio-research-card__link { text-decoration: underline; } .portfolio-research-card__topics { font-size: 13px; color: var(--home-muted); } }
+.portfolio-research-card__link { margin-top: auto; padding-top: 16px; color: var(--global-link-color); font-size: 14px; font-weight: 600; }
 .portfolio-detail__end { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 20px; max-width: 820px; margin: 56px auto 0; padding-top: 28px; border-top: 1px solid var(--global-border-color); }
 .portfolio-detail--projects .portfolio-detail__end { max-width: none; }
 @media (max-width: 900px) {
@@ -262,7 +268,7 @@ html[data-theme="dark"] body.portfolio-shell {
 @media (max-width: 760px) {
   .portfolio-detail { margin-top: 40px; }
   .portfolio-detail__header { margin-bottom: 32px; }
-  .portfolio-projects-grid { grid-template-columns: minmax(0, 1fr); }
+  .portfolio-projects-grid, .portfolio-research-grid { grid-template-columns: minmax(0, 1fr); }
   .portfolio-prose .project-entry { padding: 24px; }
   .home-hero { grid-template-columns: minmax(0, 1fr); gap: 36px; padding: 40px 0; }
   .home-hero__portrait { width: 220px; justify-self: start; margin-left: 12px; }
@@ -278,6 +284,8 @@ html[data-theme="dark"] body.portfolio-shell {
   .home-page .portfolio-detail__intro { font-size: 17px; }
   .portfolio-prose h2 { font-size: 24px; }
   .portfolio-prose .project-entry { padding: 20px; }
+  .home-page#main a.portfolio-research-card { padding: 20px; }
+  .portfolio-learning-plan { padding: 20px; }
   .portfolio-section-nav a { padding: 7px 12px; }
   body.portfolio-shell .masthead__inner-wrap { padding: 8px 20px; }
   body.portfolio-shell .portfolio-nav__language { margin-left: 4px; padding: 6px; }

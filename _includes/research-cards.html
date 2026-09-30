@@ -1,0 +1,11 @@
+<div class="portfolio-research-grid">
+  {% for item in include.items %}
+  <a class="portfolio-research-card" href="{{ item.url | relative_url }}"{% if item.id %} id="{{ item.id }}"{% endif %}>
+    <p class="home-eyebrow">{{ item.status | escape }}</p>
+    <h3>{{ item.title | escape }}</h3>
+    <p>{{ item.summary | escape }}</p>
+    <p class="portfolio-research-card__topics">{{ item.topics | escape }}</p>
+    <span class="portfolio-research-card__link">{{ item.action | escape }} <span aria-hidden="true">→</span></span>
+  </a>
+  {% endfor %}
+</div>

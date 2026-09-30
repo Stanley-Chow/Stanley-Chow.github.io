@@ -13,6 +13,7 @@ sections:
   - {id: recommendation--machine-learning, label: Recommendation & ML}
   - {id: information-retrieval--software-systems, label: Search & software}
   - {id: research--mathematical-computing, label: Mathematical computing}
+  - {id: planned-learning, label: Planned learning}
 ---
 
 ## Recommendation & Machine Learning
@@ -30,15 +31,7 @@ It uses **31.8 million transaction records** and combines nine ways of finding c
 
 <div class="project-evidence"><div><strong>0.034479</strong><span>MAP@12 on a later, untouched week</span></div><div><strong>1.37 million</strong><span>customers in the prediction run</span></div></div>
 
-<details class="portfolio-technical" markdown="1">
-<summary>How I built and evaluated it</summary>
-
-- Combined nine retrieval methods, with a quota for each and a target of 500 candidate products per customer query.
-- Trained LightGBM LambdaRank on **100,000 customer-week queries** across four rolling target weeks. Features use only information available before each cutoff, and negative examples are sampled within query groups.
-- Reached **MAP@12 0.034479** on a later, untouched week—3.94% below the development score. Kaggle scores were **0.03117 public / 0.03116 private**.
-- Generated predictions for **1,371,980 customers** in 138 batches to limit memory use. Of these, 1,362,281 received personalized results and 9,699 used a documented fallback.
-
-</details>
+I trained LightGBM LambdaRank on **100,000 customer-week queries**, using only information available before each prediction cutoff. For inference, I processed customers in **138 batches** to keep memory use bounded.
 
 [View repository](https://github.com/Stanley-Chow/hm-2stage-recommender)
 {: .project-link }
@@ -53,15 +46,6 @@ I used generated behavioral data to test whether a small set of features could p
 
 After comparing **381 configurations**, a three-feature Gradient Boosting model reached **0.9651 ROC-AUC** on the holdout set.
 
-<details class="portfolio-technical" markdown="1">
-<summary>Evaluation details</summary>
-
-- Used development data to compare **381 combinations of models and feature subsets**.
-- Selected a three-feature Gradient Boosting model, then tested it once on the untouched holdout set: **0.9651 ROC-AUC**.
-- Reached 0.9910 holdout accuracy on the associated stage-fright task.
-- Kept model selection separate from the final evaluation, with all choices made before checking the holdout results.
-
-</details>
 
 [View repository](https://github.com/Stanley-Chow/behavioral-personality-analytics)
 {: .project-link }
@@ -76,15 +60,7 @@ Our team studied airline fares using **300,153 records**. I wrote the code for E
 
 We compared polynomial regression with XGBoost, then looked at how route, class, stops, airline and booking time relate to prices.
 
-<details class="portfolio-technical" markdown="1">
-<summary>Results and my contribution</summary>
-
-- Compared polynomial regression with XGBoost for fare prediction.
-- XGBoost reached **RMSE ₹2,319.47** and **R² 0.9896** on a same-period held-out set of 60,031 rows.
-- Analyzed how route, class, stops, airline and booking time relate to fares.
-- Evaluated the model with a random train-test split using records from the same period.
-
-</details>
+XGBoost reached **RMSE ₹2,319.47** and **R² 0.9896** on **60,031 held-out records** from the same period, using a random train-test split.
 
 [View repository](https://github.com/Stanley-Chow/flight-price-prediction-and-pricing-analysis)
 {: .project-link }
@@ -106,17 +82,7 @@ A document question-answering tool with a C++ search layer. I built the index an
 
 The search tests run **without network access or API credentials**, so I can check the core behavior independently of the model service.
 
-<details class="portfolio-technical" markdown="1">
-<summary>Inside the search layer</summary>
-
-- Built tokenization, an inverted index and a custom unbalanced binary-search-tree multimap with explicit object ownership.
-- Required matches for all terms within each expanded query group, then combined results across groups.
-- Made the model client replaceable in tests, so search behavior can be checked without network access or credentials. Secrets are read from the environment.
-- Used CMake and focused tests to check object ownership, lookups, retrieval and the question-answering workflow.
-
-The search layer uses keyword matching and an inverted index to find relevant passages for the question-answering workflow.
-
-</details>
+**Inside the search layer:** an inverted index maps terms to passages, while a custom binary-search-tree multimap manages the index entries. Query groups combine keyword matches before passing the retrieved text to the model.
 
 [View repository](https://github.com/Stanley-Chow/docuquest-agent)
 {: .project-link }
@@ -129,18 +95,7 @@ The search layer uses keyword matching and an inverted index to find relevant pa
 
 I implemented the actor and world logic for a tick-based 2D game. Each update coordinates movement, terrain, hazards, goals and player-assigned skills on a **20 × 20 grid**.
 
-The project gave me practice separating individual actor behavior from the rules that govern the whole game.
-
-<details class="portfolio-technical" markdown="1">
-<summary>What I implemented</summary>
-
-- Designed the actor classes and handled their state changes and lifetimes.
-- Coordinated collisions, terrain, spawning, goals, hazards and skill effects on a 20 × 20 grid loaded from level data.
-- Kept individual actor behavior separate from the rules managed by the game world.
-
-The course supplied the surrounding framework and media assets. My implementation is concentrated in the Actor and StudentWorld components.
-
-</details>
+Actor classes manage individual behavior and state changes; StudentWorld coordinates the game rules and object lifetimes. My work is in those two components, within the course-supplied framework and assets.
 
 [View repository](https://github.com/Stanley-Chow/lemmings-game-engine)
 {: .project-link }
@@ -160,18 +115,9 @@ The course supplied the surrounding framework and media assets. My implementatio
 
 I study how to recover a source from blurred, noisy temperature measurements. I compare both the recovered values and the shape, and test when a smaller model can speed up the computation.
 
-<details class="portfolio-technical" markdown="1">
-<summary>The research questions</summary>
+In the letter-A demonstration, the letter-trained POD model reduced the measured iterative solve from **5.56 seconds to 48 milliseconds**. The research page walks through the models and the recovered shapes.
 
-- Compare errors in source values, fields smoothed at a chosen scale, and the boundaries of recovered regions.
-- Study how regularization affects recovery and when a small field error keeps the recovered boundary stable.
-- Test POD models trained on different examples, including what happens when those examples differ from the sources we later try to recover.
-
-</details>
-
-The research page includes a 34-second visual demonstration, with a walkthrough of the models and measured results.
-
-[Watch the demo and read more](/research/#heat-source-demo)
+[Watch the demo and read more](/research/parabolic-inverse-source/#heat-source-demo)
 {: .project-link }
 </article>
 
@@ -181,5 +127,23 @@ The research page includes a 34-second visual demonstration, with a walkthrough 
 <p class="home-eyebrow">Independent research · 2023</p>
 
 I modeled rail routes with constraints on geometry, curvature, feasibility and construction cost. I used analytical optimization for simpler layouts and Particle Swarm Optimization for routes with several intersections. The work was recognized in the S.-T. Yau High School Science Award.
+
+[Read about the research](/research/urban-rail-optimization/)
+{: .project-link }
 </article>
 </div>
+
+## Planned learning
+{: #planned-learning }
+
+<aside class="portfolio-learning-plan" id="drawing-with-llms" aria-labelledby="drawing-plan-title" markdown="1">
+<p class="home-eyebrow">Winter vacation · Planned replication</p>
+### Drawing with LLMs: text to SVG
+{: #drawing-plan-title }
+
+During winter vacation, I plan to work through a text-to-SVG solution supplied through tutoring. The idea is to generate an image first, then convert its main shapes into a compact vector drawing.
+
+The supplied pipeline uses **SDXL Lightning, a vector-style LoRA and OpenCV**. I want to replicate the code and understand how image generation, color grouping and shape simplification work together under a file-size budget.
+
+<p class="learning-plan__status">Future learning plan · Based on supplied tutoring materials</p>
+</aside>

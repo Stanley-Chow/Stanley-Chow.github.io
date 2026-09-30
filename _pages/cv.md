@@ -17,7 +17,7 @@ description: "Education, research, selected projects, honors, and technical skil
 author_profile: false
 ---
 
-The English PDF is my Quant CV; the Chinese PDF is my algorithm-focused CV. You can also find the [project details](/projects/) and [research demo](/research/#heat-source-demo) on this site.
+The English PDF is my Quant CV; the Chinese PDF is my algorithm-focused CV. You can also find the [project details](/projects/) and [research demo](/research/parabolic-inverse-source/#heat-source-demo) on this site.
 
 ## Education
 

@@ -15,6 +15,8 @@ sections:
 permalink: /research/parabolic-inverse-source/
 description: "Scale-resolved reconstruction of parabolic inverse sources: raw error, heat-visible fields, and visible geometry."
 author_profile: false
+back_url: /research/
+back_label: All research
 ---
 
 <p class="project-status">HKU Summer Research Fellowship · Faculty of Science, The University of Hong Kong · 2026<br>Supervisor: Prof. Zhiwen Zhang</p>

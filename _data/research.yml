@@ -1,0 +1,28 @@
+current:
+  - title: Recovering a hidden heat source
+    status: HKU Summer Research Fellowship · 2026
+    summary: "Heat diffusion blurs a source’s shape. I study how to recover useful shape information from temperature measurements, and when a smaller model can make the computation faster."
+    topics: Inverse problems · Scientific computing · POD
+    url: /research/parabolic-inverse-source/
+    id: heat-source-demo
+    action: Watch the demo & read the research
+  - title: Sharpness-aware optimization
+    status: Current capstone · In progress
+    summary: "I’m exploring sharpness-aware optimization for machine-learning training. This page will follow the capstone as the experiments and findings take shape."
+    topics: Machine learning · Optimization
+    url: /research/sharpness-aware-optimization/
+    id: sharpness-aware-optimization
+    action: View the current project
+earlier:
+  - title: Urban rail network optimization
+    status: Independent research · 2023
+    summary: "How can a rail route balance geometry, engineering constraints and construction cost? I combined analytical optimization with Particle Swarm Optimization to study feasible routes."
+    topics: Mathematical modeling · Route design
+    url: /research/urban-rail-optimization/
+    action: Read the project overview
+  - title: Mapping Galactic hydrogen
+    status: Earlier astronomy work
+    summary: "I used 21 cm neutral-hydrogen observations and computational models of Galactic rotation to study the large-scale structure of the Milky Way."
+    topics: Astronomy · Computational modeling
+    url: /research/galactic-hydrogen/
+    action: Read the project overview
