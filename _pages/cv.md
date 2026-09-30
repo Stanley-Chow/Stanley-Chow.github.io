@@ -54,11 +54,9 @@ Exploring sharpness-aware optimization for machine-learning training. The work i
 Supervisor: Prof. Zhiwen Zhang
 
 - Study how to recover a hidden heat source from temperature measurements taken after diffusion.
-- Compare recovered source values, the field visible at a chosen smoothing scale, and the shape of the recovered region.
-- Build and test reduced models for repeated reconstruction, alongside a separate spectral benchmark for error analysis.
-- Investigate when small field errors lead to a stable recovered boundary.
+- Compare recovered source values and shapes, and test reduced models that speed up repeated reconstruction.
 
-[Research overview]({{ '/research/parabolic-inverse-source/' | relative_url }}) · [Synopsis]({{ '/files/research/srf/Stanley_Chow_SRF_Research_Synopsis.pdf' | relative_url }}) · [Poster]({{ '/files/research/srf/Stanley_Chow_SRF_A11_Poster.pdf' | relative_url }})
+[Research overview]({{ '/research/parabolic-inverse-source/' | relative_url }}) · [Poster]({{ '/files/research/srf/Stanley_Chow_SRF_A11_Poster.pdf' | relative_url }})
 ### Urban Rail Network Optimization
 
 **Independent research** · 2023

@@ -208,6 +208,10 @@ html[data-theme="dark"] body.portfolio-shell {
 .home-topic-number { color: var(--home-accent); font-size: 12px; font-weight: 600; }
 .home-skills { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; align-items: start; details { border: 1px solid var(--global-border-color); border-radius: 14px; padding: 20px; } summary { cursor: pointer; font-size: 15px; font-weight: 600; } p { margin: 16px 0 0; color: var(--home-muted); font-size: 14px; } }
 .home-contact { display: flex; align-items: center; justify-content: space-between; gap: 32px; margin-top: 72px; padding: 32px 0 0; border-top: 1px solid var(--global-border-color); h2 { margin-bottom: 12px !important; } p:last-child { margin: 0; max-width: 690px; color: var(--home-muted); } .home-button { flex: 0 0 auto; } }
+.home-contact__actions { flex: 0 1 300px; min-width: 0; }
+.home-contact__email { display: inline-block; margin-bottom: 14px; overflow-wrap: anywhere; font-size: 15px; }
+.home-contact__buttons { display: flex; flex-wrap: wrap; gap: 10px; button { font-family: inherit; cursor: pointer; } button:disabled { cursor: wait; } [hidden] { display: none; } }
+.home-page#main .home-contact__status { margin: 10px 0 0; min-height: 40px; font-size: 12px; line-height: 1.5; color: var(--home-muted); }
 .home-writing-header { padding: 72px 0 0; h1 { margin: 12px 0 20px; font-size: clamp(36px, 5vw, 50px); letter-spacing: -1.5px; line-height: 1.15; } }
 .home-article { max-width: 760px; margin: 56px auto; header { margin: 32px 0; } h1 { font-size: clamp(32px, 4vw, 44px); letter-spacing: -1px; } }
 .home-article__body { h2 { margin: 40px 0 16px !important; } h3 { margin: 28px 0 12px !important; } img { max-width: 100%; } table { display: block; max-width: 100%; overflow-x: auto; } }
@@ -288,6 +292,7 @@ html[data-theme="dark"] body.portfolio-shell {
   .home-background { margin-top: 48px; gap: 40px; }
   .home-section { margin-top: 48px; }
   .home-contact { align-items: flex-start; flex-direction: column; margin-top: 48px; }
+  .home-contact__actions { flex-basis: auto; width: 100%; }
   .home-desktop-break { display: none; }
 }
 @media (max-width: 520px) {

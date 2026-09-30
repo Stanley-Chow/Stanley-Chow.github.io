@@ -50,11 +50,17 @@ For replications, include the original paper citation, reproduction setup, code 
 
 Project cards present the problem, approach and results without disclosure widgets or evaluation bullet lists. Grid rows stretch cards to equal heights and keep repository links at the bottom. Drawing with LLMs is separate from completed work, under Planned learning. Public copy describes a proposed text-to-SVG method and explicitly says it is not yet implemented. The supplied pipeline comes from paid tutoring materials; language-model-assisted prompting/checking is a proposed extension, not an implemented feature. Do not publish the tutoring notebook, lesson files or sample outputs, or claim original authorship, results or a competition win.
 
+Use normal-weight prose for project descriptions; reserve emphasis for headings and the short “Inside the search layer” label. The flight card describes Experiment 2’s log-price XGBoost/PDP analysis, using saved model-estimated premiums (156.64% Economy, 23.48% Business, final three days versus 20–30 days ahead). It does not claim future forecasting or a verified temporal-holdout result.
+
+The homepage contact section shows the email address, an “Email me” link and a “Copy email” button with a visible success/failure message. Mail links depend on the visitor’s configured email handler; copy offers a browser-based alternative. Without JavaScript, the address and mail link still work.
+
+SRF publication boundary: publish only the general overview, existing numerical demo and approved poster. Keep the manuscript and synopsis private through at least late November/December 2026, and require explicit approval before any later release; do not auto-publish on a date. Do not add unpublished manuscript text, theory, convergence rates or synopsis links. The synopsis has been moved to ignored `local/private-materials/2026-10-01-srf/` and is explicitly excluded from builds. Older Git history and the currently deployed site can still contain previously published material; a new build does not erase that history.
+
 ### Research images
 
 Research cards have consistent 16:9 previews, descriptive alternative text, and captions distinguishing experimental results from illustrative context. Keep image provenance when editing:
 
 - Heat-source preview: three CSS-framed views of the existing SRF demo thumbnail (original source, measured heat, letter-trained POD outline). No new experimental result is implied.
-- `images/research/sam-landscape.svg`: original conceptual illustration of the neighborhood-loss idea in [Foret et al. (2021)](https://arxiv.org/abs/2010.01412), not a plot of capstone results.
+- `images/research/sam-landscape-3d.svg`: original synthetic 3D illustration of the neighborhood-loss idea in [Foret et al. (2021)](https://arxiv.org/abs/2010.01412), not a plot of capstone results. Regenerate with `node scripts/generate-sam-illustration.mjs`; the earlier `sam-landscape.svg` remains available as a 2D visual fallback.
 - `images/research/hong-kong-mtr.svg`: unmodified [MTR System Topological Map](https://commons.wikimedia.org/wiki/File:MTR_System_Topological_Map.svg) by Emphrase, [CC0](https://creativecommons.org/publicdomain/zero/1.0/), downloaded 2026-10-01. Historical illustrative context, not an optimized route or up-to-date travel map.
 - `images/research/milky-way-nasa.jpg`: [PIA10748, Our Milky Way Gets a Makeover](https://science.nasa.gov/photojournal/our-milky-way-gets-a-makeover-artist-concept/), NASA/JPL-Caltech, downloaded 2026-10-01. Artist’s concept, not project output. Used as informational context under [NASA media guidelines](https://www.nasa.gov/nasa-brand-center/images-and-media/); no endorsement is implied.

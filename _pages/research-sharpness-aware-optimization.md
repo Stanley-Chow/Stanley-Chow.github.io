@@ -13,8 +13,8 @@ back_label: All research
 ---
 
 <figure class="research-topic-figure">
-  <img src="{{ '/images/research/sam-landscape.svg' | relative_url }}" alt="Conceptual comparison of a sharp loss valley and a broad valley with low loss nearby." width="800" height="450">
-  <figcaption>A sketch of the idea behind SAM—not a capstone result. Based on <a href="https://arxiv.org/abs/2010.01412">Foret et al., Sharpness-Aware Minimization (2021)</a>.</figcaption>
+  <img src="{{ '/images/research/sam-landscape-3d.svg' | relative_url }}" alt="Conceptual 3D sharp and broad loss basins, with equal-sized parameter neighborhoods outlined in gold." width="800" height="450">
+  <figcaption>A conceptual 3D sketch—not a capstone result. Gold outlines mark equal-sized neighborhoods in parameter space. Based on <a href="https://arxiv.org/abs/2010.01412">Foret et al., Sharpness-Aware Minimization (2021)</a>.</figcaption>
 </figure>
 
 ## What I’m working on

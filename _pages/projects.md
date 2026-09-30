@@ -27,11 +27,11 @@ sections:
 
 How do you choose a handful of useful recommendations from a large product catalogue? I built an offline system that first finds promising items, then ranks them for each customer.
 
-It uses **31.8 million transaction records** and combines nine ways of finding candidates, including shopping history, learned models, and text and image features.
+It uses 31.8 million transaction records and combines nine ways of finding candidates, including shopping history, learned models, and text and image features.
 
-<div class="project-evidence"><div><strong>0.034479</strong><span>MAP@12 on a later, untouched week</span></div><div><strong>1.37 million</strong><span>customers in the prediction run</span></div></div>
+On a later, untouched week, it reached MAP@12 0.034479. The prediction run covered 1.37 million customers.
 
-I trained LightGBM LambdaRank on **100,000 customer-week queries**, using only information available before each prediction cutoff. For inference, I processed customers in **138 batches** to keep memory use bounded.
+I trained LightGBM LambdaRank on 100,000 customer-week queries, using only information available before each prediction cutoff. For inference, I processed customers in batches to keep memory use bounded.
 
 [View repository](https://github.com/Stanley-Chow/hm-2stage-recommender)
 {: .project-link }
@@ -44,7 +44,7 @@ I trained LightGBM LambdaRank on **100,000 customer-week queries**, using only i
 
 I used generated behavioral data to test whether a small set of features could predict personality-related outcomes. I kept model selection separate from the final test.
 
-After comparing **381 configurations**, a three-feature Gradient Boosting model reached **0.9651 ROC-AUC** on the holdout set.
+After comparing 381 configurations, a three-feature Gradient Boosting model reached 0.9651 ROC-AUC on the holdout set.
 
 
 [View repository](https://github.com/Stanley-Chow/behavioral-personality-analytics)
@@ -56,11 +56,11 @@ After comparing **381 configurations**, a three-feature Gradient Boosting model 
 
 <p class="home-eyebrow">Team project · Python, XGBoost</p>
 
-Our team studied airline fares using **300,153 records**. I wrote the code for Experiments 1 and 2 and interpreted the findings from Experiment 2.
+Our team studied 300,153 domestic flight listings. I wrote the code for Experiments 1 and 2 and interpreted the pricing patterns in Experiment 2.
 
-We compared polynomial regression with XGBoost, then looked at how route, class, stops, airline and booking time relate to prices.
+In Experiment 2, we fitted XGBoost to log prices and used partial-dependence plots (PDPs) to examine how modeled fares change as departure approaches, across ticket classes, airlines and routes.
 
-XGBoost reached **RMSE ₹2,319.47** and **R² 0.9896** on **60,031 held-out records** from the same period, using a random train-test split.
+The model estimated a last-minute premium of about 157% for Economy and 23% for Business, comparing the final three days before departure with booking 20–30 days ahead.
 
 [View repository](https://github.com/Stanley-Chow/flight-price-prediction-and-pricing-analysis)
 {: .project-link }
@@ -80,7 +80,7 @@ XGBoost reached **RMSE ₹2,319.47** and **R² 0.9896** on **60,031 held-out rec
 
 A document question-answering tool with a C++ search layer. I built the index and retrieval logic, then connected the retrieved passages to a language-model client.
 
-The search tests run **without network access or API credentials**, so I can check the core behavior independently of the model service.
+The search tests run without network access or API credentials, so I can check the core behavior independently of the model service.
 
 **Inside the search layer:** an inverted index maps terms to passages, while a custom binary-search-tree multimap manages the index entries. Query groups combine keyword matches before passing the retrieved text to the model.
 
@@ -93,7 +93,7 @@ The search tests run **without network access or API credentials**, so I can che
 
 <p class="home-eyebrow">Course project · C++17</p>
 
-I implemented the actor and world logic for a tick-based 2D game. Each update coordinates movement, terrain, hazards, goals and player-assigned skills on a **20 × 20 grid**.
+I implemented the actor and world logic for a tick-based 2D game. Each update coordinates movement, terrain, hazards, goals and player-assigned skills on a 20 × 20 grid.
 
 Actor classes manage individual behavior and state changes; StudentWorld coordinates the game rules and object lifetimes. My work is in those two components, within the course-supplied framework and assets.
 
@@ -115,7 +115,7 @@ Actor classes manage individual behavior and state changes; StudentWorld coordin
 
 I study how to recover a source from blurred, noisy temperature measurements. I compare both the recovered values and the shape, and test when a smaller model can speed up the computation.
 
-In the letter-A demonstration, the letter-trained POD model reduced the measured iterative solve from **5.56 seconds to 48 milliseconds**. The research page walks through the models and the recovered shapes.
+In the letter-A demonstration, the letter-trained POD model reduced the measured iterative solve from 5.56 seconds to 48 milliseconds. The research page walks through the models and the recovered shapes.
 
 [Watch the demo and read more](/research/parabolic-inverse-source/#heat-source-demo)
 {: .project-link }
@@ -143,7 +143,7 @@ I modeled rail routes with constraints on geometry, curvature, feasibility and c
 
 The idea is to turn a written description into an editable SVG drawing. A language model could help shape the prompt and check whether the drawing matches what was asked for.
 
-The proposed pipeline uses **SDXL Lightning with a vector-style LoRA** to generate an image, then **OpenCV** to group colors, trace contours and simplify them into SVG paths. The aim is a recognizable drawing that stays within a file-size budget.
+The proposed pipeline uses SDXL Lightning with a vector-style LoRA to generate an image, then OpenCV to group colors, trace contours and simplify them into SVG paths. The aim is a recognizable drawing that stays within a file-size budget.
 
 <p class="learning-plan__status">Planned · Not yet implemented</p>
 </aside>

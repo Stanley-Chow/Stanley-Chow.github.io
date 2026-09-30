@@ -31,7 +31,7 @@
     <summary>How the comparison was made</summary>
     <p>All three models use the same source, measurements, noise, mesh, time step, regularization, visibility scale, and iterative solver (steepest descent with exact line search). The video uses recorded solver iterations. It slows the opening, pauses when both POD models finish, then accelerates the remaining replay tenfold. This playback change is separate from the measured 116-fold solve-time difference.</p>
     <p>The timings include forming the data right-hand side, solving for coefficients, and mapping the solution back to the full grid. Offline training, operator assembly, and video rendering are excluded. Cached direct solves are faster for this linear quadratic problem: 10.60 ms for the full model, 0.0423 ms for letter-trained POD, and 0.0378 ms for circle-trained POD, measured separately over 40 queries. The video’s speedup applies to iterative optimization.</p>
-    <p>This is one preselected noise realization, not evidence of performance on unseen letters. It is a finite-element/POD experiment; the spectral-truncation results in the synopsis below concern a different benchmark.</p>
+    <p>This is one preselected noise realization, not evidence of performance on unseen letters. It is a finite-element/POD experiment.</p>
     <p>Setup: a 32 × 32-cell mesh with 961 interior unknowns; final time 1; time step 1/32; 100 × 100 sensors; regularization 10<sup>−6</sup>; Gaussian noise standard deviation 10<sup>−3</sup>; visibility length 0.08/π.</p>
     <p><a href="{{ '/assets/media/srf-heat-demo/metrics.csv' | relative_url }}">Download the measured results (CSV)</a></p>
   </details>

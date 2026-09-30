@@ -15,8 +15,8 @@ current:
     url: /research/sharpness-aware-optimization/
     id: sharpness-aware-optimization
     action: View the current project
-    image: /images/research/sam-landscape.svg
-    image_alt: "Conceptual loss landscapes: nearby parameter changes raise loss sharply in a narrow valley, but less in a broad valley."
+    image: /images/research/sam-landscape-3d.svg
+    image_alt: "Conceptual 3D loss surfaces: the same-size parameter neighborhood has higher nearby loss in a sharp basin than in a broad basin."
     image_caption: "SAM seeks low loss across a neighborhood · Conceptual illustration"
 earlier:
   - title: Urban rail network optimization
