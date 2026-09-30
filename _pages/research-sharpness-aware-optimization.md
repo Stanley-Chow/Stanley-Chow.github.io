@@ -13,8 +13,8 @@ back_label: All research
 ---
 
 <figure class="research-topic-figure">
-  <img src="{{ '/images/research/sam-landscape-3d.svg' | relative_url }}" alt="Conceptual 3D sharp and broad loss basins, with equal-sized parameter neighborhoods outlined in gold." width="800" height="450">
-  <figcaption>A conceptual 3D sketch—not a capstone result. Gold outlines mark equal-sized neighborhoods in parameter space. Based on <a href="https://arxiv.org/abs/2010.01412">Foret et al., Sharpness-Aware Minimization (2021)</a>.</figcaption>
+  <img src="{{ '/images/research/sam-landscape-comparison.svg' | relative_url }}" alt="Illustrative SGD and SAM solutions on an uneven loss curve: a sharp minimum versus a broad basin, with equal-size parameter neighborhoods." width="800" height="450">
+  <figcaption>A synthetic landscape—not a capstone result or a guarantee of either optimizer’s outcome. The shaded bands show equal-size parameter neighborhoods. Based on <a href="https://arxiv.org/abs/2010.01412">Foret et al., Sharpness-Aware Minimization (2021)</a>.</figcaption>
 </figure>
 
 ## What I’m working on

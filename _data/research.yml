@@ -15,9 +15,9 @@ current:
     url: /research/sharpness-aware-optimization/
     id: sharpness-aware-optimization
     action: View the current project
-    image: /images/research/sam-landscape-3d.svg
-    image_alt: "Conceptual 3D loss surfaces: the same-size parameter neighborhood has higher nearby loss in a sharp basin than in a broad basin."
-    image_caption: "SAM seeks low loss across a neighborhood · Conceptual illustration"
+    image: /images/research/sam-landscape-comparison.svg
+    image_alt: "Illustrative SGD and SAM solutions on an uneven loss curve: a sharp minimum versus a broad basin, with equal-size parameter neighborhoods."
+    image_caption: "Sharp point, broad basin · Illustrative SGD/SAM comparison"
 earlier:
   - title: Urban rail network optimization
     status: Independent research · 2023

@@ -29,7 +29,7 @@ How do you choose a handful of useful recommendations from a large product catal
 
 It uses 31.8 million transaction records and combines nine ways of finding candidates, including shopping history, learned models, and text and image features.
 
-On a later, untouched week, it reached MAP@12 0.034479. The prediction run covered 1.37 million customers.
+<div class="project-evidence" aria-label="Recommendation system results"><div><strong>0.034479</strong><span>MAP@12 on a later, untouched week</span></div><div><strong>1.37 million</strong><span>customers in the prediction run</span></div></div>
 
 I trained LightGBM LambdaRank on 100,000 customer-week queries, using only information available before each prediction cutoff. For inference, I processed customers in batches to keep memory use bounded.
 

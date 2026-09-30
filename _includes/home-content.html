@@ -87,10 +87,9 @@
 <section class="home-contact" aria-labelledby="contact-title">
   <div><p class="home-eyebrow">{{ copy.contact.eyebrow | escape }}</p><h2 id="contact-title">{{ copy.contact.title | escape }}</h2><p>{{ copy.contact.body | escape }}</p></div>
   <div class="home-contact__actions">
-    <a class="home-contact__email" href="mailto:{{ site.author.email }}">{{ site.author.email | escape }}</a>
+    <span class="home-contact__email" hidden>{{ site.author.email | escape }}</span>
     <div class="home-contact__buttons">
-      <a class="home-button home-button--primary" href="mailto:{{ site.author.email }}">{{ copy.contact.button | escape }} <span aria-hidden="true">↗</span></a>
-      <button class="home-button" type="button" data-copy-email="{{ site.author.email | escape }}" hidden>Copy email</button>
+      <a class="home-button home-button--primary" href="mailto:{{ site.author.email }}" data-copy-email="{{ site.author.email | escape }}">{{ copy.contact.button | escape }}</a>
     </div>
     <p class="home-contact__status" role="status" aria-live="polite"></p>
   </div>

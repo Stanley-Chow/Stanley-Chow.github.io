@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450" role="img" aria-labelledby="title desc">
+  <title id="title">Illustrative SGD and SAM solutions on an uneven loss landscape</title>
+  <desc id="desc">A synthetic loss curve has several hills and valleys. An SGD-style solution sits in a narrow, sharp minimum with slightly lower point loss. A SAM-style solution sits in a broad basin where nearby loss remains low. Equal-width parameter neighborhoods are shaded. This is a conceptual sketch, not a training run or a guarantee of either optimizer’s outcome.</desc>
+  <defs>
+    <linearGradient id="bg" x2="1" y2="1"><stop stop-color="#f0f5ff"/><stop offset="1" stop-color="#e8f6f5"/></linearGradient>
+    <linearGradient id="fill" x2="0" y2="1"><stop stop-color="#7896c5" stop-opacity=".16"/><stop offset="1" stop-color="#7896c5" stop-opacity=".02"/></linearGradient>
+    <path id="landscape" d="M64 215 C83 165 108 174 124 207 S152 251 177 189 C194 133 221 129 240 206 C250 244 252 322 264 322 C276 322 278 244 288 206 C305 136 324 139 340 166 S372 244 392 212 C411 188 420 123 450 137 C476 148 484 236 504 276 C519 305 543 301 566 302 C587 303 607 300 626 278 C645 247 650 204 674 220 C696 248 708 169 736 166"/>
+  </defs>
+  <rect width="800" height="450" fill="url(#bg)"/>
+  <g font-family="Arial, Helvetica, sans-serif" fill="#273142">
+    <text x="40" y="46" font-size="26">Sharp minimum or broad basin?</text>
+    <text x="40" y="77" font-size="18" fill="#596577">SAM looks for low loss nearby, not just at one point.</text>
+    <path d="M64 113 V346 H736" fill="none" stroke="#b5c5dc" stroke-width="2"/>
+    <text x="35" y="125" font-size="15" fill="#596577" transform="rotate(-90 35 125)">Loss</text>
+    <path d="M64 215 C83 165 108 174 124 207 S152 251 177 189 C194 133 221 129 240 206 C250 244 252 322 264 322 C276 322 278 244 288 206 C305 136 324 139 340 166 S372 244 392 212 C411 188 420 123 450 137 C476 148 484 236 504 276 C519 305 543 301 566 302 C587 303 607 300 626 278 C645 247 650 204 674 220 C696 248 708 169 736 166 V346 H64 Z" fill="url(#fill)"/>
+    <rect x="242" y="112" width="44" height="234" rx="5" fill="#527af4" opacity=".13"/>
+    <rect x="544" y="112" width="44" height="234" rx="5" fill="#0e9494" opacity=".13"/>
+    <use href="#landscape" fill="none" stroke="#7286a6" stroke-width="4" stroke-linecap="round"/>
+    <path d="M240 206 C250 244 252 322 264 322 C276 322 278 244 288 206" fill="none" stroke="#527af4" stroke-width="5" stroke-linecap="round"/>
+    <path d="M504 276 C519 305 543 301 566 302 C587 303 607 300 626 278" fill="none" stroke="#0e9494" stroke-width="5" stroke-linecap="round"/>
+    <circle cx="264" cy="322" r="6" fill="#fff" stroke="#335cce" stroke-width="3"/>
+    <circle cx="566" cy="302" r="6" fill="#fff" stroke="#087e82" stroke-width="3"/>
+    <path d="M242 351 H286 M242 347 V355 M286 347 V355" stroke="#527af4" stroke-width="2"/>
+    <path d="M544 351 H588 M544 347 V355 M588 347 V355" stroke="#0e9494" stroke-width="2"/>
+    <text x="715" y="371" text-anchor="end" font-size="14" fill="#596577">Model parameters</text>
+    <text x="264" y="397" text-anchor="middle" font-size="21" fill="#335cce">SGD · sharp minimum</text>
+    <text x="566" y="397" text-anchor="middle" font-size="21" fill="#087e82">SAM · broad basin</text>
+    <text x="264" y="424" text-anchor="middle" font-size="16" fill="#596577">Small move, steep rise in loss</text>
+    <text x="566" y="424" text-anchor="middle" font-size="16" fill="#596577">Same-size move, lower nearby loss</text>
+  </g>
+</svg>
