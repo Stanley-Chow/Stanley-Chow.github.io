@@ -21,7 +21,7 @@ en:
   hero:
     pill: Mathematics × Computer Science
     name: Stanley Chow
-    subtitle: Mathematics student at the University of Hong Kong
+    subtitle: Mathematics & Computer Science student at the University of Hong Kong
     intro: "I work on scientific computing and machine learning, with current projects in inverse problems and sharpness-aware optimization."
     roles: "Career interests: Data science · ML engineering · Recommender systems · Quant"
     cv_label: Download CV (EN)
@@ -63,8 +63,8 @@ en:
     items:
       - mark: HKU
         name: The University of Hong Kong
-        degree: BSc in Mathematics
-        detail: Second Major in Computer Science · Minor in Finance
+        degree: BSc · Mathematics & Computer Science
+        detail: Minor in Finance
         period: Expected June 2028
         gpa: 3.98 / 4.30
       - mark: UCLA
@@ -196,8 +196,8 @@ zh:
     items:
       - mark: HKU
         name: 香港大学
-        degree: 理学士 · 数学专业 · 预计 2028 年 6 月毕业
-        detail: 计算机科学第二主修 · 金融副修 · GPA 3.98 / 4.30
+        degree: 理学士 · 数学与计算机科学 · 预计 2028 年 6 月毕业
+        detail: 金融副修 · GPA 3.98 / 4.30
       - mark: UCLA
         name: 加州大学洛杉矶分校
         degree: 交换学习 · 数学与计算机科学

@@ -12,8 +12,8 @@ author_profile: false
 
 ## The University of Hong Kong
 
-**Bachelor of Science in Mathematics**<br>
-Second Major in Computer Science · Minor in Finance<br>
+**Bachelor of Science · Mathematics & Computer Science**<br>
+Minor in Finance<br>
 <p class="education-meta"><span>Expected June 2028</span> <span>GPA <strong>3.98 / 4.30</strong></span></p>
 
 **Distinctions:** Dean's List, HKU Entrance Scholarship, Lee Shau Kee Scholarship

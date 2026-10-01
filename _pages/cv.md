@@ -5,7 +5,7 @@ lang: en
 title: "CV"
 display_title: Curriculum vitae
 eyebrow: Background & experience
-intro: "I’m a mathematics student at HKU, working on scientific computing and machine-learning projects. This page brings together my education, research and selected work."
+intro: "I study mathematics and computer science at HKU, working on scientific computing and machine-learning projects. This page brings together my education, research and selected work."
 cv_downloads: true
 sections:
   - {id: education, label: Education}
@@ -23,7 +23,7 @@ The English PDF is my Quant CV; the Chinese PDF is my algorithm-focused CV. You 
 
 ### The University of Hong Kong
 
-**Bachelor of Science in Mathematics** · Second Major in Computer Science · Minor in Finance<br>
+**Bachelor of Science · Mathematics & Computer Science** · Minor in Finance<br>
 <p class="education-meta"><span>Expected June 2028</span> <span>GPA <strong>3.98 / 4.30</strong></span></p>
 
 Dean's List · HKU Entrance Scholarship · Lee Shau Kee Scholarship
