@@ -44,6 +44,8 @@ The public site is English-only. The Chinese homepage and writing page are retai
 
 For replications, include the original paper citation, reproduction setup, code link, results, and discrepancies. Keep conclusions clearly separate from the paper's claims.
 
+“Learning recommendation systems with Wang Shusen” is a short reading guide to the original [course repository](https://github.com/wangshusen/RecommenderSystem). It links to Stanley's existing Chinese study summary at `files/blog/stanley-chow-recommendation-system-study-notes-zh.pdf` (55 pages, approximately 64.8 MB), with explicit attribution and a visible language/file-size label. The PDF is copied unchanged from the supplied local notes; it is not an original course or a new research contribution. Keep the full PDF behind a normal link, not an automatically loaded embed.
+
 ## Research and project pages
 
 `/research/` is a card index driven by `_data/research.yml`. Each topic links to a separate overview under `/research/`; the heat-source video and technical materials live on `/research/parabolic-inverse-source/`. New demo links point directly there. The old `/research/#heat-source-demo` anchor still finds the corresponding card. Capstone work is labelled in progress, and earlier topics retain only documented facts.
