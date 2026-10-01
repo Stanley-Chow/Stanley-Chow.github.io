@@ -249,7 +249,7 @@ html[data-theme="dark"] body.portfolio-shell {
 .portfolio-prose .project-entry { display: flex; flex-direction: column; margin: 0; padding: 28px; min-width: 0; background: var(--global-bg-color); border: 1px solid var(--global-border-color); border-radius: 18px; h3 { font-size: 22px; margin: 0 0 12px !important; } p:last-child { margin-bottom: 0; } .project-link { margin-top: auto; padding-top: 16px; } }
 .project-entry--featured { grid-column: 1 / -1; }
 .home-page#main .project-entry .project-link { margin-top: auto; padding-top: 16px; }
-.portfolio-prose .project-evidence { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; margin: 24px 0; div { display: flex; flex-direction: column; gap: 4px; min-width: 0; padding: 20px 24px; border-radius: 14px; background: var(--home-tint); } strong { color: var(--global-link-color); font-size: 30px; letter-spacing: -0.6px; } span { color: var(--home-muted); font-size: 13px; } }
+.portfolio-prose .project-evidence { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; margin: 24px 0; padding: 20px 24px; border-radius: 14px; background: var(--home-tint); div { display: flex; flex-direction: column; gap: 4px; min-width: 0; } strong { color: var(--global-link-color); font-size: 30px; letter-spacing: -0.6px; } span { color: var(--home-muted); font-size: 13px; } }
 .portfolio-learning-plan { padding: 28px; background: var(--home-panel); border: 1px solid var(--global-border-color); border-radius: 18px; h3 { margin: 0 0 16px !important; } }
 .home-page#main .learning-plan__status { margin-bottom: 0; font-size: 13px; color: var(--home-muted); }
 .portfolio-research-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
