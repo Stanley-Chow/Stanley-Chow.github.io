@@ -13,7 +13,7 @@ sections:
   - {id: recommendation--machine-learning, label: Recommendation & ML}
   - {id: information-retrieval--software-systems, label: Search & software}
   - {id: research--mathematical-computing, label: Mathematical computing}
-  - {id: planned-learning, label: Planned learning}
+  - {id: ongoing-projects, label: Ongoing projects}
 ---
 
 ## Recommendation & Machine Learning
@@ -32,6 +32,8 @@ It uses 31.8 million transaction records and combines nine ways of finding candi
 <div class="project-evidence" aria-label="Recommendation system results"><div><strong>0.034479</strong><span>MAP@12 on a later, untouched week</span></div><div><strong>1.37 million</strong><span>customers in the prediction run</span></div></div>
 
 I trained LightGBM LambdaRank on 100,000 customer-week queries, using only information available before each prediction cutoff. For inference, I processed customers in batches to keep memory use bounded.
+
+[Read the project write-up](/blog/hm-recommendation-system-writeup/)
 
 [View repository](https://github.com/Stanley-Chow/hm-2stage-recommender)
 {: .project-link }
@@ -133,13 +135,33 @@ I modeled rail routes with constraints on geometry, curvature, feasibility and c
 </article>
 </div>
 
-## Planned learning
-{: #planned-learning }
+## Ongoing projects
+{: #ongoing-projects }
+
+<span id="planned-learning"></span>
+
+<div class="portfolio-projects-grid portfolio-ongoing-grid" markdown="1">
+
+<article class="project-entry" id="amazon-beauty-tiger" markdown="1">
+### Amazon Beauty: TIGER-style recommendations
+
+<p class="home-eyebrow">Ongoing · Working research prototype · Python, PyTorch</p>
+
+Can a model recommend a product by generating its code? I turn product descriptions into short semantic IDs, then train a small Transformer to predict the next product code from a customer's history. Catalog-aware search maps the generated codes back to real products.
+
+The project includes learned residual quantization, comparisons with SASRec and popularity across multiple random seeds, and time-based evaluation on Amazon Beauty data. A CLI and HTTP API make the trained pipeline usable on a CPU.
+
+This is my implementation and study of ideas from [TIGER](https://arxiv.org/abs/2305.05065), with further experiments planned.
+
+[View repository](https://github.com/Stanley-Chow/tiger-recommendation)
+{: .project-link }
+</article>
 
 <aside class="portfolio-learning-plan" id="drawing-with-llms" aria-labelledby="drawing-plan-title" markdown="1">
-<p class="home-eyebrow">Winter vacation · Planned exploration</p>
 ### Drawing with LLMs: text to SVG
 {: #drawing-plan-title }
+
+<p class="home-eyebrow">Winter vacation · Planned exploration</p>
 
 The idea is to turn a written description into an editable SVG drawing. A language model could help shape the prompt and check whether the drawing matches what was asked for.
 
@@ -147,3 +169,7 @@ The proposed pipeline uses SDXL Lightning with a vector-style LoRA to generate a
 
 <p class="learning-plan__status">Planned · Not yet implemented</p>
 </aside>
+
+</div>
+
+<p class="portfolio-next-project">Next on the list: a Hull Tactical market-prediction replication, planned for later this semester. Work has not started yet.</p>
