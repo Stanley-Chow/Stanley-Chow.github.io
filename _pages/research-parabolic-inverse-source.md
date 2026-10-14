@@ -19,6 +19,8 @@ back_label: All research
 
 <p class="project-status">HKU Summer Research Fellowship · Faculty of Science, The University of Hong Kong · 2026<br>Supervisor: Prof. Zhiwen Zhang</p>
 
+I was selected by the panel members and fellow participants as one of the best poster presenters, and invited to present at the HKU Science Undergraduate Research Colloquium (Summer 2026).
+
 {% include heat-source-demo.html %}
 
 ## Research overview

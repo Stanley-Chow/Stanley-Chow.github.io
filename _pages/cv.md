@@ -53,6 +53,8 @@ Exploring sharpness-aware optimization for machine-learning training. The work i
 **Parabolic Inverse Source Reconstruction: From Raw Error to Visible Geometry** · 2026<br>
 Supervisor: Prof. Zhiwen Zhang
 
+Selected as one of the best poster presenters and invited to present at the HKU Science Undergraduate Research Colloquium (Summer 2026).
+
 - Study how to recover a hidden heat source from temperature measurements taken after diffusion.
 - Compare recovered source values and shapes, and test reduced models that speed up repeated reconstruction.
 

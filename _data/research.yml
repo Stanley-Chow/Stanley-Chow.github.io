@@ -1,7 +1,7 @@
 current:
   - title: Recovering a hidden heat source
     status: HKU Summer Research Fellowship · 2026
-    summary: "Heat diffusion blurs a source’s shape. I study how to recover useful shape information from temperature measurements, and when a smaller model can make the computation faster."
+    summary: "Heat diffusion blurs a source’s shape. I study how to recover useful shape information from temperature measurements, and when a smaller model can make the computation faster. I was selected as one of the best poster presenters for this work."
     topics: Inverse problems · Scientific computing · POD
     url: /research/parabolic-inverse-source/
     id: heat-source-demo
