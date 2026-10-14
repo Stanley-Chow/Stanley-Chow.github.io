@@ -11,6 +11,16 @@ When learning recommendation systems, it is easy to spend a lot of time on indiv
 
 Wang Shusen's [recommendation-system course](https://github.com/wangshusen/RecommenderSystem) is a good place to explore those questions. His GitHub repository brings together slides, lecture notes, and links to the videos on YouTube and Bilibili. The lectures are in Chinese and follow the recommendation pipeline, from finding candidates to ranking and choosing the final list.
 
+<figure class="blog-visual" aria-labelledby="course-pipeline-caption">
+  <div class="blog-pipeline blog-pipeline--four">
+    <div class="blog-pipeline__step"><span class="blog-pipeline__number" aria-hidden="true">01</span><h4>Find candidates</h4><p>Retrieve a broad set of plausible items.</p></div>
+    <div class="blog-pipeline__step"><span class="blog-pipeline__number" aria-hidden="true">02</span><h4>Narrow the list</h4><p>Use a fast model to choose what gets a closer look.</p></div>
+    <div class="blog-pipeline__step"><span class="blog-pipeline__number" aria-hidden="true">03</span><h4>Rank carefully</h4><p>Score the remaining items for this user.</p></div>
+    <div class="blog-pipeline__step"><span class="blog-pipeline__number" aria-hidden="true">04</span><h4>Build the feed</h4><p>Balance relevance, variety and product rules.</p></div>
+  </div>
+  <figcaption id="course-pipeline-caption">A simplified view of the recommendation pipeline covered in the lectures: retrieval, coarse ranking, fine ranking and re-ranking.</figcaption>
+</figure>
+
 I put together my own notes while studying the course. They cover collaborative filtering and two-tower retrieval, ranking, feature interactions, user behaviour sequences, diversity, cold start, and A/B testing. The aim is to keep the main ideas and formulas in one place, so I can return to a topic without searching through every lecture.
 
 ## Read along

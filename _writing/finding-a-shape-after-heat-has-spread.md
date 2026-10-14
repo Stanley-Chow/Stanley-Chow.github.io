@@ -17,6 +17,11 @@ What interests me is not just whether the recovered values are close to the orig
 
 The [34-second demo](/research/parabolic-inverse-source/#heat-source-demo) follows that letter-A example. It compares a full numerical model with two smaller models, built using proper orthogonal decomposition (POD). One uses examples of letter-shaped sources; the other uses circles.
 
+<figure class="blog-visual">
+  <a href="/research/parabolic-inverse-source/#heat-source-demo"><img src="/assets/media/srf-heat-demo/thumbnail.jpg" alt="The existing heat-source demo compares the original letter A, blurred temperature measurements and the shapes recovered by a full model and two POD models." width="1920" height="1080" loading="lazy" decoding="async"></a>
+  <figcaption>The same letter-A problem, seen through three models. The outlines help show what each reconstruction preserves. Tap the image to watch the existing demo.</figcaption>
+</figure>
+
 POD keeps a compact set of patterns from example solutions, so there is less to compute when solving the problem again. The choice of examples matters: a model built around circles and one built around letters have different patterns to work with. Watching the reconstructions side by side makes that difference easier to see than a table alone.
 
 For me, this is a useful way into the research: start with a shape we recognise, watch what heat does to it, then ask what it takes to find it again.

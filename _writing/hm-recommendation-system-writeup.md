@@ -19,6 +19,15 @@ Retrieval asks which items are worth considering. Ranking asks which of those it
 
 I kept these jobs separate. Retrieval narrows the catalogue to at most 500 items per customer. A LightGBM model then scores those candidates and returns the top 12. That lets the first stage cover several kinds of shopping intent while the second stage spends more effort comparing a smaller set of choices.
 
+<figure class="blog-visual" aria-labelledby="hm-pipeline-caption">
+  <div class="blog-pipeline">
+    <div class="blog-pipeline__step"><span class="blog-pipeline__number">9</span><h4>Retrieval channels</h4><p>Shopping history, demand, learned models, text and images.</p></div>
+    <div class="blog-pipeline__step"><span class="blog-pipeline__number">500</span><h4>Candidates at most</h4><p>Combine the suggestions and keep track of their sources.</p></div>
+    <div class="blog-pipeline__step"><span class="blog-pipeline__number">12</span><h4>Recommendations</h4><p>LightGBM ranks the candidates into a final short list.</p></div>
+  </div>
+  <figcaption id="hm-pipeline-caption">The finished H&M pipeline: broad retrieval first, then a closer comparison of a much smaller set of items.</figcaption>
+</figure>
+
 ## Give different kinds of evidence room
 
 I used nine retrieval channels. Two look at popularity over the previous seven and fourteen days. Others look for repeat purchases, items often bought by the same shoppers, and products that tend to be bought close together in time.
@@ -65,8 +74,23 @@ MAP@12 measures how well the recommended list matches the items a customer later
 | Held-out later week | 0.034479 |
 | Kaggle public leaderboard | 0.03117 |
 | Kaggle private leaderboard | 0.03116 |
+{: .blog-results-table }
 
 The offline weeks and the Kaggle leaderboard cover different customer groups and periods, so I report their scores separately. The [saved metrics](https://github.com/Stanley-Chow/hm-2stage-recommender/blob/main/results/hm/public_summary/final_metrics.json) and [experiment summary](https://github.com/Stanley-Chow/hm-2stage-recommender/blob/main/docs/hm/FINAL_PROJECT_SUMMARY.md) give the exact settings and results.
+
+<figure class="blog-visual" aria-labelledby="hm-development-caption">
+  <div class="blog-chart">
+    <p class="blog-chart__heading">Selected development checkpoints · MAP@12</p>
+    <ol class="blog-bars">
+      <li><div class="blog-bars__label"><span>Candidate-pool sampling</span><span class="blog-bars__value">0.033679</span></div><div class="blog-bars__track" aria-hidden="true"><span class="blog-bars__fill" style="width: 84.1973752%"></span></div></li>
+      <li><div class="blog-bars__label"><span>Customer–item affinity</span><span class="blog-bars__value">0.034375</span></div><div class="blog-bars__track" aria-hidden="true"><span class="blog-bars__fill" style="width: 85.9364874%"></span></div></li>
+      <li><div class="blog-bars__label"><span>LambdaRank</span><span class="blog-bars__value">0.035475</span></div><div class="blog-bars__track" aria-hidden="true"><span class="blog-bars__fill" style="width: 88.6871217%"></span></div></li>
+      <li><div class="blog-bars__label"><span>Final 100k-group model</span><span class="blog-bars__value">0.035894</span></div><div class="blog-bars__track" aria-hidden="true"><span class="blog-bars__fill" style="width: 89.7350157%"></span></div></li>
+    </ol>
+    <div class="blog-chart__axis" aria-hidden="true"><span>0.00</span><span>0.02</span><span>0.04</span></div>
+  </div>
+  <figcaption id="hm-development-caption">Selected steps in the build, all evaluated on the complete development set. The axis starts at zero. The values come from the <a href="https://github.com/Stanley-Chow/hm-2stage-recommender/blob/main/results/hm/public_summary/ablation_summary.csv">recorded experiments</a>.</figcaption>
+</figure>
 
 ## What I took from the project
 
